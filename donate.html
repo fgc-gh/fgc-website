@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Donate — Fertile Ground Conservancy</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;1,9..40,300&family=Fragment+Mono:ital,wght@0,400;1,400&family=IBM+Plex+Mono:wght@400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <header class="nav">
+    <div class="nav-main">
+      <a href="/" class="nav-logo"><img src="images/fgclogo.svg" alt="Fertile Ground Conservancy" /></a>
+      <ul class="nav-links">
+        <li><a href="land-conservation.html">Land</a></li>
+        <li><a href="fiscal-sponsorship.html">Sponsorship</a></li>
+        <li><a href="our-story.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="donate.html" class="nav-cta nav-active">Donate</a></li>
+      </ul>
+      <button class="nav-toggle" aria-label="Toggle menu">&#9776;</button>
+    </div>
+    <div class="nav-sub-bar">
+      <span>Cascadia — Est. 2009</span>
+      <span>Land Trust + Fiscal Sponsor</span>
+    </div>
+  </header>
+
+  <main>
+
+    <section class="page-title">
+      <h1>Support the work.</h1>
+    </section>
+
+    <section class="donate-intro-row">
+      <div class="donate-intro-text">
+        <p>Fertile Ground Conservancy is a small organization doing work that larger institutions won't. Your donation funds land protection, the organizational infrastructure that makes fiscal sponsorship possible, and the ongoing work of building a conservation movement rooted in <a href="biocentric.html" class="inline-link">biocentric</a> values.</p>
+        <p>We are a 501(c)(3) nonprofit. All donations are tax-deductible to the extent permitted by law. EIN: 27-1194001.</p>
+      </div>
+      <div class="donate-intro-button">
+        <div id="donate-button-container">
+          <div id="donate-button"></div>
+          <script src="https://www.paypalobjects.com/donate/sdk/donate-sdk.js" charset="UTF-8"></script>
+          <script>
+            PayPal.Donation.Button({
+              env:'production',
+              hosted_button_id:'549XRUP6DR2YS',
+              image: {
+                src:'https://pics.paypal.com/00/s/OGNiNmViYTItMmRmYi00ZmM0LWI0MDMtNDEzOTdlYTljYzRm/file.PNG',
+                alt:'Donate with PayPal button',
+                title:'PayPal - The safer, easier way to pay online!',
+              }
+            }).render('#donate-button');
+          </script>
+        </div>
+      </div>
+    </section>
+
+    <hr class="divider" />
+
+    <!-- Other ways -->
+    <section class="zen-block">
+      <div class="zen-block-label">Other ways to give</div>
+      <div class="zen-block-body">
+        <ul class="prose-list">
+          <li><strong>By check</strong> — make payable to Fertile Ground Conservancy and mail to: Fertile Ground Conservancy, PO Box 11262, Eugene, OR 97440</li>
+          <li><strong>Stock or securities</strong> — contact us at <a href="mailto:info@fertilegroundconservancy.org" class="inline-link">info@fertilegroundconservancy.org</a> to arrange a transfer</li>
+          <li><strong>Planned giving / bequest</strong> — include Fertile Ground Conservancy in your will or estate plan. Contact us to discuss options</li>
+          <li><strong>Land donation</strong> — if you own land you would like to protect, <a href="land-conservation.html" class="inline-link">we'd like to talk</a></li>
+        </ul>
+      </div>
+    </section>
+
+    <hr class="divider" />
+
+    <!-- Where it goes -->
+    <section class="zen-block">
+      <div class="zen-block-label">Where it goes</div>
+      <div class="zen-block-body">
+        <ul class="prose-list">
+          <li><strong>Land stewardship</strong> — property taxes, legal fees, and long-term holding costs for the Elk Creek parcel and future acquisitions</li>
+          <li><strong>Fiscal sponsorship infrastructure</strong> — accounting, compliance, grant management, and organizational support for sponsored initiatives</li>
+          <li><strong>Operations</strong> — insurance, filing fees, communications, and the basic costs of keeping a nonprofit functional</li>
+          <li><strong>Future land acquisition</strong> — building toward additional parcels in the Elk Creek watershed and elsewhere in Cascadia</li>
+        </ul>
+      </div>
+    </section>
+
+    <hr class="divider" />
+
+    <!-- Tax info -->
+    <section class="zen-block">
+      <div class="zen-block-label">Tax information</div>
+      <div class="zen-block-body">
+        <p>Fertile Ground Conservancy is a 501(c)(3) nonprofit. Contributions are tax-deductible to the full extent permitted by law. You will receive a donation acknowledgment letter for any gift of $250 or more, as required by the IRS.</p>
+        <p style="margin-top:0.75rem">EIN: 27-1194001 · <a href="mailto:info@fertilegroundconservancy.org" class="inline-link">info@fertilegroundconservancy.org</a></p>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <img src="images/fgclogo.svg" alt="Fertile Ground Conservancy" class="footer-logo-img" />
+        <p class="footer-sub">501(c)(3) nonprofit · EIN: 27-1194001</p>
+        <p class="footer-sub land-ack">Land acknowledgment: We operate on the unceded territories of the Tolowa, Yurok, Karuk, and other Indigenous peoples of the Pacific Coast.</p>
+      </div>
+      <nav class="footer-nav">
+        <div class="footer-col">
+          <p class="footer-col-label">Work</p>
+          <a href="land-conservation.html">Land Conservation</a>
+          <a href="elk-creek.html">Elk Creek</a>
+          <a href="fiscal-sponsorship.html">Fiscal Sponsorship</a>
+        </div>
+        <div class="footer-col">
+          <p class="footer-col-label">Organization</p>
+          <a href="our-story.html">Our Story</a>
+          <a href="our-story.html#vision">Vision</a>
+          <a href="our-story.html#people">People</a>
+          <a href="annual-reports.html">Annual Reports</a>
+        </div>
+        <div class="footer-col">
+          <p class="footer-col
