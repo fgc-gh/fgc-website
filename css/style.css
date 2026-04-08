@@ -1336,7 +1336,7 @@ a.contact-value:hover { color: var(--warm); border-color: var(--warm); }
 
 .video-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   gap: 2rem;
 }
 
@@ -1386,10 +1386,7 @@ a.contact-value:hover { color: var(--warm); border-color: var(--warm); }
   letter-spacing: 0.06em;
 }
 
-@media (max-width: 800px) {
-  .video-grid { grid-template-columns: repeat(2, 1fr); }
-}
-@media (max-width: 500px) {
+@media (max-width: 640px) {
   .video-grid { grid-template-columns: 1fr; }
 }
 
