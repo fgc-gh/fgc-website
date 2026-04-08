@@ -6,7 +6,7 @@
   <title>Land Conservation — Fertile Ground Conservancy</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Fragment+Mono:ital,wght@0,400;1,400&family=IBM+Plex+Mono:wght@400&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;1,9..40,300&family=Fragment+Mono:ital,wght@0,400;1,400&family=IBM+Plex+Mono:wght@400&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
@@ -19,7 +19,7 @@
         <li><a href="fiscal-sponsorship.html">Sponsorship</a></li>
         <li><a href="our-story.html">About</a></li>
         <li><a href="contact.html">Contact</a></li>
-        <li><a href="donate.html" class="nav-cta">Donate</a></li>
+        <li><a href="donate.html" class="">Donate</a></li>
       </ul>
       <button class="nav-toggle" aria-label="Toggle menu">&#9776;</button>
     </div>
@@ -32,8 +32,8 @@
   <main>
 
     <section class="page-title">
-      <p class="page-label">Land Conservation</p>
-      <h1>Protecting land<br>that cannot protect itself.</h1>
+      <h1 class="quote-title">"Every species lost is an evolutionary experiment ended — a door that took four billion years to open, closed in a generation. We exist to keep as many of those doors open as possible."</h1>
+      <p class="page-title-cite">Dillon Thomson — Executive Director</p>
     </section>
 
     <section class="prose-section">
@@ -67,7 +67,7 @@
     <hr class="divider" />
 
     <!-- Conservation options — side by side -->
-    <section class="lc-options-header">
+    <section id="conservation-options" class="lc-options-header">
       <div class="zen-block-label">Conservation Options</div>
       <p class="lc-options-intro">There is no single right path to protecting land. We work with you to find the approach that fits your situation, your goals, and your relationship to the land you steward.</p>
     </section>
@@ -97,11 +97,11 @@
     <hr class="divider" />
 
     <!-- Inquiry -->
-    <section class="application-section">
+    <section id="start-a-conversation" class="application-section">
       <div class="zen-block-label">Start a Conversation</div>
       <p class="application-intro">If you own land and are thinking about its long-term future, we'd like to hear from you. There's no obligation — just a conversation about what's possible.</p>
 
-      <form class="application-form" name="land-inquiry" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+      <form class="application-form" name="land-inquiry" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/thanks.html">
         <input type="hidden" name="form-name" value="land-inquiry" />
         <p class="hidden"><label>Don't fill this out: <input name="bot-field" /></label></p>
 

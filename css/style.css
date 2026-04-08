@@ -10,8 +10,8 @@
   --rule:      #C8C2BB;
   --warm:      #9C8873;
 
-  --font-display: Helvetica, Arial, sans-serif;
-  --font-body:    'Fragment Mono', monospace;
+  --font-display: 'Fragment Mono', monospace;
+  --font-body:    Helvetica, Arial, sans-serif;
   --font-mono:    'IBM Plex Mono', monospace;
 
   --max:  860px;
@@ -20,7 +20,14 @@
 }
 
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-html { font-size: 15px; scroll-behavior: smooth; }
+html { font-size: 17px; scroll-behavior: smooth; }
+
+/* Offset anchor links for fixed header */
+#vision, #approach, #history, #people,
+#conservation-options, #start-a-conversation,
+#who-we-sponsor, #what-we-offer, #past-projects, #apply {
+  scroll-margin-top: calc(var(--nav-h) + 1rem);
+}
 body {
   font-family: var(--font-body);
   background: var(--bg);
@@ -79,14 +86,6 @@ ul { list-style: none; }
 }
 .nav-links a:hover { color: var(--ink); }
 
-.nav-cta {
-  font-family: var(--font-display) !important;
-  font-size: 0.78rem !important;
-  color: var(--ink) !important;
-  letter-spacing: 0.06em !important;
-  border-bottom: 1px solid var(--ink);
-  padding-bottom: 1px;
-}
 
 .nav-toggle {
   display: none;
@@ -1429,7 +1428,7 @@ a.contact-value:hover { color: var(--warm); border-color: var(--warm); }
 
 .person-row {
   display: grid;
-  grid-template-columns: 120px 1fr;
+  grid-template-columns: 240px 1fr;
   gap: 2rem;
   padding: 2rem 0;
   border-bottom: 1px solid var(--rule);
@@ -1438,8 +1437,8 @@ a.contact-value:hover { color: var(--warm); border-color: var(--warm); }
 .person-row:last-child { border-bottom: none; }
 
 .person-row .person-photo-placeholder {
-  width: 120px;
-  height: 120px;
+  width: 240px;
+  height: 240px;
   background: var(--rule);
   flex-shrink: 0;
   overflow: hidden;
@@ -1501,4 +1500,22 @@ a.contact-value:hover { color: var(--warm); border-color: var(--warm); }
 }
 .video-thumb-link:hover .video-play-icon {
   color: rgba(242,237,230,1);
+}
+
+.page-title-cite {
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--warm);
+  margin-top: 1rem;
+}
+
+/* Smaller h1 for long quote titles */
+.page-title h1.quote-title {
+  font-size: clamp(0.95rem, 1.6vw, 1.25rem) !important;
+  font-weight: 400;
+  line-height: 1.65;
+  letter-spacing: 0;
+  font-style: italic;
 }
