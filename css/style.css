@@ -10,8 +10,8 @@
   --rule:      #C8C2BB;
   --warm:      #9C8873;
 
-  --font-display: 'Fragment Mono', monospace;
-  --font-body:    'IBM Plex Sans', sans-serif;
+  --font-display: Helvetica, Arial, sans-serif;
+  --font-body:    'Fragment Mono', monospace;
   --font-mono:    'IBM Plex Mono', monospace;
 
   --max:  860px;
@@ -20,7 +20,7 @@
 }
 
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-html { font-size: 18px; scroll-behavior: smooth; }
+html { font-size: 15px; scroll-behavior: smooth; }
 body {
   font-family: var(--font-body);
   background: var(--bg);
@@ -150,7 +150,6 @@ main {
   object-fit: cover;
   object-position: center 40%;
   display: block;
-  filter: saturate(0.2) brightness(1.3) contrast(0.88);
 }
 
 .zen-credit {
@@ -170,15 +169,17 @@ main {
 .zen-who {
   padding: clamp(3rem, 7vw, 5rem) 0;
   border-bottom: 1px solid var(--rule);
+  text-align: center;
 }
 
 .zen-who p {
   font-family: var(--font-body);
-  font-size: clamp(1rem, 2vw, 1.2rem);
+  font-size: clamp(1rem, 1.8vw, 1.2rem);
   font-weight: 300;
   color: var(--ink);
   line-height: 1.75;
   max-width: 58ch;
+  margin: 0 auto;
 }
 
 .zen-who a {
@@ -214,6 +215,26 @@ main {
   color: var(--mid);
   line-height: 1.8;
   margin-bottom: 1rem;
+}
+
+.zen-block-thumb {
+  margin-bottom: 1rem;
+}
+.zen-block-thumb img {
+  width: 220px;
+  height: 140px;
+  object-fit: cover;
+  object-position: center;
+  border: 1px solid var(--rule);
+  display: block;
+}
+.zen-block-thumb span {
+  display: block;
+  font-family: var(--font-mono);
+  font-size: 0.58rem;
+  color: var(--mid);
+  letter-spacing: 0.06em;
+  margin-top: 0.35rem;
 }
 
 .zen-block-body a {
@@ -376,3 +397,452 @@ main {
 @media (max-width: 400px) {
   .footer-nav { grid-template-columns: 1fr; }
 }
+
+/* =============================================
+   INNER PAGES — shared
+   ============================================= */
+.page-title {
+  padding: clamp(3.5rem, 8vw, 6rem) 0 clamp(2rem, 5vw, 3.5rem);
+  border-bottom: 1px solid var(--ink);
+}
+
+.page-label {
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--warm);
+  margin-bottom: 1rem;
+}
+
+.page-title h1 {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 5vw, 3.8rem);
+  font-weight: 400;
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+  color: var(--ink);
+}
+
+.prose-section {
+  padding: clamp(2rem, 5vw, 3.5rem) 0;
+  border-bottom: 1px solid var(--rule);
+}
+
+.prose-section p {
+  font-size: 0.95rem;
+  font-weight: 300;
+  color: var(--ink);
+  line-height: 1.8;
+  max-width: 58ch;
+  margin-bottom: 1rem;
+}
+.prose-section p:last-child { margin-bottom: 0; }
+
+.divider {
+  border: none;
+  border-top: 1px solid var(--rule);
+  margin: 0;
+}
+
+.nav-active {
+  color: var(--ink) !important;
+  border-bottom: 1px solid var(--ink);
+  padding-bottom: 1px;
+}
+
+/* =============================================
+   PROSE LIST
+   ============================================= */
+.prose-list {
+  list-style: none;
+  margin: 0.75rem 0 1rem;
+}
+
+.prose-list li {
+  font-size: 0.9rem;
+  font-weight: 300;
+  color: var(--mid);
+  line-height: 1.75;
+  padding: 0.4rem 0;
+  border-bottom: 1px solid var(--rule);
+  padding-left: 1rem;
+  position: relative;
+}
+.prose-list li::before {
+  content: '—';
+  position: absolute;
+  left: 0;
+  color: var(--warm);
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+}
+.prose-list li:last-child { border-bottom: none; }
+.prose-list li strong { color: var(--ink); font-weight: 400; }
+
+/* =============================================
+   PROJECT LIST
+   ============================================= */
+.project-list {
+  list-style: none;
+}
+
+.project-list li {
+  display: grid;
+  grid-template-columns: 220px 1fr;
+  gap: 1.5rem;
+  padding: 0.9rem 0;
+  border-bottom: 1px solid var(--rule);
+  align-items: baseline;
+}
+.project-list li:last-child { border-bottom: none; }
+
+.project-name {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--ink);
+  letter-spacing: 0.02em;
+}
+
+.project-desc {
+  font-size: 0.87rem;
+  font-weight: 300;
+  color: var(--mid);
+  line-height: 1.6;
+}
+
+/* =============================================
+   APPLICATION FORM
+   ============================================= */
+.application-section {
+  padding: clamp(2.5rem, 6vw, 4rem) 0;
+}
+
+.application-intro {
+  font-size: 0.9rem;
+  font-weight: 300;
+  color: var(--mid);
+  line-height: 1.8;
+  max-width: 54ch;
+  margin: 1.25rem 0 2.5rem;
+}
+
+.application-form {
+  max-width: 600px;
+}
+
+.hidden { display: none; }
+
+.field-group {
+  margin-bottom: 1.75rem;
+}
+
+.field-group label {
+  display: block;
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--ink);
+  margin-bottom: 0.5rem;
+}
+
+.required {
+  color: var(--warm);
+}
+
+.field-group input[type="text"],
+.field-group input[type="email"],
+.field-group input[type="url"],
+.field-group textarea {
+  width: 100%;
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid var(--ink);
+  color: var(--ink);
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  font-weight: 300;
+  padding: 0.5rem 0;
+  outline: none;
+  transition: border-color 0.15s;
+  border-radius: 0;
+  -webkit-appearance: none;
+}
+
+.field-group textarea {
+  resize: vertical;
+  min-height: 80px;
+  line-height: 1.6;
+}
+
+.field-group input::placeholder,
+.field-group textarea::placeholder {
+  color: var(--rule);
+}
+
+.field-group input:focus,
+.field-group textarea:focus {
+  border-color: var(--warm);
+}
+
+.form-submit {
+  font-family: var(--font-display);
+  font-size: 0.9rem;
+  color: var(--bg);
+  background: var(--ink);
+  border: 1px solid var(--ink);
+  padding: 0.85rem 2rem;
+  cursor: pointer;
+  letter-spacing: 0.02em;
+  transition: background 0.15s, color 0.15s;
+  margin-top: 0.5rem;
+}
+.form-submit:hover {
+  background: transparent;
+  color: var(--ink);
+}
+
+/* =============================================
+   TWO-COL BLOCKS — fiscal sponsorship
+   ============================================= */
+.two-col-blocks {
+  display: grid;
+  grid-template-columns: 1fr 1px 1fr;
+  gap: 0 clamp(2rem, 4vw, 3.5rem);
+  padding: clamp(2rem, 5vw, 3.5rem) 0;
+  align-items: start;
+}
+
+.two-col-divider {
+  background: var(--rule);
+  align-self: stretch;
+}
+
+.two-col-block .zen-block-label {
+  margin-bottom: 1rem;
+}
+
+.two-col-block p {
+  font-size: 0.9rem;
+  font-weight: 300;
+  color: var(--mid);
+  line-height: 1.75;
+  margin-bottom: 0.75rem;
+}
+.two-col-block p strong { color: var(--ink); font-weight: 400; }
+
+.col-note {
+  margin-top: 0.5rem;
+  font-size: 0.82rem !important;
+  color: var(--warm) !important;
+  font-style: italic;
+}
+
+@media (max-width: 720px) {
+  .two-col-blocks {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+  .two-col-divider {
+    display: none;
+  }
+}
+
+.inline-link {
+  color: var(--ink);
+  border-bottom: 1px solid var(--ink);
+  padding-bottom: 1px;
+  transition: border-color 0.15s, color 0.15s;
+}
+.inline-link:hover { color: var(--warm); border-color: var(--warm); }
+
+/* =============================================
+   LAND CONSERVATION PAGE
+   ============================================= */
+.species-table {
+  list-style: none;
+  margin: 1.25rem 0;
+  border-top: 1px solid var(--rule-dk);
+}
+.species-table li {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  padding: 0.5rem 0;
+  border-bottom: 1px solid var(--rule);
+  font-size: 0.88rem;
+}
+.species-table li span { color: var(--ink); }
+.species-table li em {
+  font-style: normal;
+  font-family: var(--font-mono);
+  font-size: 0.62rem;
+  color: var(--warm);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.lc-options-header {
+  padding: clamp(2rem, 5vw, 3.5rem) 0 0;
+}
+.lc-options-intro {
+  font-size: 0.92rem;
+  font-weight: 300;
+  color: var(--mid);
+  line-height: 1.75;
+  max-width: 58ch;
+  margin-top: 0.75rem;
+}
+
+.three-col-blocks {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0;
+  border-top: 1px solid var(--rule);
+  margin-bottom: 0;
+  padding-bottom: clamp(2rem, 5vw, 3.5rem);
+}
+
+.three-col-block {
+  padding: 2rem 2rem 2rem 0;
+  border-right: 1px solid var(--rule);
+}
+.three-col-block:last-child { border-right: none; padding-right: 0; }
+.three-col-block:not(:first-child) { padding-left: 2rem; }
+
+.three-col-block h3 {
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+  font-weight: 400;
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+  color: var(--ink);
+  margin-bottom: 1rem;
+}
+
+.three-col-block p {
+  font-size: 0.88rem;
+  font-weight: 300;
+  color: var(--mid);
+  line-height: 1.8;
+  margin-bottom: 0.75rem;
+}
+
+@media (max-width: 800px) {
+  .three-col-blocks { grid-template-columns: 1fr; }
+  .three-col-block {
+    border-right: none;
+    border-bottom: 1px solid var(--rule);
+    padding: 1.75rem 0;
+  }
+  .three-col-block:not(:first-child) { padding-left: 0; }
+  .three-col-block:last-child { border-bottom: none; }
+}
+
+/* =============================================
+   ELK CREEK PAGE
+   ============================================= */
+.location-strip {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  border-bottom: 1px solid var(--ink);
+}
+
+.location-item {
+  display: flex;
+  flex-direction: column;
+  padding: 1.6rem 2rem 1.6rem 0;
+  border-right: 1px solid var(--rule);
+  padding-left: 0;
+  gap: 0.4rem;
+}
+.location-item:first-child { padding-left: 0; }
+.location-item:last-child { border-right: none; }
+
+.location-label {
+  font-family: var(--font-mono);
+  font-size: 0.6rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--warm);
+}
+
+.location-value {
+  font-size: 0.9rem;
+  font-weight: 300;
+  color: var(--ink);
+  line-height: 1.4;
+}
+
+.elk-image {
+  padding: 0;
+}
+.elk-image img {
+  width: 100%;
+  max-height: 480px;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+.photo-credit-line {
+  font-family: var(--font-mono);
+  font-size: 0.6rem;
+  color: var(--mid);
+  letter-spacing: 0.08em;
+  padding: 0.4rem 0;
+  text-align: right;
+  border-bottom: 1px solid var(--rule);
+}
+
+@media (max-width: 640px) {
+  .location-strip {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .location-item {
+    padding: 0.9rem 1rem 0.9rem 0;
+    border-bottom: 1px solid var(--rule);
+  }
+  .location-item:nth-child(2) { border-right: none; }
+  .location-item:nth-child(3), .location-item:nth-child(4) { border-bottom: none; }
+}
+
+/* =============================================
+   ZEN HERO — paragraph overlaid on image
+   ============================================= */
+.zen-hero {
+  position: relative;
+  border-bottom: 1px solid var(--ink);
+}
+
+.zen-hero img {
+  width: 100%;
+  max-height: 480px;
+  object-fit: cover;
+  object-position: center 40%;
+  display: block;
+}
+
+.zen-hero-overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: clamp(2rem, 5vw, 4rem);
+}
+
+.zen-hero-overlay p {
+  font-size: clamp(1rem, 1.8vw, 1.3rem);
+  font-weight: 400;
+  color: var(--ink);
+  line-height: 1.7;
+  text-align: center;
+  max-width: 52ch;
+}
+
+.zen-hero-overlay a {
+  border-bottom: 1px solid var(--ink);
+  transition: color 0.15s, border-color 0.15s;
+}
+.zen-hero-overlay a:hover { color: var(--warm); border-color: var(--warm); }
