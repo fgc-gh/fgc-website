@@ -6,12 +6,12 @@
 :root {
   --bg:        #F2EDE6;
   --ink:       #171412;
-  --mid:       #706B65;
+  --mid:       #171412;   /* full black — body text */
   --rule:      #C8C2BB;
   --warm:      #9C8873;
 
   --font-display: 'Fragment Mono', monospace;
-  --font-body:    Helvetica, Arial, sans-serif;
+  --font-body:    'Lucida Sans', 'Lucida Grande', 'Lucida Sans Unicode', sans-serif;
   --font-mono:    'IBM Plex Mono', monospace;
 
   --max:  860px;
