@@ -80,7 +80,7 @@ ul { list-style: none; }
   flex-shrink: 0;
 }
 .nav-logo img {
-  height: 88px;
+  height: 112px;
   width: auto;
   display: block;
   filter: grayscale(0%) invert(1) brightness(0.9);
@@ -156,7 +156,7 @@ main { margin-top: var(--nav-h); }
 }
 .zen-hero-text p {
   font-family: var(--font-display);
-  font-size: clamp(1.4rem, 2.8vw, 2.2rem);
+  font-size: clamp(1.15rem, 2.2vw, 1.75rem);
   font-weight: 800;
   color: var(--chalk);
   line-height: 1.15;
@@ -185,8 +185,7 @@ main { margin-top: var(--nav-h); }
   object-fit: cover;
   object-position: center 35%;
   display: block;
-  filter: grayscale(100%) contrast(1.05);
-  mix-blend-mode: multiply;
+  filter: grayscale(100%);
 }
 
 /* =============================================
@@ -209,7 +208,7 @@ main { margin-top: var(--nav-h); }
 }
 .zen-who p {
   font-family: var(--font-display);
-  font-size: clamp(1.5rem, 3.5vw, 2.6rem);
+  font-size: clamp(1.2rem, 2.8vw, 2rem);
   font-weight: 800;
   color: var(--chalk);
   line-height: 1.1;
@@ -327,7 +326,7 @@ main { margin-top: var(--nav-h); }
 }
 .zen-quote blockquote {
   font-family: var(--font-display);
-  font-size: clamp(1.3rem, 2.8vw, 2rem);
+  font-size: clamp(1.1rem, 2.2vw, 1.6rem);
   font-weight: 700;
   font-style: normal;
   color: var(--chalk);
@@ -358,7 +357,7 @@ main { margin-top: var(--nav-h); }
 }
 .zen-donate a {
   font-family: var(--font-display);
-  font-size: clamp(1.8rem, 4vw, 3.2rem);
+  font-size: clamp(1.4rem, 3vw, 2.4rem);
   font-weight: 800;
   font-style: normal;
   color: var(--soot);
@@ -394,7 +393,7 @@ main { margin-top: var(--nav-h); }
 
 .page-title h1 {
   font-family: var(--font-display);
-  font-size: clamp(2.5rem, 6.5vw, 5.5rem);
+  font-size: clamp(2rem, 5vw, 4rem);
   font-weight: 800;
   line-height: 0.95;
   letter-spacing: -0.03em;
@@ -451,7 +450,7 @@ main { margin-top: var(--nav-h); }
 .page-nav a:hover { background: var(--wet); color: var(--chalk); }
 
 /* Anchor scroll offset */
-#vision, #approach, #history, #people,
+#vision, #approach, #theory, #history, #people,
 #conservation-options, #start-a-conversation,
 #who-we-sponsor, #what-we-offer, #past-projects, #apply {
   scroll-margin-top: calc(var(--nav-h) + 1rem);
@@ -922,7 +921,7 @@ a.contact-value:hover { color: var(--rust); border-color: var(--rust); }
 .thanks-eyebrow { font-family: var(--font-mono); font-size: 0.62rem; letter-spacing: 0.16em; text-transform: uppercase; color: var(--rust); margin-bottom: 1rem; }
 .thanks-section h1 {
   font-family: var(--font-display);
-  font-size: clamp(3rem, 8vw, 6rem);
+  font-size: clamp(2.2rem, 6vw, 4.5rem);
   font-weight: 400;
   font-style: italic;
   line-height: 1.0;
@@ -1032,11 +1031,4 @@ a.contact-value:hover { color: var(--rust); border-color: var(--rust); }
   .video-grid { grid-template-columns: 1fr; }
   .page-nav a { padding: 0.6rem 1rem; font-size: 0.58rem; }
   .page-nav a:first-child { padding-left: var(--pad); }
-}
-
-/* =============================================
-   BLACK AND WHITE — all images
-   ============================================= */
-img {
-  filter: grayscale(100%);
 }
