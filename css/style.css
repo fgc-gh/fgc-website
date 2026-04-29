@@ -16,9 +16,9 @@
   --soot:       #0F0E0C;   /* near black — mass */
   --membrane:   #C8BDB0;   /* light rule */
 
-  --font-display: 'Space Grotesk', sans-serif;
-  --font-body:    'JetBrains Mono', monospace;
-  --font-mono:    'JetBrains Mono', monospace;
+  --font-display: Georgia, 'Times New Roman', serif;
+  --font-body:    'Lucida Sans', 'Lucida Grande', 'Lucida Sans Unicode', sans-serif;
+  --font-mono:    'IBM Plex Mono', 'Courier New', monospace;
 
   --max:    1100px;
   --pad:    clamp(1.75rem, 5vw, 4rem);
@@ -31,7 +31,7 @@
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
 html {
-  font-size: 18px;
+  font-size: 16px;
   scroll-behavior: smooth;
 }
 
@@ -47,7 +47,7 @@ body {
 img {
   display: block;
   max-width: 100%;
-  filter: grayscale(100%);
+  filter: saturate(0.55) brightness(0.97);
 }
 
 a { color: inherit; text-decoration: none; }
@@ -80,7 +80,7 @@ ul { list-style: none; }
   flex-shrink: 0;
 }
 .nav-logo img {
-  height: 112px;
+  height: 132px;
   width: auto;
   display: block;
   filter: grayscale(0%) invert(1) brightness(0.9);
@@ -161,7 +161,6 @@ main { margin-top: var(--nav-h); }
   color: var(--chalk);
   line-height: 1.15;
   letter-spacing: -0.03em;
-  text-transform: uppercase;
   flex: 1;
   display: flex;
   align-items: center;
@@ -185,7 +184,7 @@ main { margin-top: var(--nav-h); }
   object-fit: cover;
   object-position: center 35%;
   display: block;
-  filter: grayscale(100%);
+  filter: saturate(0.55) brightness(0.97);
 }
 
 /* =============================================
@@ -213,7 +212,7 @@ main { margin-top: var(--nav-h); }
   color: var(--chalk);
   line-height: 1.1;
   letter-spacing: -0.03em;
-  text-transform: uppercase;
+
   max-width: 18ch;
   margin: 0;
 }
@@ -234,7 +233,7 @@ main { margin-top: var(--nav-h); }
   object-position: center 35%;
   display: block;
   mix-blend-mode: multiply;
-  filter: grayscale(100%) contrast(1.1);
+  filter: saturate(0.55) contrast(1.05);
   background: var(--wet);
 }
 .zen-credit {
@@ -335,7 +334,7 @@ main { margin-top: var(--nav-h); }
   border-left: 4px solid var(--rust);
   padding-left: 1.5rem;
   letter-spacing: -0.02em;
-  text-transform: uppercase;
+
 }
 .zen-quote cite {
   display: block;
@@ -367,7 +366,7 @@ main { margin-top: var(--nav-h); }
   transition: color 0.2s, border-color 0.2s;
   line-height: 1.0;
   letter-spacing: -0.03em;
-  text-transform: uppercase;
+
 }
 .zen-donate a:hover { color: var(--rust); border-color: var(--rust); }
 
@@ -398,7 +397,6 @@ main { margin-top: var(--nav-h); }
   line-height: 0.95;
   letter-spacing: -0.03em;
   color: var(--soot);
-  text-transform: uppercase;
   max-width: var(--max);
   margin: 0 auto;
   padding: 0 var(--pad);
@@ -836,7 +834,7 @@ a.contact-value:hover { color: var(--rust); border-color: var(--rust); }
 }
 .location-value { font-size: 0.92rem; color: var(--chalk); line-height: 1.5; font-style: italic; }
 .elk-image { border-bottom: 3px solid var(--soot); }
-.elk-image img { width: 100%; max-height: 520px; object-fit: cover; display: block; filter: grayscale(100%) contrast(1.05); }
+.elk-image img { width: 100%; max-height: 520px; object-fit: cover; display: block; filter: saturate(0.55) contrast(1.02); }
 .photo-credit-line {
   font-family: var(--font-mono);
   font-size: 0.58rem;
@@ -1031,4 +1029,81 @@ a.contact-value:hover { color: var(--rust); border-color: var(--rust); }
   .video-grid { grid-template-columns: 1fr; }
   .page-nav a { padding: 0.6rem 1rem; font-size: 0.58rem; }
   .page-nav a:first-child { padding-left: var(--pad); }
+}
+
+/* Defend page anchors */
+#why, #how, #cdi, #current, #involved {
+  scroll-margin-top: calc(var(--nav-h) + 1rem);
+}
+
+/* =============================================
+   CONSERVATION OPTION BOXES
+   ============================================= */
+.conservation-boxes {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  padding: clamp(2rem, 4vw, 3rem) var(--pad);
+  max-width: var(--max);
+  margin: 0 auto;
+}
+
+.conservation-box {
+  padding: 2rem 1.75rem;
+  border-top: 4px solid transparent;
+}
+
+.conservation-box h3 {
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: 1.3rem;
+  font-weight: 400;
+  color: var(--soot);
+  margin-bottom: 0.85rem;
+  line-height: 1.2;
+}
+
+.conservation-box p {
+  font-size: 0.88rem;
+  color: var(--soot);
+  line-height: 1.8;
+  margin-bottom: 0.6rem;
+}
+
+.box-note {
+  font-family: var(--font-mono);
+  font-size: 0.62rem !important;
+  letter-spacing: 0.08em;
+  opacity: 0.7;
+  margin-top: 0.75rem;
+}
+
+.conservation-box--easement {
+  background: #E8EDE8;
+  border-top-color: #7A9E7E;
+}
+
+.conservation-box--donation {
+  background: #EDE8E0;
+  border-top-color: var(--rust);
+}
+
+.conservation-box--bequest {
+  background: #E5E8ED;
+  border-top-color: #6B85A0;
+}
+
+@media (max-width: 760px) {
+  .conservation-boxes { grid-template-columns: 1fr; }
+}
+
+/* =============================================
+   START A CONVERSATION TITLE
+   ============================================= */
+.conversation-title {
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: clamp(1.8rem, 3.5vw, 2.8rem);
+  font-weight: 400;
+  color: var(--soot);
+  line-height: 1.1;
+  margin-bottom: 1rem;
 }

@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Land Conservation — Fertile Ground Conservancy</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <header class="nav">
+    <div class="nav-main">
+      <a href="/" class="nav-logo"><img src="images/fgclogo.svg" alt="Fertile Ground Conservancy" /></a>
+      <ul class="nav-links">
+        <li><a href="defend.html">Defend</a></li>
+        <li><a href="sponsor.html">Sponsor</a></li>
+        <li><a href="steward.html" class="nav-active">Steward</a></li>
+        <li><a href="our-story.html">Story</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="donate.html">Give</a></li>
+      </ul>
+      <button class="nav-toggle" aria-label="Toggle menu">&#9776;</button>
+    </div>
+    <div class="nav-sub-bar">
+      <span>Cascadia — Est. 2009</span>
+      <span>Defend · Sponsor · Steward</span>
+    </div>
+  </header>
+
+  <main>
+
+    <section class="page-title">
+      <h1 class="quote-title">"Every species lost is an evolutionary experiment ended — a door that took four billion years to open, closed in a generation. We exist to keep as many of those doors open as possible."</h1>
+      <p class="page-title-cite">Dillon Thomson — Executive Director</p>
+    </section>
+
+    <section class="prose-section">
+      <p>Land stewardship is one of three ways FGC works to defend the living world — alongside <a href="defend.html" class="inline-link">ecodefense</a> and <a href="sponsor.html" class="inline-link">fiscal sponsorship</a>. This page is about the land we hold and how it gets there.</p>
+      <p>Industrial civilization does not pause. Species do not wait. Every acre that remains intact is an acre where evolutionary time can continue uninterrupted — where salmon can still find cold gravel, where old-growth forest can still shelter the creatures that depend on it, where native plants can still hold the hillside they have inhabited for centuries.</p>
+      <p>We work with landowners, Tribes, and communities across Cascadia to permanently protect land through conservation easements, outright donation, and direct stewardship. Our approach is rooted in a <a href="biocentric.html" class="inline-link">biocentric</a> ethic: we hold land not as owners but as participants in communities of life that predate and will outlast us — if we let them.</p>
+    </section>
+
+    <hr class="divider" />
+
+    <!-- Current stewardship -->
+    <section class="zen-block">
+      <div class="zen-block-label">Current Stewardship</div>
+      <div class="zen-block-body">
+        <p>Our first stewarded parcel is 15 acres in the <a href="steward/elk-creek.html" class="inline-link">Elk Creek watershed</a>, Del Norte County, California — old-growth redwood country where the Klamath Mountains meet the Pacific.</p>
+        <div class="zen-block-thumb">
+          <img src="images/elk-creek-aerial.png" alt="Aerial view of Elk Creek watershed" />
+          <span>Elk Creek watershed · Photo: Justin Garwood</span>
+        </div>
+        <ul class="species-table">
+          <li><span>Coho salmon</span><em>endangered</em></li>
+          <li><span>Northern Spotted Owl</span><em>threatened</em></li>
+          <li><span>Port Orford cedar</span><em></em></li>
+          <li><span>Pacific Giant salamander</span><em></em></li>
+          <li><span>Roosevelt elk</span><em></em></li>
+          <li><span>Cougar · Black bear</span><em></em></li>
+        </ul>
+        <a href="steward/elk-creek.html" class="text-link">Read more about Elk Creek →</a>
+      </div>
+    </section>
+
+    <hr class="divider" />
+
+    <!-- Conservation options — side by side -->
+    <section id="conservation-options" class="lc-options-header">
+      <div class="zen-block-label">Conservation Options</div>
+      <p class="lc-options-intro">There is no single right path to protecting land. We work with you to find the approach that fits your situation, your goals, and your relationship to the land you steward.</p>
+    </section>
+
+    <section class="conservation-boxes">
+
+      <div class="conservation-box conservation-box--easement">
+        <h3>Conservation Easement</h3>
+        <p>A legal agreement between you and FGC that permanently limits certain uses or development on your land while you retain ownership. Terms are negotiated to reflect what you want protected and how you want to use the land going forward. Once established, FGC monitors and enforces the easement in perpetuity.</p>
+        <p class="box-note">Most common option. You keep the deed.</p>
+      </div>
+
+      <div class="conservation-box conservation-box--donation">
+        <h3>Land Donation</h3>
+        <p>You transfer ownership of your land to Fertile Ground Conservancy outright. The land is permanently protected and managed by FGC for conservation purposes. This option may carry significant tax benefits and ensures the land is actively stewarded rather than simply restricted.</p>
+        <p class="box-note">Immediate and permanent. May qualify for tax deduction.</p>
+      </div>
+
+      <div class="conservation-box conservation-box--bequest">
+        <h3>Bequest</h3>
+        <p>You include a provision in your will or estate plan to leave your land to Fertile Ground Conservancy upon your death. You retain full ownership and use during your lifetime. This is a powerful way to ensure the land you love is protected for the long term without giving anything up now.</p>
+        <p class="box-note">Retain use for your lifetime. Plan for what comes after.</p>
+      </div>
+
+    </section>
+
+    <hr class="divider" />
+
+    <!-- Inquiry -->
+    <section id="start-a-conversation" class="application-section">
+      <h2 class="conversation-title">Start a Conversation</h2>
+      <p class="application-intro">If you own land and are thinking about its long-term future, we'd like to hear from you. There's no obligation — just a conversation about what's possible.</p>
+
+      <form class="application-form" name="land-inquiry" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/thanks.html">
+        <input type="hidden" name="form-name" value="land-inquiry" />
+        <p class="hidden"><label>Don't fill this out: <input name="bot-field" /></label></p>
+
+        <div class="field-group">
+          <label for="name">Your name <span class="required">*</span></label>
+          <input type="text" id="name" name="name" required />
+        </div>
+
+        <div class="field-group">
+          <label for="email">Email address <span class="required">*</span></label>
+          <input type="email" id="email" name="email" required />
+        </div>
+
+        <div class="field-group">
+          <label for="phone">Phone number</label>
+          <input type="tel" id="phone" name="phone" />
+        </div>
+
+        <div class="field-group">
+          <label for="location">Where is your land located? <span class="required">*</span></label>
+          <input type="text" id="location" name="location" placeholder="County, state" required />
+        </div>
+
+        <div class="field-group">
+          <label for="acres">Approximate acreage</label>
+          <input type="text" id="acres" name="acres" placeholder="e.g. 40 acres" />
+        </div>
+
+        <div class="field-group">
+          <label for="description">Tell us about the land and what you're hoping to protect <span class="required">*</span></label>
+          <textarea id="description" name="description" rows="5" required placeholder="Habitat, features, history, your goals..."></textarea>
+        </div>
+
+        <div class="field-group">
+          <label for="timeline">Any timeline considerations?</label>
+          <textarea id="timeline" name="timeline" rows="3" placeholder="Estate planning, development pressure, other factors..."></textarea>
+        </div>
+
+        <button type="submit" class="form-submit">Send inquiry →</button>
+      </form>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <img src="images/fgclogo.svg" alt="Fertile Ground Conservancy" class="footer-logo-img" />
+        <p class="footer-sub">501(c)(3) nonprofit · EIN: 27-1194001</p>
+        <p class="footer-sub land-ack">Land acknowledgment: We operate on the unceded territories of the Tolowa, Yurok, Karuk, and other Indigenous peoples of the Pacific Coast.</p>
+      </div>
+      <nav class="footer-nav">
+        <div class="footer-col">
+          <p class="footer-col-label">Work</p>
+          <a href="defend.html">Ecodefense</a>
+          <a href="sponsor.html">Sponsorship</a>
+          <a href="steward.html" class="nav-active">Stewardship</a>
+        </div>
+        <div class="footer-col">
+          <p class="footer-col-label">Organization</p>
+          <a href="our-story.html">Our Story</a>
+          <a href="our-story.html#vision">Vision</a>
+          <a href="our-story.html#people">People</a>
+        </div>
+        <div class="footer-col">
+          <p class="footer-col-label">Connect</p>
+          <a href="donate.html">Donate</a>
+          <a href="contact.html">Contact</a>
+        </div>
+      </nav>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 Fertile Ground Conservancy. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
