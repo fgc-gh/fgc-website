@@ -43,21 +43,10 @@
         <p>We are a 501(c)(3) nonprofit. All donations are tax-deductible to the extent permitted by law. EIN: 27-1194001.</p>
       </div>
       <div class="donate-intro-button">
-        <div id="donate-button-container">
-          <div id="donate-button"></div>
-          <script src="https://www.paypalobjects.com/donate/sdk/donate-sdk.js" charset="UTF-8"></script>
-          <script>
-            PayPal.Donation.Button({
-              env:'production',
-              hosted_button_id:'549XRUP6DR2YS',
-              image: {
-                src:'https://pics.paypal.com/00/s/OGNiNmViYTItMmRmYi00ZmM0LWI0MDMtNDEzOTdlYTljYzRm/file.PNG',
-                alt:'Donate with PayPal button',
-                title:'PayPal - The safer, easier way to pay online!',
-              }
-            }).render('#donate-button');
-          </script>
-        </div>
+        <form action="https://www.paypal.com/donate" method="post" target="_top">
+          <input type="hidden" name="hosted_button_id" value="549XRUP6DR2YS" />
+          <button type="submit" class="donate-btn">Donate via PayPal</button>
+        </form>
       </div>
     </section>
 
