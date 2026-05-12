@@ -16,7 +16,7 @@
   --soot:       #0F0E0C;   /* near black — mass */
   --membrane:   #C8BDB0;   /* light rule */
 
-  --font-display: Georgia, 'Times New Roman', serif;
+  --font-display: 'DM Sans', system-ui, sans-serif;
   --font-body:    'Lucida Sans', 'Lucida Grande', 'Lucida Sans Unicode', sans-serif;
   --font-mono:    'IBM Plex Mono', 'Courier New', monospace;
 
@@ -157,7 +157,7 @@ main { margin-top: var(--nav-h); }
 .zen-hero-text p {
   font-family: var(--font-display);
   font-size: clamp(1.15rem, 2.2vw, 1.75rem);
-  font-weight: 800;
+  font-weight: 400;
   color: var(--chalk);
   line-height: 1.15;
   letter-spacing: -0.03em;
@@ -208,7 +208,7 @@ main { margin-top: var(--nav-h); }
 .zen-who p {
   font-family: var(--font-display);
   font-size: clamp(1.2rem, 2.8vw, 2rem);
-  font-weight: 800;
+  font-weight: 400;
   color: var(--chalk);
   line-height: 1.1;
   letter-spacing: -0.03em;
@@ -326,7 +326,7 @@ main { margin-top: var(--nav-h); }
 .zen-quote blockquote {
   font-family: var(--font-display);
   font-size: clamp(1.1rem, 2.2vw, 1.6rem);
-  font-weight: 700;
+  font-weight: 400;
   font-style: normal;
   color: var(--chalk);
   line-height: 1.2;
@@ -357,7 +357,7 @@ main { margin-top: var(--nav-h); }
 .zen-donate a {
   font-family: var(--font-display);
   font-size: clamp(1.4rem, 3vw, 2.4rem);
-  font-weight: 800;
+  font-weight: 400;
   font-style: normal;
   color: var(--soot);
   border-bottom: 3px solid var(--soot);
