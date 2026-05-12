@@ -1107,3 +1107,22 @@ a.contact-value:hover { color: var(--rust); border-color: var(--rust); }
   line-height: 1.1;
   margin-bottom: 1rem;
 }
+
+/* =============================================
+   DONATE BUTTON
+   ============================================= */
+.donate-btn {
+  display: block;
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  color: var(--chalk);
+  background: var(--soot);
+  border: none;
+  padding: 1rem 2rem;
+  cursor: pointer;
+  transition: background 0.2s;
+  white-space: nowrap;
+}
+.donate-btn:hover { background: var(--rust); }
