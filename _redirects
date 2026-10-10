@@ -1,3 +1,13 @@
-/land-conservation       /steward            301
-/fiscal-sponsorship      /sponsor            301
-/elk-creek               /steward/elk-creek  301
+# Old URLs from earlier versions of the site
+/defend                   /campaigns.html  301
+/defend.html              /campaigns.html  301
+/steward                  /land.html       301
+/steward.html             /land.html       301
+/steward/elk-creek        /land.html       301
+/steward/elk-creek.html   /land.html       301
+/elk-creek                /land.html       301
+/elk-creek.html           /land.html       301
+/land-conservation        /land.html       301
+/land-conservation.html   /land.html       301
+/fiscal-sponsorship       /sponsor.html    301
+/fiscal-sponsorship.html  /sponsor.html    301
