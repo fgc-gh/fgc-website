@@ -4,19 +4,81 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>What is biocentrism? · Fertile Ground Conservancy</title>
-  <meta name="description" content="Biocentrism starts from the view that the living world matters on its own terms. What that means, and what it means for Fertile Ground Conservancy." />
-  <meta name="theme-color" content="#F4F1EA" />
-  <link rel="icon" href="images/fgclogo.svg" type="image/svg+xml" />
+  <meta name="description" content="Biocentrism means the living world matters for its own sake. A plain summary, the full essay, and further reading." />
+  <meta name="theme-color" content="#FAF7EF" />
+  <link rel="icon" href="/images/fgclogo.svg" type="image/svg+xml" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&display=swap" />
-  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Next:ital,wght@0,400;0,700;1,400&display=swap" />
+  <link rel="stylesheet" href="/css/style.css" />
 </head>
 <body>
 <a class="skip" href="#main">Skip to main content</a>
 
+<div class="utility wrap">
+  <div class="inner">
+    <a href="/accessibility.html">Accessibility</a>
+    <button class="settings-toggle" id="settingsToggle" type="button" aria-expanded="false" aria-controls="settings" hidden>
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 7h10M18 7h2M4 17h4M12 17h8"/><circle cx="16" cy="7" r="2.2"/><circle cx="10" cy="17" r="2.2"/></svg>
+      Display settings</button>
+  </div>
+</div>
+
+<section class="settings wrap" id="settings" aria-labelledby="h-settings" hidden>
+  <div class="inner">
+    <h2 id="h-settings">Display settings</h2>
+    <p class="help">Change how this site looks for you. Changes apply right away and are remembered on this device.</p>
+    <div class="groups">
+      <fieldset>
+        <legend>Text size</legend>
+        <div class="choice">
+          <label><input type="radio" name="display-text" value="" id="display-text-default" checked> Standard</label>
+          <label><input type="radio" name="display-text" value="large" id="display-text-large"> Large</label>
+          <label><input type="radio" name="display-text" value="largest" id="display-text-largest"> Largest</label>
+        </div>
+      </fieldset>
+      <fieldset>
+        <legend>Contrast</legend>
+        <div class="choice">
+          <label><input type="radio" name="display-contrast" value="" id="display-contrast-default" checked> Standard</label>
+          <label><input type="radio" name="display-contrast" value="more" id="display-contrast-more"> High contrast</label>
+        </div>
+      </fieldset>
+      <fieldset>
+        <legend>Light or dark</legend>
+        <div class="choice">
+          <label><input type="radio" name="display-theme" value="" id="display-theme-default" checked> Match my device</label>
+          <label><input type="radio" name="display-theme" value="light" id="display-theme-light"> Light</label>
+          <label><input type="radio" name="display-theme" value="dark" id="display-theme-dark"> Dark</label>
+        </div>
+      </fieldset>
+      <fieldset>
+        <legend>Spacing</legend>
+        <div class="choice">
+          <label><input type="radio" name="display-spacing" value="" id="display-spacing-default" checked> Standard</label>
+          <label><input type="radio" name="display-spacing" value="roomy" id="display-spacing-roomy"> Extra space between letters and lines</label>
+        </div>
+      </fieldset>
+      <fieldset>
+        <legend>Motion</legend>
+        <div class="choice">
+          <label><input type="radio" name="display-motion" value="" id="display-motion-default" checked> Match my device</label>
+          <label><input type="radio" name="display-motion" value="reduce" id="display-motion-reduce"> No animation</label>
+        </div>
+      </fieldset>
+    </div>
+    <p class="zoom-tip">You can also zoom any page: hold Control (Command on a Mac) and press the plus key.</p>
+    <div class="settings-foot">
+      <button class="btn" type="button" id="resetSettings">Reset to standard</button>
+      <button class="btn" type="button" id="closeSettings">Close settings</button>
+      <span class="saved" id="savedNote" role="status" aria-live="polite"></span>
+    </div>
+  </div>
+</section>
+
 <header class="top wrap">
-  <a class="logo" href="index.html" aria-label="Fertile Ground Conservancy, home"><svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 482.6 264" fill="currentColor">
+  <div class="inner">
+    <a class="logo" href="/index.html" aria-label="Fertile Ground Conservancy, home"><svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 482.6 264" fill="currentColor">
 <style type="text/css">
 	.st0{fill:none;}
 	.st1{fill:none;stroke:currentColor;stroke-width:7;stroke-miterlimit:10;}
@@ -92,94 +154,103 @@
 <g>
 </g>
 </svg></a>
-  <nav class="main" aria-label="Main">
-    <ul>
-      <li><a href="sponsor.html">Sponsorship</a></li>
-      <li><a href="campaigns.html">Campaigns</a></li>
-      <li><a href="projects.html">Projects</a></li>
-      <li><a href="land.html">Land</a></li>
-      <li><a href="contact.html">Contact</a></li>
-      <li><a class="give" href="donate.html">Give</a></li>
-    </ul>
-  </nav>
+    <nav class="main" aria-label="Main">
+      <ul>
+        <li><a href="/index.html">Home</a></li>
+        <li><a href="/sponsor.html">Sponsorship</a></li>
+        <li><a href="/campaigns.html">Campaign help</a></li>
+        <li><a href="/projects.html">Projects</a></li>
+        <li><a href="/land.html">Land</a></li>
+        <li><a href="/our-story.html">About</a></li>
+        <li><a href="/contact.html">Contact</a></li>
+        <li><a class="donate" href="/donate.html">Donate</a></li>
+      </ul>
+    </nav>
+  </div>
 </header>
 
 <main id="main" tabindex="-1">
+  <nav class="crumbs wrap" aria-label="Breadcrumb">
+    <ol class="inner"><li><a href="/index.html">Home</a></li><li><a href="/our-story.html">About us</a></li><li><span aria-current="page">What is biocentrism?</span></li></ol>
+  </nav>
 <section class="hero wrap" aria-labelledby="h-hero">
-    <h1 id="h-hero">What is biocentrism?</h1>
-  </section>
-
-  <section class="wrap" aria-label="Introduction" style="padding-bottom:clamp(56px,8vw,120px)">
-    <div class="split">
-      <div></div>
-      <div class="prose">
-        <p>You have felt it. Standing at the edge of a forest and sensing that something is attending to you. Watching a heron hold perfectly still above moving water: not an absence of mind, but a different kind of presence. Putting your hand in cold running water and feeling, for a moment, that the line between you and the water is less fixed than you assumed.</p>
-        <p>That sensation is not imagination. It is your nervous system recognizing what it shares with other nervous systems. The same electrochemical pulse that fires in a neuron in your brain fires in the lateral line of a fish sensing pressure changes in the current around it. The oxygen in your blood was made by the same photosynthesis running in the trees around you. The water cycling through your cells fell as rain over a watershed that a hundred other species also depend on.</p>
-        <p>Biocentrism is not a philosophy you adopt. It is a perception you stop suppressing. Most people have had it. The culture works hard to explain it away as sentiment, as projection, as the kind of thing that's fine to feel but shouldn't influence decisions. Biocentrism says: let it influence decisions. Let it be the starting point rather than the thing you set aside.</p>
-        <p>What follows from that starting point is not vague reverence. It is a specific ethical position with practical consequences for which land gets protected, how protection is justified, what kinds of ecological work get supported, and what gets refused. If the living world is not separate from you but part of what you are, then harm to it is harm to you. Defending it is not altruism. It is self-preservation, at the scale of what you actually are.</p>
-      </div>
+    <div class="inner">
+      <h1 id="h-hero">What is biocentrism?</h1>
+      <p class="sub">The view behind everything we do</p>
     </div>
   </section>
+  <div class="wrap page-short">
+    <section class="short" aria-labelledby="h-short">
+      <h2 id="h-short">In short</h2>
+      <ul>
+        <li>Biocentrism means the living world matters for its own sake, not only for what it gives people.</li>
+        <li>For us, it means we protect land for the plants and animals that live there.</li>
+        <li>We sponsor projects that share this view, and turn down work that treats nature only as a resource.</li>
+        <li>The full essay below explains this in more depth. It uses more complex language than the rest of the site.</li>
+      </ul>
+    </section>
+  </div>
 
-  <section class="block wrap on-lichen" aria-labelledby="h-means">
-    <div class="split">
-      <h2 class="mid" id="h-means">What it means</h2>
+  <div class="page-body wrap">
+    <div class="inner">
+      <nav class="toc" aria-labelledby="h-toc">
+        <h2 id="h-toc">On this page</h2>
+        <ol>
+          <li><a href="#feel">A perception, not a theory</a></li>
+          <li><a href="#means">What it means</a></li>
+          <li><a href="#us">What it means for us</a></li>
+          <li><a href="#reading">Further reading</a></li>
+        </ol>
+      </nav>
       <div class="prose">
-        <p>The salmon in Elk Creek is not waiting for human beings to decide it has value. It has been returning to this watershed for thousands of years, navigating by magnetic field and chemical memory, finding the tributary where its body was made. Whether or not a conservation organization exists, whether or not a legal instrument protects the creek, the salmon keeps trying. Its life does not depend on our recognition of it.</p>
-        <p>Biocentrism begins there, not with the argument but with the fact. Other beings are engaged in their own lives. Those lives have their own orientation, their own integrity, their own stakes. An old-growth forest is not scenery waiting to be protected. It is a community of relations, between fungi and roots, soil and moisture, canopy and understory, that has been developing for centuries and does not need human oversight to be meaningful.</p>
-        <p>The anthropocentric alternative is not wrong because it is cruel. It is wrong because it is inaccurate. It mistakes a cultural preference, putting the human at the center, for a biological fact, and then builds an entire ethical framework on that mistake. The consequences are what we are living through.</p>
+        <h2 id="feel">A perception, not a theory</h2>
+        <p>You have felt it. Standing at the edge of a forest and sensing that something is paying attention to you. Watching a heron hold perfectly still above moving water: not an absence of mind, but a different kind of presence. Putting your hand in cold running water and feeling, for a moment, that the line between you and the water is less fixed than you thought.</p>
+        <p>That feeling is not imagination. It is your nervous system recognizing what it shares with other nervous systems. The same electrical pulse that fires in a neuron in your brain fires in the lateral line of a fish sensing the current. The oxygen in your blood was made by the same photosynthesis running in the trees around you. The water in your cells fell as rain over a watershed that a hundred other species also depend on.</p>
+        <p>Biocentrism is not a philosophy you adopt. It is a perception you stop suppressing. Most people have had it. Our culture works hard to explain it away as sentiment, or as something fine to feel but not to act on. Biocentrism says: let it guide your decisions. Make it the starting point instead of the thing you set aside.</p>
+        <p>What follows from that starting point is not vague reverence. It is a clear ethical position with practical results: which land gets protected, how we justify protecting it, what work we support, and what we refuse. If the living world is not separate from you but part of what you are, then harm to it is harm to you. Defending it is not charity. It is self-defense, at the scale of what you actually are.</p>
+
+        <h2 id="means">What it means</h2>
+        <p>The salmon in Elk Creek is not waiting for people to decide it has value. It has returned to this watershed for thousands of years, finding its way by magnetic field and chemical memory to the stream where it was born. Whether or not a conservation group exists, whether or not the law protects the creek, the salmon keeps trying. Its life does not depend on our recognizing it.</p>
+        <p>Biocentrism begins there, with that fact. Other beings are living their own lives, with their own direction and their own stakes. An old-growth forest is not scenery waiting to be protected. It is a community of relationships, between fungi and roots, soil and water, canopy and understory, that has grown over centuries and doesn't need human oversight to matter.</p>
+        <p>The human-centered view is not wrong because it is cruel. It is wrong because it is inaccurate. It mistakes a cultural preference, putting people at the center, for a fact of biology, and builds a whole ethic on that mistake. We are living with the results.</p>
+
+        <h2 id="us">What it means for us</h2>
+        <p>For Fertile Ground Conservancy, a biocentric view shapes everything: which land we protect and why, which projects we sponsor, how we talk about conservation, and what we refuse to do.</p>
+        <ul>
+          <li>We don't pursue conservation that trades away ecological health to be politically easier.</li>
+          <li>We don't justify protecting wild land mainly by its value to people, even though that value is real.</li>
+          <li>We don't sponsor projects whose methods treat people as the only beings who matter.</li>
+          <li>We hold land on behalf of the communities of life that live on it.</li>
+        </ul>
+        <p>We don't believe our current economic system will make this shift on its own. Extraction is too profitable and too entrenched. Many proposed solutions, like electric cars, carbon markets, and green energy, change the fuel source but keep the idea that the world is raw material. We aren't interested in making extraction sustainable. We're interested in ending it.</p>
+        <p>This is a demanding standard. We don't always meet it. But it is the standard we hold ourselves to.</p>
       </div>
     </div>
-  </section>
+  </div>
 
-  <section class="block wrap" aria-labelledby="h-us">
-    <div class="split">
-      <h2 class="mid" id="h-us">What it means for us</h2>
-      <div class="prose">
-        <p>For Fertile Ground Conservancy, a biocentric orientation shapes everything: which land we protect and why, which projects we sponsor, how we talk about conservation, and what we refuse to do.</p>
-        <p>We do not pursue conservation that trades ecological integrity for political palatability. We do not frame the protection of wild land mainly in terms of its value to human communities, though that value is real. We do not sponsor projects that, in their methods or assumptions, reproduce the human supremacist logic we are trying to dismantle.</p>
-        <p>We hold land on behalf of the communities of life that inhabit it. We sponsor initiatives that recognize those communities as having standing, not as legal abstractions, but as real participants in the world whose continued existence matters on its own terms.</p>
-        <p>We do not believe the current economic system will make this shift voluntarily. The logic of extraction is too profitable and too entrenched. The technologies offered as solutions, like electric vehicles, carbon markets, and green energy, change the fuel source while keeping the assumption that the world is raw material. We are not interested in making extraction sustainable. We are interested in ending it.</p>
-        <p>This is a demanding standard. We do not always meet it. But it is the standard we hold ourselves to.</p>
-      </div>
-    </div>
-  </section>
-
-  <section class="block wrap on-cobalt" aria-labelledby="h-read">
-    <h2 class="big" id="h-read">Further reading</h2>
-    <ul class="reading">
-      <li><div><cite>Respect for Nature</cite><span class="by">Paul W. Taylor, 1986</span></div><p>The foundational philosophical text on biocentric ethics. Dense but essential.</p></li>
-      <li><div><cite>Braiding Sweetgrass</cite><span class="by">Robin Wall Kimmerer, 2013</span></div><p>Indigenous and scientific ways of knowing woven together into a living ethics of reciprocity.</p></li>
-      <li><div><cite>The Spell of the Sensuous</cite><span class="by">David Abram, 1996</span></div><p>A phenomenological argument for the animate, communicative character of the more-than-human world.</p></li>
-      <li><div><cite>Deep Ecology for the 21st Century</cite><span class="by">George Sessions (ed.), 1995</span></div><p>A broad collection of essays defining and defending a biocentric philosophy of nature.</p></li>
-      <li><div><cite>A Sand County Almanac</cite><span class="by">Aldo Leopold, 1949</span></div><p>The land ethic. Still one of the most important things ever written about our obligations to the living world.</p></li>
-    </ul>
-    <div class="cta-row">
-      <a class="btn" href="contact.html">If this is your frame too, get in touch <span aria-hidden="true">→</span></a>
+  <section class="block wrap on-green" id="reading" aria-labelledby="h-read" tabindex="-1">
+    <div class="inner">
+      <h2 id="h-read">Further reading</h2>
+      <ul class="reading">
+        <li><div><cite>Respect for Nature</cite><span class="by">Paul W. Taylor, 1986</span></div><p>The founding book on biocentric ethics. Dense but essential.</p></li>
+        <li><div><cite>Braiding Sweetgrass</cite><span class="by">Robin Wall Kimmerer, 2013</span></div><p>Indigenous and scientific ways of knowing, woven into an ethic of reciprocity.</p></li>
+        <li><div><cite>The Spell of the Sensuous</cite><span class="by">David Abram, 1996</span></div><p>How the more-than-human world is alive and communicating.</p></li>
+        <li><div><cite>Deep Ecology for the 21st Century</cite><span class="by">George Sessions, editor, 1995</span></div><p>Essays defining and defending a biocentric view of nature.</p></li>
+        <li><div><cite>A Sand County Almanac</cite><span class="by">Aldo Leopold, 1949</span></div><p>The land ethic. Still one of the most important things written about our duties to the living world.</p></li>
+      </ul>
+      <div class="cta-row"><a class="btn primary" href="/contact.html">If this is your view too, get in touch <span aria-hidden="true">→</span></a></div>
     </div>
   </section>
 </main>
 
 <footer class="foot wrap">
-  <nav class="foot-nav" aria-label="Site">
-    <ul>
-      <li><a href="sponsor.html">Sponsorship</a></li>
-      <li><a href="campaigns.html">Campaigns</a></li>
-      <li><a href="projects.html">Projects</a></li>
-      <li><a href="land.html">Land</a></li>
-      <li><a href="our-story.html">About</a></li>
-      <li><a href="biocentric.html" aria-current="page">Biocentrism</a></li>
-      <li><a href="contact.html">Contact</a></li>
-      <li><a href="donate.html">Give</a></li>
-    </ul>
-  </nav>
-  <div class="foot-cols">
-    <p>Fertile Ground Conservancy<br>PO Box 11262<br>Eugene, OR 97440</p>
-    <p>501(c)(3) nonprofit<br>EIN 27-1194001<br>Since 2009</p>
+  <div class="inner">
+    <p>Fertile Ground Conservancy<br>PO Box 11262<br>Eugene, OR 97440<br>info@fertilegroundconservancy.org</p>
+    <p>501(c)(3) nonprofit<br>EIN 27-1194001<br><a href="/accessibility.html">Accessibility statement</a><br><a href="/biocentric.html">What is biocentrism?</a><br><a href="#main">Back to top</a></p>
     <p>We work on the unceded lands of many Indigenous peoples, including the Kalapuya, on whose homelands Eugene sits, and the Tolowa Dee-ni', Yurok, and Karuk of the Pacific Coast.</p>
   </div>
 </footer>
 
-<script src="js/main.js"></script>
+<script src="/js/main.js"></script>
 </body>
 </html>

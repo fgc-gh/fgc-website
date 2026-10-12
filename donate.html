@@ -3,20 +3,82 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Give · Fertile Ground Conservancy</title>
-  <meta name="description" content="Support Fertile Ground Conservancy. Donations are tax-deductible to the extent the law allows. EIN 27-1194001." />
-  <meta name="theme-color" content="#F4F1EA" />
-  <link rel="icon" href="images/fgclogo.svg" type="image/svg+xml" />
+  <title>Donate · Fertile Ground Conservancy</title>
+  <meta name="description" content="Support Fertile Ground Conservancy online, by check, or with stock, a bequest, or land. Gifts are tax-deductible. EIN 27-1194001." />
+  <meta name="theme-color" content="#FAF7EF" />
+  <link rel="icon" href="/images/fgclogo.svg" type="image/svg+xml" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&display=swap" />
-  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Next:ital,wght@0,400;0,700;1,400&display=swap" />
+  <link rel="stylesheet" href="/css/style.css" />
 </head>
 <body>
 <a class="skip" href="#main">Skip to main content</a>
 
+<div class="utility wrap">
+  <div class="inner">
+    <a href="/accessibility.html">Accessibility</a>
+    <button class="settings-toggle" id="settingsToggle" type="button" aria-expanded="false" aria-controls="settings" hidden>
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 7h10M18 7h2M4 17h4M12 17h8"/><circle cx="16" cy="7" r="2.2"/><circle cx="10" cy="17" r="2.2"/></svg>
+      Display settings</button>
+  </div>
+</div>
+
+<section class="settings wrap" id="settings" aria-labelledby="h-settings" hidden>
+  <div class="inner">
+    <h2 id="h-settings">Display settings</h2>
+    <p class="help">Change how this site looks for you. Changes apply right away and are remembered on this device.</p>
+    <div class="groups">
+      <fieldset>
+        <legend>Text size</legend>
+        <div class="choice">
+          <label><input type="radio" name="display-text" value="" id="display-text-default" checked> Standard</label>
+          <label><input type="radio" name="display-text" value="large" id="display-text-large"> Large</label>
+          <label><input type="radio" name="display-text" value="largest" id="display-text-largest"> Largest</label>
+        </div>
+      </fieldset>
+      <fieldset>
+        <legend>Contrast</legend>
+        <div class="choice">
+          <label><input type="radio" name="display-contrast" value="" id="display-contrast-default" checked> Standard</label>
+          <label><input type="radio" name="display-contrast" value="more" id="display-contrast-more"> High contrast</label>
+        </div>
+      </fieldset>
+      <fieldset>
+        <legend>Light or dark</legend>
+        <div class="choice">
+          <label><input type="radio" name="display-theme" value="" id="display-theme-default" checked> Match my device</label>
+          <label><input type="radio" name="display-theme" value="light" id="display-theme-light"> Light</label>
+          <label><input type="radio" name="display-theme" value="dark" id="display-theme-dark"> Dark</label>
+        </div>
+      </fieldset>
+      <fieldset>
+        <legend>Spacing</legend>
+        <div class="choice">
+          <label><input type="radio" name="display-spacing" value="" id="display-spacing-default" checked> Standard</label>
+          <label><input type="radio" name="display-spacing" value="roomy" id="display-spacing-roomy"> Extra space between letters and lines</label>
+        </div>
+      </fieldset>
+      <fieldset>
+        <legend>Motion</legend>
+        <div class="choice">
+          <label><input type="radio" name="display-motion" value="" id="display-motion-default" checked> Match my device</label>
+          <label><input type="radio" name="display-motion" value="reduce" id="display-motion-reduce"> No animation</label>
+        </div>
+      </fieldset>
+    </div>
+    <p class="zoom-tip">You can also zoom any page: hold Control (Command on a Mac) and press the plus key.</p>
+    <div class="settings-foot">
+      <button class="btn" type="button" id="resetSettings">Reset to standard</button>
+      <button class="btn" type="button" id="closeSettings">Close settings</button>
+      <span class="saved" id="savedNote" role="status" aria-live="polite"></span>
+    </div>
+  </div>
+</section>
+
 <header class="top wrap">
-  <a class="logo" href="index.html" aria-label="Fertile Ground Conservancy, home"><svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 482.6 264" fill="currentColor">
+  <div class="inner">
+    <a class="logo" href="/index.html" aria-label="Fertile Ground Conservancy, home"><svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 482.6 264" fill="currentColor">
 <style type="text/css">
 	.st0{fill:none;}
 	.st1{fill:none;stroke:currentColor;stroke-width:7;stroke-miterlimit:10;}
@@ -92,91 +154,107 @@
 <g>
 </g>
 </svg></a>
-  <nav class="main" aria-label="Main">
-    <ul>
-      <li><a href="sponsor.html">Sponsorship</a></li>
-      <li><a href="campaigns.html">Campaigns</a></li>
-      <li><a href="projects.html">Projects</a></li>
-      <li><a href="land.html">Land</a></li>
-      <li><a href="contact.html">Contact</a></li>
-      <li><a class="give" href="donate.html" aria-current="page">Give</a></li>
-    </ul>
-  </nav>
+    <nav class="main" aria-label="Main">
+      <ul>
+        <li><a href="/index.html">Home</a></li>
+        <li><a href="/sponsor.html">Sponsorship</a></li>
+        <li><a href="/campaigns.html">Campaign help</a></li>
+        <li><a href="/projects.html">Projects</a></li>
+        <li><a href="/land.html">Land</a></li>
+        <li><a href="/our-story.html">About</a></li>
+        <li><a href="/contact.html">Contact</a></li>
+        <li><a class="donate" href="/donate.html" aria-current="page">Donate</a></li>
+      </ul>
+    </nav>
+  </div>
 </header>
 
 <main id="main" tabindex="-1">
+  <nav class="crumbs wrap" aria-label="Breadcrumb">
+    <ol class="inner"><li><a href="/index.html">Home</a></li><li><span aria-current="page">Donate</span></li></ol>
+  </nav>
 <section class="hero wrap" aria-labelledby="h-hero">
-    <h1 id="h-hero">Support the work.</h1>
-    <p class="lede-lg">Your gift keeps fiscal sponsorship, campaign support, and the care of Elk Creek running. We're volunteer-run, so it goes a long way.</p>
+    <div class="inner">
+      <h1 id="h-hero">Donate</h1>
+      <p class="sub">Support grassroots ecological work</p>
+    </div>
   </section>
+  <div class="wrap page-short">
+    <section class="short" aria-labelledby="h-short">
+      <h2 id="h-short">In short</h2>
+      <ul>
+        <li>Your gift pays for the basic costs of fiscal sponsorship, campaign help, and caring for Elk Creek.</li>
+        <li>Volunteers run everything, so your gift goes a long way.</li>
+        <li>Gifts are tax-deductible. Our tax ID (EIN) is 27-1194001.</li>
+      </ul>
+    </section>
+  </div>
 
-  <section class="block wrap on-blaze" aria-labelledby="h-pp">
-    <div class="split">
-      <h2 class="mid" id="h-pp">Give online</h2>
-      <div>
-        <p style="margin:0 0 24px;max-width:48ch;font-size:clamp(1.25rem,1.8vw,1.625rem);line-height:1.3">Give through PayPal's secure donation page. Every gift helps, whatever the size.</p>
-        <form action="https://www.paypal.com/donate" method="post" target="_top">
-          <input type="hidden" name="hosted_button_id" value="549XRUP6DR2YS" />
-          <button type="submit" class="btn" style="min-height:60px;padding:0 28px;font-size:1.125rem">Donate with PayPal <span aria-hidden="true">→</span></button>
-        </form>
-              </div>
+  <section class="block wrap" aria-labelledby="h-online">
+    <div class="inner">
+      <div class="split">
+        <h2 id="h-online">Give online</h2>
+        <div>
+          <p>Online gifts go through PayPal's secure donation page. PayPal is a separate website. You can usually pay with a card without a PayPal account.</p>
+          <form action="https://www.paypal.com/donate" method="post" target="_top">
+            <input type="hidden" name="hosted_button_id" value="549XRUP6DR2YS" />
+            <button type="submit" class="btn primary">Donate on PayPal <span aria-hidden="true">→</span></button>
+          </form>
+        </div>
+      </div>
+      <div class="split">
+        <h2 id="h-check">Give by check</h2>
+        <div>
+          <p>Make your check out to <strong>Fertile Ground Conservancy</strong> and mail it to:</p>
+          <p class="addr" style="font-size:1.375rem">Fertile Ground Conservancy<br>PO Box 11262<br>Eugene, OR 97440</p>
+        </div>
+      </div>
+      <div class="split">
+        <h2 id="h-other">Other ways to give</h2>
+        <ul class="ruled">
+          <li><strong>Stock</strong>Email info@fertilegroundconservancy.org to arrange a transfer.</li>
+          <li><strong>In your will</strong>Include Fertile Ground Conservancy in your estate plan. <a href="/contact.html?topic=Donation#message">Contact us</a> to talk it through.</li>
+          <li><strong>Land</strong>If you own land you'd like to protect, <a href="/land.html#inquiry">tell us about it</a>.</li>
+        </ul>
+      </div>
     </div>
   </section>
 
-  <section class="block wrap" aria-labelledby="h-other">
-    <div class="split">
-      <h2 class="mid" id="h-other">Other ways to give</h2>
-      <ul class="rows">
-        <li class="row two sm"><h3>By check</h3><p>Make it payable to Fertile Ground Conservancy and mail it to PO Box 11262, Eugene, OR 97440.</p></li>
-        <li class="row two sm"><h3>Stock</h3><p>Email <a href="mailto:info@fertilegroundconservancy.org">info@fertilegroundconservancy.org</a> to arrange a transfer.</p></li>
-        <li class="row two sm"><h3>Bequest</h3><p>Include Fertile Ground Conservancy in your will or estate plan. <a href="contact.html?topic=Donation">Contact us</a> to talk through options.</p></li>
-        <li class="row two sm"><h3>Land</h3><p>If you own land you'd like to protect, <a href="land.html#inquiry">we'd like to talk</a>.</p></li>
-      </ul>
-    </div>
-  </section>
-
-  <section class="block wrap on-lichen" aria-labelledby="h-where">
-    <div class="split">
-      <h2 class="mid" id="h-where">Where it goes</h2>
-      <ul class="rows">
-        <li class="row two sm"><h3>Sponsorship</h3><p>Accounting, compliance, and grant management for the projects we sponsor.</p></li>
-        <li class="row two sm"><h3>Campaigns</h3><p>The basic costs of helping groups defend the places they love.</p></li>
-        <li class="row two sm"><h3>Land</h3><p>Property taxes, legal fees, and long-term care of the Elk Creek parcel.</p></li>
-        <li class="row two sm"><h3>Operations</h3><p>Insurance, filing fees, and the other costs of keeping a nonprofit running.</p></li>
-      </ul>
+  <section class="block wrap on-green" aria-labelledby="h-where">
+    <div class="inner">
+      <div class="split">
+        <h2 id="h-where">Where your gift goes</h2>
+        <ul class="ruled">
+          <li><strong>Sponsorship</strong>Accounting, tax filings, and grant management for the projects we sponsor.</li>
+          <li><strong>Campaign help</strong>The basic costs of helping groups protect the places they love.</li>
+          <li><strong>Land</strong>Property taxes, legal fees, and long-term care of Elk Creek.</li>
+          <li><strong>Running the organization</strong>Insurance, filing fees, and other basic costs.</li>
+        </ul>
+      </div>
     </div>
   </section>
 
   <section class="block wrap" aria-labelledby="h-tax">
-    <div class="split">
-      <h2 class="mid" id="h-tax">Tax information</h2>
-      <div class="prose">
-        <p>Fertile Ground Conservancy is a 501(c)(3) nonprofit, EIN 27-1194001. Contributions are tax-deductible to the full extent the law allows. We send an acknowledgment letter for any gift of $250 or more, as the IRS requires. IRS filings and financial statements are available on request.</p>
+    <div class="inner">
+      <div class="split">
+        <h2 id="h-tax">Tax information</h2>
+        <div>
+          <p>Fertile Ground Conservancy is a 501(c)(3) nonprofit, tax ID (EIN) 27-1194001. Gifts are tax-deductible to the full extent the law allows.</p>
+          <p>We send a receipt for any gift of $250 or more, as the IRS requires. Need a receipt for a smaller gift? Just ask. Our IRS filings and financial statements are available on request.</p>
+        </div>
       </div>
     </div>
   </section>
 </main>
 
 <footer class="foot wrap">
-  <nav class="foot-nav" aria-label="Site">
-    <ul>
-      <li><a href="sponsor.html">Sponsorship</a></li>
-      <li><a href="campaigns.html">Campaigns</a></li>
-      <li><a href="projects.html">Projects</a></li>
-      <li><a href="land.html">Land</a></li>
-      <li><a href="our-story.html">About</a></li>
-      <li><a href="biocentric.html">Biocentrism</a></li>
-      <li><a href="contact.html">Contact</a></li>
-      <li><a href="donate.html" aria-current="page">Give</a></li>
-    </ul>
-  </nav>
-  <div class="foot-cols">
-    <p>Fertile Ground Conservancy<br>PO Box 11262<br>Eugene, OR 97440</p>
-    <p>501(c)(3) nonprofit<br>EIN 27-1194001<br>Since 2009</p>
+  <div class="inner">
+    <p>Fertile Ground Conservancy<br>PO Box 11262<br>Eugene, OR 97440<br>info@fertilegroundconservancy.org</p>
+    <p>501(c)(3) nonprofit<br>EIN 27-1194001<br><a href="/accessibility.html">Accessibility statement</a><br><a href="/biocentric.html">What is biocentrism?</a><br><a href="#main">Back to top</a></p>
     <p>We work on the unceded lands of many Indigenous peoples, including the Kalapuya, on whose homelands Eugene sits, and the Tolowa Dee-ni', Yurok, and Karuk of the Pacific Coast.</p>
   </div>
 </footer>
 
-<script src="js/main.js"></script>
+<script src="/js/main.js"></script>
 </body>
 </html>

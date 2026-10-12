@@ -4,19 +4,81 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Land · Fertile Ground Conservancy</title>
-  <meta name="description" content="Fertile Ground Conservancy holds about 15 acres in the Elk Creek watershed of Del Norte County, California, and talks with landowners about protecting land they care about." />
-  <meta name="theme-color" content="#F4F1EA" />
-  <link rel="icon" href="images/fgclogo.svg" type="image/svg+xml" />
+  <meta name="description" content="Fertile Ground Conservancy holds about 15 acres along Elk Creek in Del Norte County, California, and talks with landowners about protecting land." />
+  <meta name="theme-color" content="#FAF7EF" />
+  <link rel="icon" href="/images/fgclogo.svg" type="image/svg+xml" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&display=swap" />
-  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Next:ital,wght@0,400;0,700;1,400&display=swap" />
+  <link rel="stylesheet" href="/css/style.css" />
 </head>
 <body>
 <a class="skip" href="#main">Skip to main content</a>
 
+<div class="utility wrap">
+  <div class="inner">
+    <a href="/accessibility.html">Accessibility</a>
+    <button class="settings-toggle" id="settingsToggle" type="button" aria-expanded="false" aria-controls="settings" hidden>
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 7h10M18 7h2M4 17h4M12 17h8"/><circle cx="16" cy="7" r="2.2"/><circle cx="10" cy="17" r="2.2"/></svg>
+      Display settings</button>
+  </div>
+</div>
+
+<section class="settings wrap" id="settings" aria-labelledby="h-settings" hidden>
+  <div class="inner">
+    <h2 id="h-settings">Display settings</h2>
+    <p class="help">Change how this site looks for you. Changes apply right away and are remembered on this device.</p>
+    <div class="groups">
+      <fieldset>
+        <legend>Text size</legend>
+        <div class="choice">
+          <label><input type="radio" name="display-text" value="" id="display-text-default" checked> Standard</label>
+          <label><input type="radio" name="display-text" value="large" id="display-text-large"> Large</label>
+          <label><input type="radio" name="display-text" value="largest" id="display-text-largest"> Largest</label>
+        </div>
+      </fieldset>
+      <fieldset>
+        <legend>Contrast</legend>
+        <div class="choice">
+          <label><input type="radio" name="display-contrast" value="" id="display-contrast-default" checked> Standard</label>
+          <label><input type="radio" name="display-contrast" value="more" id="display-contrast-more"> High contrast</label>
+        </div>
+      </fieldset>
+      <fieldset>
+        <legend>Light or dark</legend>
+        <div class="choice">
+          <label><input type="radio" name="display-theme" value="" id="display-theme-default" checked> Match my device</label>
+          <label><input type="radio" name="display-theme" value="light" id="display-theme-light"> Light</label>
+          <label><input type="radio" name="display-theme" value="dark" id="display-theme-dark"> Dark</label>
+        </div>
+      </fieldset>
+      <fieldset>
+        <legend>Spacing</legend>
+        <div class="choice">
+          <label><input type="radio" name="display-spacing" value="" id="display-spacing-default" checked> Standard</label>
+          <label><input type="radio" name="display-spacing" value="roomy" id="display-spacing-roomy"> Extra space between letters and lines</label>
+        </div>
+      </fieldset>
+      <fieldset>
+        <legend>Motion</legend>
+        <div class="choice">
+          <label><input type="radio" name="display-motion" value="" id="display-motion-default" checked> Match my device</label>
+          <label><input type="radio" name="display-motion" value="reduce" id="display-motion-reduce"> No animation</label>
+        </div>
+      </fieldset>
+    </div>
+    <p class="zoom-tip">You can also zoom any page: hold Control (Command on a Mac) and press the plus key.</p>
+    <div class="settings-foot">
+      <button class="btn" type="button" id="resetSettings">Reset to standard</button>
+      <button class="btn" type="button" id="closeSettings">Close settings</button>
+      <span class="saved" id="savedNote" role="status" aria-live="polite"></span>
+    </div>
+  </div>
+</section>
+
 <header class="top wrap">
-  <a class="logo" href="index.html" aria-label="Fertile Ground Conservancy, home"><svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 482.6 264" fill="currentColor">
+  <div class="inner">
+    <a class="logo" href="/index.html" aria-label="Fertile Ground Conservancy, home"><svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 482.6 264" fill="currentColor">
 <style type="text/css">
 	.st0{fill:none;}
 	.st1{fill:none;stroke:currentColor;stroke-width:7;stroke-miterlimit:10;}
@@ -92,137 +154,164 @@
 <g>
 </g>
 </svg></a>
-  <nav class="main" aria-label="Main">
-    <ul>
-      <li><a href="sponsor.html">Sponsorship</a></li>
-      <li><a href="campaigns.html">Campaigns</a></li>
-      <li><a href="projects.html">Projects</a></li>
-      <li><a href="land.html" aria-current="page">Land</a></li>
-      <li><a href="contact.html">Contact</a></li>
-      <li><a class="give" href="donate.html">Give</a></li>
-    </ul>
-  </nav>
+    <nav class="main" aria-label="Main">
+      <ul>
+        <li><a href="/index.html">Home</a></li>
+        <li><a href="/sponsor.html">Sponsorship</a></li>
+        <li><a href="/campaigns.html">Campaign help</a></li>
+        <li><a href="/projects.html">Projects</a></li>
+        <li><a href="/land.html" aria-current="page">Land</a></li>
+        <li><a href="/our-story.html">About</a></li>
+        <li><a href="/contact.html">Contact</a></li>
+        <li><a class="donate" href="/donate.html">Donate</a></li>
+      </ul>
+    </nav>
+  </div>
 </header>
 
 <main id="main" tabindex="-1">
+  <nav class="crumbs wrap" aria-label="Breadcrumb">
+    <ol class="inner"><li><a href="/index.html">Home</a></li><li><span aria-current="page">Land</span></li></ol>
+  </nav>
 <section class="hero wrap" aria-labelledby="h-hero">
-    <h1 id="h-hero">Land</h1>
-    <p class="lede-lg">We hold land for the communities of life that live on it. Land protection is a smaller part of our work right now, but if you're thinking about the future of land you care about, we're glad to talk.</p>
-  </section>
-
-  <div class="band">
-    <figure>
-      <img src="images/elk-creek-aerial.jpg" width="1600" height="1070" alt="Aerial view of forest and creek along lower Elk Creek, Del Norte County." />
-      <figcaption>Elk Creek watershed · Photo: Justin Garwood</figcaption>
-    </figure>
-    <div class="panel">
-      <div>
-        <h2 class="mid" style="margin-bottom:24px">Elk Creek</h2>
-        <dl class="facts stack" aria-label="Elk Creek facts">
-          <div><dt>Where</dt><dd>Del Norte County, California</dd></div>
-          <div><dt>Size</dt><dd>About 15 acres</dd></div>
-          <div><dt>Habitat</dt><dd>Riparian forest along the creek</dd></div>
-        </dl>
-      </div>
-      <p style="margin:0">Our parcel sits along lower Elk Creek, where forest meets water. Shaded banks keep the creek cold enough for coho salmon, and roots and fallen logs hold the soil and give young fish places to shelter.</p>
+    <div class="inner">
+      <h1 id="h-hero">Land</h1>
+      <p class="sub">Holding land for the life that depends on it</p>
     </div>
+  </section>
+  <div class="wrap page-short">
+    <section class="short" aria-labelledby="h-short">
+      <h2 id="h-short">In short</h2>
+      <ul>
+        <li>We own about 15 acres along Elk Creek in Del Norte County, California, and keep it protected.</li>
+        <li>Land is a smaller part of our work right now.</li>
+        <li>If you own land you'd like to protect, we're still glad to talk. There's no obligation.</li>
+      </ul>
+      <div class="actions"><a class="btn primary" href="#inquiry">Tell us about your land <span aria-hidden="true">→</span></a></div>
+    </section>
   </div>
 
-  <section class="block wrap" aria-labelledby="h-lives">
-    <div class="split">
-      <h2 class="mid" id="h-lives">Who lives here</h2>
-      <div class="prose">
-        <ul class="ruled two">
-          <li>Coho salmon</li>
-          <li>Northern spotted owl</li>
-          <li>Port Orford cedar</li>
-          <li>Pacific giant salamander</li>
-          <li>Roosevelt elk</li>
-          <li>Cougar and black bear</li>
-        </ul>
-        <p style="margin-top:1.4em">Elk Creek sits at the coastal edge of the Klamath-Siskiyou, one of the most biologically rich temperate regions on Earth. The land doesn't need much management. It needs to be kept out of harm's way.</p>
+  <section class="block wrap" aria-labelledby="h-elk" style="padding-bottom:0">
+    <div class="inner" style="padding-bottom:0">
+      <div class="band">
+        <figure>
+          <img src="/images/elk-creek-aerial.jpg" width="1600" height="1070" alt="Aerial view of a forested valley along lower Elk Creek, with the town of Crescent City and the Pacific Ocean in the distance.">
+          <figcaption>Elk Creek watershed. Photo by Justin Garwood.</figcaption>
+        </figure>
+        <div class="panel">
+          <h2 id="h-elk">Elk Creek</h2>
+          <dl class="facts" aria-label="Elk Creek facts">
+            <div><dt>Where</dt><dd>Del Norte County, California</dd></div>
+            <div><dt>Size</dt><dd>About 15 acres</dd></div>
+            <div><dt>Habitat</dt><dd>Forest along the creek</dd></div>
+          </dl>
+          <p>Our land sits where forest meets water. Shady banks keep the creek cold enough for coho salmon. Roots and fallen logs hold the soil and give young fish places to hide.</p>
+        </div>
       </div>
     </div>
   </section>
 
-  <section class="block wrap on-lichen" aria-labelledby="h-opt">
-    <h2 class="big" id="h-opt">Ways to protect land</h2>
-    <ul class="rows">
-      <li class="row two sm"><h3>Conservation easement</h3><div><p>A legal agreement that permanently limits development on your land while you keep ownership. You decide what's protected and how you'll keep using it, and we monitor and enforce the terms over time.</p><p class="note">The most common option. You keep the deed.</p></div></li>
-      <li class="row two sm"><h3>Land donation</h3><div><p>You transfer the land to Fertile Ground Conservancy outright, and we hold it permanently for the life that depends on it.</p><p class="note">Immediate and permanent. May qualify for a tax deduction.</p></div></li>
-      <li class="row two sm"><h3>Bequest</h3><div><p>You name Fertile Ground Conservancy in your will or estate plan to receive the land later. You keep full ownership and use during your lifetime.</p><p class="note">Plan now for what comes after.</p></div></li>
-    </ul>
+  <section class="block wrap" aria-labelledby="h-lives">
+    <div class="inner">
+      <div class="split">
+        <h2 id="h-lives">Who lives here</h2>
+        <div>
+          <ul class="ruled">
+            <li>Coho salmon (threatened)</li>
+            <li>Northern spotted owl (threatened)</li>
+            <li>Port Orford cedar</li>
+            <li>Pacific giant salamander</li>
+            <li>Roosevelt elk</li>
+            <li>Cougar and black bear</li>
+          </ul>
+          <p>Elk Creek is at the coastal edge of the Klamath-Siskiyou region, one of the richest temperate forests on Earth. The land doesn't need much managing. It needs to be kept out of harm's way.</p>
+        </div>
+      </div>
+    </div>
   </section>
 
-  <section class="block wrap" id="inquiry" aria-labelledby="h-inq">
-    <div class="split">
-      <div>
-        <h2 class="mid" id="h-inq">Start a conversation</h2>
-        <p style="max-width:40ch;margin:20px 0 0">If you own land and are thinking about its long-term future, tell us about it. There's no obligation. Because land is on the back burner for us right now, we may take a little while to reply.</p>
-        <p style="max-width:40ch">Want to help care for Elk Creek instead? <a href="donate.html">Give here</a>.</p>
+  <section class="block wrap on-green" aria-labelledby="h-ways">
+    <div class="inner">
+      <h2 id="h-ways">Ways to protect your land</h2>
+      <p class="def">There are three main options. We can help you figure out which one fits.</p>
+      <div class="table-wrap">
+        <table class="data-table">
+          <caption class="vh">Comparison of three ways to protect land</caption>
+          <thead><tr><th scope="col">Option</th><th scope="col">What it is</th><th scope="col">Who owns the land</th><th scope="col">When it starts</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">Conservation easement</th><td data-label="What it is">A legal agreement that permanently limits building and other harm on the land. We check on it over time.</td><td data-label="Who owns the land">You do</td><td data-label="When it starts">Now</td></tr>
+            <tr><th scope="row">Land donation</th><td data-label="What it is">You give the land to us, and we hold it permanently for the life that depends on it.</td><td data-label="Who owns the land">We do</td><td data-label="When it starts">Now</td></tr>
+            <tr><th scope="row">Bequest</th><td data-label="What it is">You leave the land to us in your will.</td><td data-label="Who owns the land">You do, for your lifetime</td><td data-label="When it starts">After your death</td></tr>
+          </tbody>
+        </table>
       </div>
+      <p style="margin-top:24px">Each option may have tax benefits. Talk with a tax advisor about your situation.</p>
+    </div>
+  </section>
+
+  <section class="block wrap" id="inquiry" aria-labelledby="h-inq" tabindex="-1">
+    <div class="inner">
+      <div class="split">
+        <div>
+          <h2 id="h-inq">Tell us about your land</h2>
+          <p>There's no obligation. Because land is a smaller part of our work right now, we may take a little while to reply.</p>
+          <p>Rather talk first? Email <strong>info@fertilegroundconservancy.org</strong> and include a phone number.</p>
+          <p>Want to help care for Elk Creek instead? <a href="/donate.html">Make a gift</a>.</p>
+        </div>
     <form class="form" name="land-inquiry" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/thanks.html" aria-label="Land conservation inquiry">
+      <div class="error-summary" role="alert" hidden></div>
       <input type="hidden" name="form-name" value="land-inquiry" />
-      <p class="hp"><label>Don't fill this out if you're human: <input name="bot-field" tabindex="-1" autocomplete="off" /></label></p>
+      <p class="hp"><label>Leave this empty: <input name="bot-field" tabindex="-1" autocomplete="off" /></label></p>
       <div class="pair">
       <div class="field">
-        <label for="f-name">Your name <span class="req">Required</span></label>
-        <input id="f-name" name="name" type="text" autocomplete="name" required />
+        <label for="f-name">Your name <span class="req">(required)</span></label>
+        <input id="f-name" name="name" type="text" autocomplete="name" required data-missing="Enter your name" />
       </div>
       <div class="field">
-        <label for="f-email">Email address <span class="req">Required</span></label>
-        <input id="f-email" name="email" type="email" autocomplete="email" required />
+        <label for="f-email">Email address <span class="req">(required)</span></label>
+        <input id="f-email" name="email" type="email" autocomplete="email" required data-missing="Enter your email address" />
       </div>
       </div>
       <div class="pair">
       <div class="field">
-        <label for="f-phone">Phone number</label>
-        <input id="f-phone" name="phone" type="tel" autocomplete="tel" />
+        <label for="f-phone">Phone number <span class="req">(optional)</span></label>
+        <span class="hint" id="f-phone-hint">Only if you would like a call.</span>
+        <input id="f-phone" name="phone" type="tel" autocomplete="tel" aria-describedby="f-phone-hint" />
       </div>
       <div class="field">
-        <label for="f-location">Where is the land? <span class="req">Required</span></label>
+        <label for="f-location">Where is the land? <span class="req">(required)</span></label>
         <span class="hint" id="f-location-hint">County and state</span>
-        <input id="f-location" name="location" type="text" required aria-describedby="f-location-hint" />
+        <input id="f-location" name="location" type="text" required aria-describedby="f-location-hint" data-missing="Tell us where the land is" />
       </div>
       </div>
       <div class="field">
-        <label for="f-acres">Approximate acreage</label>
-        <input id="f-acres" name="acres" type="text" />
+        <label for="f-acres">About how many acres? <span class="req">(optional)</span></label>
+        <span class="hint" id="f-acres-hint">A rough number is fine.</span>
+        <input id="f-acres" name="acres" type="text" aria-describedby="f-acres-hint" />
       </div>
       <div class="field">
-        <label for="f-description">Tell us about the land and what you'd like to protect <span class="req">Required</span></label>
-        <textarea id="f-description" name="description" rows="6" required></textarea>
+        <label for="f-description">Tell us about the land and what you'd like to protect <span class="req">(required)</span></label>
+        <textarea id="f-description" name="description" rows="6" required data-missing="Tell us a little about the land"></textarea>
       </div>
       <div class="field">
-        <label for="f-timeline">Any timeline considerations?</label>
+        <label for="f-timeline">Is there a timeline we should know about? <span class="req">(optional)</span></label>
         <textarea id="f-timeline" name="timeline" rows="3"></textarea>
       </div>
-      <div><button class="btn primary" type="submit">Send inquiry <span aria-hidden="true">→</span></button></div>
+      <div><button class="btn primary" type="submit">Send <span aria-hidden="true">→</span></button></div>
     </form>
+      </div>
     </div>
   </section>
 </main>
 
 <footer class="foot wrap">
-  <nav class="foot-nav" aria-label="Site">
-    <ul>
-      <li><a href="sponsor.html">Sponsorship</a></li>
-      <li><a href="campaigns.html">Campaigns</a></li>
-      <li><a href="projects.html">Projects</a></li>
-      <li><a href="land.html" aria-current="page">Land</a></li>
-      <li><a href="our-story.html">About</a></li>
-      <li><a href="biocentric.html">Biocentrism</a></li>
-      <li><a href="contact.html">Contact</a></li>
-      <li><a href="donate.html">Give</a></li>
-    </ul>
-  </nav>
-  <div class="foot-cols">
-    <p>Fertile Ground Conservancy<br>PO Box 11262<br>Eugene, OR 97440</p>
-    <p>501(c)(3) nonprofit<br>EIN 27-1194001<br>Since 2009</p>
+  <div class="inner">
+    <p>Fertile Ground Conservancy<br>PO Box 11262<br>Eugene, OR 97440<br>info@fertilegroundconservancy.org</p>
+    <p>501(c)(3) nonprofit<br>EIN 27-1194001<br><a href="/accessibility.html">Accessibility statement</a><br><a href="/biocentric.html">What is biocentrism?</a><br><a href="#main">Back to top</a></p>
     <p>We work on the unceded lands of many Indigenous peoples, including the Kalapuya, on whose homelands Eugene sits, and the Tolowa Dee-ni', Yurok, and Karuk of the Pacific Coast.</p>
   </div>
 </footer>
 
-<script src="js/main.js"></script>
+<script src="/js/main.js"></script>
 </body>
 </html>

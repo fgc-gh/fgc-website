@@ -4,19 +4,81 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Fiscal sponsorship · Fertile Ground Conservancy</title>
-  <meta name="description" content="Fiscal sponsorship for grassroots ecological projects: run under our 501(c)(3), accept tax-deductible donations, and apply for grants without forming a nonprofit." />
-  <meta name="theme-color" content="#F4F1EA" />
-  <link rel="icon" href="images/fgclogo.svg" type="image/svg+xml" />
+  <meta name="description" content="Fiscal sponsorship for grassroots ecological projects: use our 501(c)(3) status to receive tax-deductible donations and grants. 9% fee. Apply online." />
+  <meta name="theme-color" content="#FAF7EF" />
+  <link rel="icon" href="/images/fgclogo.svg" type="image/svg+xml" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&display=swap" />
-  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Next:ital,wght@0,400;0,700;1,400&display=swap" />
+  <link rel="stylesheet" href="/css/style.css" />
 </head>
 <body>
 <a class="skip" href="#main">Skip to main content</a>
 
+<div class="utility wrap">
+  <div class="inner">
+    <a href="/accessibility.html">Accessibility</a>
+    <button class="settings-toggle" id="settingsToggle" type="button" aria-expanded="false" aria-controls="settings" hidden>
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 7h10M18 7h2M4 17h4M12 17h8"/><circle cx="16" cy="7" r="2.2"/><circle cx="10" cy="17" r="2.2"/></svg>
+      Display settings</button>
+  </div>
+</div>
+
+<section class="settings wrap" id="settings" aria-labelledby="h-settings" hidden>
+  <div class="inner">
+    <h2 id="h-settings">Display settings</h2>
+    <p class="help">Change how this site looks for you. Changes apply right away and are remembered on this device.</p>
+    <div class="groups">
+      <fieldset>
+        <legend>Text size</legend>
+        <div class="choice">
+          <label><input type="radio" name="display-text" value="" id="display-text-default" checked> Standard</label>
+          <label><input type="radio" name="display-text" value="large" id="display-text-large"> Large</label>
+          <label><input type="radio" name="display-text" value="largest" id="display-text-largest"> Largest</label>
+        </div>
+      </fieldset>
+      <fieldset>
+        <legend>Contrast</legend>
+        <div class="choice">
+          <label><input type="radio" name="display-contrast" value="" id="display-contrast-default" checked> Standard</label>
+          <label><input type="radio" name="display-contrast" value="more" id="display-contrast-more"> High contrast</label>
+        </div>
+      </fieldset>
+      <fieldset>
+        <legend>Light or dark</legend>
+        <div class="choice">
+          <label><input type="radio" name="display-theme" value="" id="display-theme-default" checked> Match my device</label>
+          <label><input type="radio" name="display-theme" value="light" id="display-theme-light"> Light</label>
+          <label><input type="radio" name="display-theme" value="dark" id="display-theme-dark"> Dark</label>
+        </div>
+      </fieldset>
+      <fieldset>
+        <legend>Spacing</legend>
+        <div class="choice">
+          <label><input type="radio" name="display-spacing" value="" id="display-spacing-default" checked> Standard</label>
+          <label><input type="radio" name="display-spacing" value="roomy" id="display-spacing-roomy"> Extra space between letters and lines</label>
+        </div>
+      </fieldset>
+      <fieldset>
+        <legend>Motion</legend>
+        <div class="choice">
+          <label><input type="radio" name="display-motion" value="" id="display-motion-default" checked> Match my device</label>
+          <label><input type="radio" name="display-motion" value="reduce" id="display-motion-reduce"> No animation</label>
+        </div>
+      </fieldset>
+    </div>
+    <p class="zoom-tip">You can also zoom any page: hold Control (Command on a Mac) and press the plus key.</p>
+    <div class="settings-foot">
+      <button class="btn" type="button" id="resetSettings">Reset to standard</button>
+      <button class="btn" type="button" id="closeSettings">Close settings</button>
+      <span class="saved" id="savedNote" role="status" aria-live="polite"></span>
+    </div>
+  </div>
+</section>
+
 <header class="top wrap">
-  <a class="logo" href="index.html" aria-label="Fertile Ground Conservancy, home"><svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 482.6 264" fill="currentColor">
+  <div class="inner">
+    <a class="logo" href="/index.html" aria-label="Fertile Ground Conservancy, home"><svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 482.6 264" fill="currentColor">
 <style type="text/css">
 	.st0{fill:none;}
 	.st1{fill:none;stroke:currentColor;stroke-width:7;stroke-miterlimit:10;}
@@ -92,168 +154,178 @@
 <g>
 </g>
 </svg></a>
-  <nav class="main" aria-label="Main">
-    <ul>
-      <li><a href="sponsor.html" aria-current="page">Sponsorship</a></li>
-      <li><a href="campaigns.html">Campaigns</a></li>
-      <li><a href="projects.html">Projects</a></li>
-      <li><a href="land.html">Land</a></li>
-      <li><a href="contact.html">Contact</a></li>
-      <li><a class="give" href="donate.html">Give</a></li>
-    </ul>
-  </nav>
+    <nav class="main" aria-label="Main">
+      <ul>
+        <li><a href="/index.html">Home</a></li>
+        <li><a href="/sponsor.html" aria-current="page">Sponsorship</a></li>
+        <li><a href="/campaigns.html">Campaign help</a></li>
+        <li><a href="/projects.html">Projects</a></li>
+        <li><a href="/land.html">Land</a></li>
+        <li><a href="/our-story.html">About</a></li>
+        <li><a href="/contact.html">Contact</a></li>
+        <li><a class="donate" href="/donate.html">Donate</a></li>
+      </ul>
+    </nav>
+  </div>
 </header>
 
 <main id="main" tabindex="-1">
+  <nav class="crumbs wrap" aria-label="Breadcrumb">
+    <ol class="inner"><li><a href="/index.html">Home</a></li><li><span aria-current="page">Fiscal sponsorship</span></li></ol>
+  </nav>
 <section class="hero wrap" aria-labelledby="h-hero">
-    <h1 id="h-hero">Fiscal sponsorship</h1>
-    <p class="lede-lg">Your project runs under our 501(c)(3), so it can take tax-deductible donations and apply for grants without forming a nonprofit of its own. We handle the money and the paperwork. You keep doing the work.</p>
-    <div class="cta-row">
-      <a class="btn primary" href="#apply">Apply now <span aria-hidden="true">→</span></a>
+    <div class="inner">
+      <h1 id="h-hero">Fiscal sponsorship</h1>
+      <p class="sub">A nonprofit home for grassroots ecological projects</p>
     </div>
   </section>
-
-  <dl class="facts wrap" aria-label="Sponsorship at a glance">
-    <div><dt>Review</dt><dd>Rolling</dd></div>
-    <div><dt>Reply</dt><dd>Usually within 3 weeks</dd></div>
-    <div><dt>Admin fee</dt><dd>9% of funds received</dd></div>
-    <div><dt>Since</dt><dd>2009</dd></div>
-  </dl>
+  <div class="wrap page-short">
+    <section class="short" aria-labelledby="h-short">
+      <h2 id="h-short">In short</h2>
+      <ul>
+        <li>Fiscal sponsorship lets your project use our 501(c)(3) nonprofit status.</li>
+        <li>Donors give to us for your project, and their gifts are tax-deductible.</li>
+        <li>You can apply for grants that only go to nonprofits.</li>
+        <li>We handle the money and paperwork. You do the work.</li>
+        <li>We keep 9% of the money your project receives to cover our costs.</li>
+      </ul>
+      <div class="actions"><a class="btn primary" href="#apply">Go to the application <span aria-hidden="true">→</span></a></div>
+    </section>
+  </div>
+  <div class="wrap">
+    <dl class="facts inner" aria-label="Sponsorship at a glance"><div><dt>Cost</dt><dd>9% of funds received</dd></div><div><dt>Reply time</dt><dd>Usually within 3 weeks</dd></div><div><dt>Applications</dt><dd>Open all year</dd></div></dl>
+  </div>
 
   <section class="block wrap" aria-labelledby="h-who">
-    <div class="split">
-      <h2 class="mid" id="h-who">Who we sponsor</h2>
-      <div class="prose">
-        <p>We work with projects that are:</p>
+    <div class="inner">
+      <div class="split">
+        <h2 id="h-who">Who we sponsor</h2>
+        <div>
+          <p>We work with projects that are:</p>
+          <ul class="ruled">
+            <li>Grassroots and led by their community</li>
+            <li>Working on protecting nature, habitat, Indigenous land rights, or related justice issues</li>
+            <li>Rooted in respect for the living world for its own sake</li>
+            <li>Working in good faith with the communities they affect</li>
+            <li>Not repeating work that well-funded groups already do</li>
+          </ul>
+          <p>Groups defending a specific place through public comment, watchdog work, or legal action are welcome. See <a href="/projects.html">projects we've sponsored</a>.</p>
+        </div>
+      </div>
+      <div class="split">
+        <h2 id="h-get">What you get</h2>
         <ul class="ruled">
-          <li>Biocentric in their values and approach</li>
-          <li>Grassroots and community-led</li>
-          <li>Working on ecological protection, habitat defense, Indigenous land rights, or related social justice issues</li>
-          <li>Acting in good faith with the communities their work affects</li>
-          <li>Not duplicating existing, well-funded efforts</li>
+          <li><strong>Tax-deductible donations</strong>Donors give to FGC for your project and get a tax receipt.</li>
+          <li><strong>Grant eligibility</strong>Apply for grants that require 501(c)(3) status, with FGC as the applicant.</li>
+          <li><strong>Money management</strong>We receive, hold, and pay out funds, and keep full records.</li>
+          <li><strong>Tax paperwork</strong>Your project is included in our annual IRS filing. We send donor receipts.</li>
+          <li><strong>Financial reports</strong>Clear statements of money in and money out, every three months.</li>
+          <li><strong>Writing help</strong>A second set of eyes on grant applications, appeals, and reports to funders.</li>
+          <li><strong>Policy templates</strong>Ready-made conflict of interest, whistleblower, and record-keeping policies.</li>
         </ul>
-        <p style="margin-top:1.4em">We've sponsored projects across the western United States and internationally, including mining resistance, urban permaculture, climate grief, Zen ecological practice, and rural agroforestry. Groups defending a specific place through public comment, watchdog work, or legal intervention are welcome.</p>
-        <p><a href="projects.html">See projects we've sponsored</a></p>
       </div>
     </div>
   </section>
 
-  <section class="block wrap on-cobalt" aria-labelledby="h-how">
-    <h2 class="big" id="h-how">How it works</h2>
-    <ol class="steps">
-      <li>
-        <span class="n">Step 1 · Apply</span>
-        <h3>Tell us about the project</h3>
-        <p>Fill out the application below: what you do, who's involved, and how you plan to fund it.</p>
-      </li>
-      <li>
-        <span class="n">Step 2 · Talk</span>
-        <h3>Check that it's a fit</h3>
-        <p>We review applications on a rolling basis, usually reply within three weeks, and set up a call.</p>
-      </li>
-      <li>
-        <span class="n">Step 3 · Start</span>
-        <h3>Sign and receive funds</h3>
-        <p>We sign a sponsorship agreement, and donations and grants start flowing through FGC.</p>
-      </li>
-    </ol>
-    <div class="includes">
-      <h3>What's included</h3>
-      <ul>
-        <li>501(c)(3) status<small>Tax-deductible donations and eligibility for foundation grants</small></li>
-        <li>Financial administration<small>We receive, hold, and pay out funds with full accounting</small></li>
-        <li>Tax compliance<small>Inclusion in our 990 and donor acknowledgment letters</small></li>
-        <li>Quarterly financial reports<small>Clear statements of income and spending</small></li>
-        <li>Grant writing support<small>Help drafting and reviewing applications</small></li>
-        <li>Donor communications<small>Appeals, acknowledgments, and updates</small></li>
-        <li>Policy templates<small>Conflict of interest, whistleblower, document retention</small></li>
-        <li>Annual report help<small>A narrative and financial summary for your funders</small></li>
-      </ul>
+  <section class="block wrap on-green" aria-labelledby="h-how">
+    <div class="inner">
+      <h2 id="h-how">How it works</h2>
+      <ol class="steps">
+        <li><span class="n">Step 1 of 3</span><h3>Apply</h3><p>Fill out the application below. It has 10 questions, and 6 are required.</p><p class="need"><strong>Have ready:</strong> a short description of your project and a rough budget.</p></li>
+        <li><span class="n">Step 2 of 3</span><h3>Talk with us</h3><p>We read every application and usually reply within three weeks. Then we set up a call to make sure it's a good fit.</p><p class="need"><strong>Prefer email to a call?</strong> Just say so.</p></li>
+        <li><span class="n">Step 3 of 3</span><h3>Start receiving funds</h3><p>We sign a simple agreement. After that, donations and grants for your project come through us.</p><p class="need"><strong>Cost:</strong> we keep 9% of funds received.</p></li>
+      </ol>
+      <div class="glossary">
+        <h3>Words to know</h3>
+        <dl>
+          <div><dt>Fiscal sponsor</dt><dd>An established nonprofit that receives and manages money for a project that isn't its own nonprofit.</dd></div>
+          <div><dt>501(c)(3)</dt><dd>The IRS category for charities. Gifts to a 501(c)(3) can be deducted from the donor's taxes.</dd></div>
+          <div><dt>Grant</dt><dd>Money from a foundation or agency for specific work. Many grants only go to 501(c)(3) groups or their sponsored projects.</dd></div>
+          <div><dt>Sponsorship agreement</dt><dd>A short contract that says what we each agree to do, including the 9% fee.</dd></div>
+        </dl>
+      </div>
     </div>
-    <p class="note" style="margin:clamp(28px,4vw,40px) 0 0;max-width:62ch">We keep 9% of the funds a project receives to cover administration. The rest goes to your work.</p>
   </section>
 
-  <section class="block wrap" id="apply" aria-labelledby="h-apply">
-    <div class="split">
-      <div>
-        <h2 class="mid" id="h-apply">Apply for sponsorship</h2>
-        <p style="max-width:40ch;margin:20px 0 0">Before applying, read about our <a href="biocentric.html">biocentric orientation</a> to make sure we're aligned. Questions first? <a href="contact.html?topic=Fiscal%20sponsorship">Send us a note</a>.</p>
-      </div>
+  <section class="block wrap" id="apply" aria-labelledby="h-apply" tabindex="-1">
+    <div class="inner">
+      <div class="split">
+        <div>
+          <h2 id="h-apply">Apply for sponsorship</h2>
+          <div class="box before">
+            <h3>Before you start</h3>
+            <p>The form has 10 questions. Most people finish in about 20 minutes. The form can't save your progress, so you may want to write longer answers somewhere else first.</p>
+          </div>
+          <p>Rather not use a form? Email the same information to <strong>info@fertilegroundconservancy.org</strong>, or ask for a call.</p>
+        </div>
     <form class="form" name="fiscal-sponsorship" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/thanks.html" aria-label="Fiscal sponsorship application">
+      <div class="error-summary" role="alert" hidden></div>
       <input type="hidden" name="form-name" value="fiscal-sponsorship" />
-      <p class="hp"><label>Don't fill this out if you're human: <input name="bot-field" tabindex="-1" autocomplete="off" /></label></p>
+      <p class="hp"><label>Leave this empty: <input name="bot-field" tabindex="-1" autocomplete="off" /></label></p>
       <div class="pair">
       <div class="field">
-        <label for="f-org-name">Organization or project name <span class="req">Required</span></label>
-        <input id="f-org-name" name="org-name" type="text" autocomplete="organization" required />
+        <label for="f-org-name">Project or organization name <span class="req">(required)</span></label>
+        <input id="f-org-name" name="org-name" type="text" autocomplete="organization" required data-missing="Enter the name of your project or organization" />
       </div>
       <div class="field">
-        <label for="f-contact-name">Primary contact name <span class="req">Required</span></label>
-        <input id="f-contact-name" name="contact-name" type="text" autocomplete="name" required />
+        <label for="f-contact-name">Your name <span class="req">(required)</span></label>
+        <input id="f-contact-name" name="contact-name" type="text" autocomplete="name" required data-missing="Enter your name" />
       </div>
       </div>
       <div class="pair">
       <div class="field">
-        <label for="f-email">Email address <span class="req">Required</span></label>
-        <input id="f-email" name="email" type="email" autocomplete="email" required />
+        <label for="f-email">Email address <span class="req">(required)</span></label>
+        <input id="f-email" name="email" type="email" autocomplete="email" required data-missing="Enter your email address" />
       </div>
       <div class="field">
-        <label for="f-website">Website or social media</label>
-        <span class="hint" id="f-website-hint">If you have one. Start with https://</span>
+        <label for="f-website">Website or social media <span class="req">(optional)</span></label>
+        <span class="hint" id="f-website-hint">Start with https://</span>
         <input id="f-website" name="website" type="url" autocomplete="url" aria-describedby="f-website-hint" />
       </div>
       </div>
       <div class="field">
-        <label for="f-location">Where are you based? <span class="req">Required</span></label>
-        <span class="hint" id="f-location-hint">City and state or region, or country</span>
-        <input id="f-location" name="location" type="text" required aria-describedby="f-location-hint" />
+        <label for="f-location">Where are you based? <span class="req">(required)</span></label>
+        <span class="hint" id="f-location-hint">For example: Eugene, Oregon. Or a region or country.</span>
+        <input id="f-location" name="location" type="text" required aria-describedby="f-location-hint" data-missing="Tell us where you are based" />
       </div>
       <div class="field">
-        <label for="f-mission">Describe your project's mission and work <span class="req">Required</span></label>
-        <textarea id="f-mission" name="mission" rows="6" required></textarea>
+        <label for="f-mission">What does your project do? <span class="req">(required)</span></label>
+        <span class="hint" id="f-mission-hint">A few sentences is enough. Tell us who is involved and what you're working toward.</span>
+        <textarea id="f-mission" name="mission" rows="6" required aria-describedby="f-mission-hint" data-missing="Tell us what your project does"></textarea>
       </div>
       <div class="field">
-        <label for="f-alignment">How does your work align with biocentric values? <span class="req">Required</span></label>
-        <textarea id="f-alignment" name="alignment" rows="5" required></textarea>
+        <label for="f-alignment">How does your work connect to protecting the living world for its own sake? <span class="req">(required)</span></label>
+        <span class="hint" id="f-alignment-hint">There is no single right answer. <a href="/biocentric.html">Read what biocentrism means to us</a>.</span>
+        <textarea id="f-alignment" name="alignment" rows="5" required aria-describedby="f-alignment-hint" data-missing="Tell us how your work connects to our values"></textarea>
       </div>
       <div class="field">
-        <label for="f-budget">Approximate annual budget or fundraising goal</label>
-        <input id="f-budget" name="budget" type="text" />
+        <label for="f-budget">About how much money do you hope to raise each year? <span class="req">(optional)</span></label>
+        <span class="hint" id="f-budget-hint">A rough guess is fine.</span>
+        <input id="f-budget" name="budget" type="text" aria-describedby="f-budget-hint" />
       </div>
       <div class="field">
-        <label for="f-timeline">When are you hoping to begin? Any urgent funding deadlines?</label>
+        <label for="f-timeline">When do you hope to start? Any funding deadlines coming up? <span class="req">(optional)</span></label>
         <textarea id="f-timeline" name="timeline" rows="3"></textarea>
       </div>
       <div class="field">
-        <label for="f-referral">How did you hear about Fertile Ground Conservancy?</label>
+        <label for="f-referral">How did you hear about us? <span class="req">(optional)</span></label>
         <input id="f-referral" name="referral" type="text" />
       </div>
-      <div><button class="btn primary" type="submit">Submit application <span aria-hidden="true">→</span></button></div>
+      <div><button class="btn primary" type="submit">Send application <span aria-hidden="true">→</span></button></div>
     </form>
+      </div>
     </div>
   </section>
 </main>
 
 <footer class="foot wrap">
-  <nav class="foot-nav" aria-label="Site">
-    <ul>
-      <li><a href="sponsor.html" aria-current="page">Sponsorship</a></li>
-      <li><a href="campaigns.html">Campaigns</a></li>
-      <li><a href="projects.html">Projects</a></li>
-      <li><a href="land.html">Land</a></li>
-      <li><a href="our-story.html">About</a></li>
-      <li><a href="biocentric.html">Biocentrism</a></li>
-      <li><a href="contact.html">Contact</a></li>
-      <li><a href="donate.html">Give</a></li>
-    </ul>
-  </nav>
-  <div class="foot-cols">
-    <p>Fertile Ground Conservancy<br>PO Box 11262<br>Eugene, OR 97440</p>
-    <p>501(c)(3) nonprofit<br>EIN 27-1194001<br>Since 2009</p>
+  <div class="inner">
+    <p>Fertile Ground Conservancy<br>PO Box 11262<br>Eugene, OR 97440<br>info@fertilegroundconservancy.org</p>
+    <p>501(c)(3) nonprofit<br>EIN 27-1194001<br><a href="/accessibility.html">Accessibility statement</a><br><a href="/biocentric.html">What is biocentrism?</a><br><a href="#main">Back to top</a></p>
     <p>We work on the unceded lands of many Indigenous peoples, including the Kalapuya, on whose homelands Eugene sits, and the Tolowa Dee-ni', Yurok, and Karuk of the Pacific Coast.</p>
   </div>
 </footer>
 
-<script src="js/main.js"></script>
+<script src="/js/main.js"></script>
 </body>
 </html>

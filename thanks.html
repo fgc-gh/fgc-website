@@ -4,19 +4,81 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Thank you · Fertile Ground Conservancy</title>
-  <meta name="description" content="Thanks for getting in touch with Fertile Ground Conservancy." />
-  <meta name="theme-color" content="#F4F1EA" />
-  <link rel="icon" href="images/fgclogo.svg" type="image/svg+xml" />
+  <meta name="description" content="Your message to Fertile Ground Conservancy was received." />
+  <meta name="theme-color" content="#FAF7EF" />
+  <link rel="icon" href="/images/fgclogo.svg" type="image/svg+xml" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&display=swap" />
-  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Next:ital,wght@0,400;0,700;1,400&display=swap" />
+  <link rel="stylesheet" href="/css/style.css" />
 </head>
 <body>
 <a class="skip" href="#main">Skip to main content</a>
 
+<div class="utility wrap">
+  <div class="inner">
+    <a href="/accessibility.html">Accessibility</a>
+    <button class="settings-toggle" id="settingsToggle" type="button" aria-expanded="false" aria-controls="settings" hidden>
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 7h10M18 7h2M4 17h4M12 17h8"/><circle cx="16" cy="7" r="2.2"/><circle cx="10" cy="17" r="2.2"/></svg>
+      Display settings</button>
+  </div>
+</div>
+
+<section class="settings wrap" id="settings" aria-labelledby="h-settings" hidden>
+  <div class="inner">
+    <h2 id="h-settings">Display settings</h2>
+    <p class="help">Change how this site looks for you. Changes apply right away and are remembered on this device.</p>
+    <div class="groups">
+      <fieldset>
+        <legend>Text size</legend>
+        <div class="choice">
+          <label><input type="radio" name="display-text" value="" id="display-text-default" checked> Standard</label>
+          <label><input type="radio" name="display-text" value="large" id="display-text-large"> Large</label>
+          <label><input type="radio" name="display-text" value="largest" id="display-text-largest"> Largest</label>
+        </div>
+      </fieldset>
+      <fieldset>
+        <legend>Contrast</legend>
+        <div class="choice">
+          <label><input type="radio" name="display-contrast" value="" id="display-contrast-default" checked> Standard</label>
+          <label><input type="radio" name="display-contrast" value="more" id="display-contrast-more"> High contrast</label>
+        </div>
+      </fieldset>
+      <fieldset>
+        <legend>Light or dark</legend>
+        <div class="choice">
+          <label><input type="radio" name="display-theme" value="" id="display-theme-default" checked> Match my device</label>
+          <label><input type="radio" name="display-theme" value="light" id="display-theme-light"> Light</label>
+          <label><input type="radio" name="display-theme" value="dark" id="display-theme-dark"> Dark</label>
+        </div>
+      </fieldset>
+      <fieldset>
+        <legend>Spacing</legend>
+        <div class="choice">
+          <label><input type="radio" name="display-spacing" value="" id="display-spacing-default" checked> Standard</label>
+          <label><input type="radio" name="display-spacing" value="roomy" id="display-spacing-roomy"> Extra space between letters and lines</label>
+        </div>
+      </fieldset>
+      <fieldset>
+        <legend>Motion</legend>
+        <div class="choice">
+          <label><input type="radio" name="display-motion" value="" id="display-motion-default" checked> Match my device</label>
+          <label><input type="radio" name="display-motion" value="reduce" id="display-motion-reduce"> No animation</label>
+        </div>
+      </fieldset>
+    </div>
+    <p class="zoom-tip">You can also zoom any page: hold Control (Command on a Mac) and press the plus key.</p>
+    <div class="settings-foot">
+      <button class="btn" type="button" id="resetSettings">Reset to standard</button>
+      <button class="btn" type="button" id="closeSettings">Close settings</button>
+      <span class="saved" id="savedNote" role="status" aria-live="polite"></span>
+    </div>
+  </div>
+</section>
+
 <header class="top wrap">
-  <a class="logo" href="index.html" aria-label="Fertile Ground Conservancy, home"><svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 482.6 264" fill="currentColor">
+  <div class="inner">
+    <a class="logo" href="/index.html" aria-label="Fertile Ground Conservancy, home"><svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 482.6 264" fill="currentColor">
 <style type="text/css">
 	.st0{fill:none;}
 	.st1{fill:none;stroke:currentColor;stroke-width:7;stroke-miterlimit:10;}
@@ -92,49 +154,56 @@
 <g>
 </g>
 </svg></a>
-  <nav class="main" aria-label="Main">
-    <ul>
-      <li><a href="sponsor.html">Sponsorship</a></li>
-      <li><a href="campaigns.html">Campaigns</a></li>
-      <li><a href="projects.html">Projects</a></li>
-      <li><a href="land.html">Land</a></li>
-      <li><a href="contact.html">Contact</a></li>
-      <li><a class="give" href="donate.html">Give</a></li>
-    </ul>
-  </nav>
+    <nav class="main" aria-label="Main">
+      <ul>
+        <li><a href="/index.html">Home</a></li>
+        <li><a href="/sponsor.html">Sponsorship</a></li>
+        <li><a href="/campaigns.html">Campaign help</a></li>
+        <li><a href="/projects.html">Projects</a></li>
+        <li><a href="/land.html">Land</a></li>
+        <li><a href="/our-story.html">About</a></li>
+        <li><a href="/contact.html">Contact</a></li>
+        <li><a class="donate" href="/donate.html">Donate</a></li>
+      </ul>
+    </nav>
+  </div>
 </header>
 
 <main id="main" tabindex="-1">
-<section class="block wrap on-lichen" aria-labelledby="h-hero" style="min-height:60vh">
-    <h1 class="giant" id="h-hero">Thank you.</h1>
-    <p style="margin:clamp(28px,4vw,48px) 0 0;max-width:40ch;font-size:clamp(1.375rem,2.1vw,2rem);line-height:1.25">We've received your message and will be in touch soon.</p>
-    <div class="cta-row">
-      <a class="btn primary" href="index.html">Back to home <span aria-hidden="true">→</span></a>
-      <a class="btn" href="projects.html">See our projects <span aria-hidden="true">→</span></a>
+<section class="hero wrap" aria-labelledby="h-hero">
+    <div class="inner">
+      <h1 id="h-hero">Thank you. We got your message.</h1>
+      
+    </div>
+  </section>
+
+  <section class="block wrap" aria-labelledby="h-next" style="padding-top:0">
+    <div class="inner" style="padding-top:0">
+      <div class="split">
+        <h2 id="h-next">What happens next</h2>
+        <ul class="ruled">
+          <li><strong>Sponsorship applications</strong>We usually reply within three weeks.</li>
+          <li><strong>Land inquiries</strong>We may take a little longer, since land is a smaller part of our work right now.</li>
+          <li><strong>Other messages</strong>We usually reply within two weeks.</li>
+          <li><strong>Don't see a reply?</strong>Check your spam folder for mail from info@fertilegroundconservancy.org, or write to us there directly.</li>
+        </ul>
+      </div>
+      <div class="cta-row">
+        <a class="btn primary" href="/index.html">Back to the home page <span aria-hidden="true">→</span></a>
+        <a href="/projects.html">See our projects</a>
+      </div>
     </div>
   </section>
 </main>
 
 <footer class="foot wrap">
-  <nav class="foot-nav" aria-label="Site">
-    <ul>
-      <li><a href="sponsor.html">Sponsorship</a></li>
-      <li><a href="campaigns.html">Campaigns</a></li>
-      <li><a href="projects.html">Projects</a></li>
-      <li><a href="land.html">Land</a></li>
-      <li><a href="our-story.html">About</a></li>
-      <li><a href="biocentric.html">Biocentrism</a></li>
-      <li><a href="contact.html">Contact</a></li>
-      <li><a href="donate.html">Give</a></li>
-    </ul>
-  </nav>
-  <div class="foot-cols">
-    <p>Fertile Ground Conservancy<br>PO Box 11262<br>Eugene, OR 97440</p>
-    <p>501(c)(3) nonprofit<br>EIN 27-1194001<br>Since 2009</p>
+  <div class="inner">
+    <p>Fertile Ground Conservancy<br>PO Box 11262<br>Eugene, OR 97440<br>info@fertilegroundconservancy.org</p>
+    <p>501(c)(3) nonprofit<br>EIN 27-1194001<br><a href="/accessibility.html">Accessibility statement</a><br><a href="/biocentric.html">What is biocentrism?</a><br><a href="#main">Back to top</a></p>
     <p>We work on the unceded lands of many Indigenous peoples, including the Kalapuya, on whose homelands Eugene sits, and the Tolowa Dee-ni', Yurok, and Karuk of the Pacific Coast.</p>
   </div>
 </footer>
 
-<script src="js/main.js"></script>
+<script src="/js/main.js"></script>
 </body>
 </html>

@@ -3,20 +3,82 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Contact · Fertile Ground Conservancy</title>
-  <meta name="description" content="Contact Fertile Ground Conservancy by email, mail, or the form on this page." />
-  <meta name="theme-color" content="#F4F1EA" />
-  <link rel="icon" href="images/fgclogo.svg" type="image/svg+xml" />
+  <title>Contact us · Fertile Ground Conservancy</title>
+  <meta name="description" content="Contact Fertile Ground Conservancy by email, mail, or web form." />
+  <meta name="theme-color" content="#FAF7EF" />
+  <link rel="icon" href="/images/fgclogo.svg" type="image/svg+xml" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&display=swap" />
-  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Next:ital,wght@0,400;0,700;1,400&display=swap" />
+  <link rel="stylesheet" href="/css/style.css" />
 </head>
 <body>
 <a class="skip" href="#main">Skip to main content</a>
 
+<div class="utility wrap">
+  <div class="inner">
+    <a href="/accessibility.html">Accessibility</a>
+    <button class="settings-toggle" id="settingsToggle" type="button" aria-expanded="false" aria-controls="settings" hidden>
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 7h10M18 7h2M4 17h4M12 17h8"/><circle cx="16" cy="7" r="2.2"/><circle cx="10" cy="17" r="2.2"/></svg>
+      Display settings</button>
+  </div>
+</div>
+
+<section class="settings wrap" id="settings" aria-labelledby="h-settings" hidden>
+  <div class="inner">
+    <h2 id="h-settings">Display settings</h2>
+    <p class="help">Change how this site looks for you. Changes apply right away and are remembered on this device.</p>
+    <div class="groups">
+      <fieldset>
+        <legend>Text size</legend>
+        <div class="choice">
+          <label><input type="radio" name="display-text" value="" id="display-text-default" checked> Standard</label>
+          <label><input type="radio" name="display-text" value="large" id="display-text-large"> Large</label>
+          <label><input type="radio" name="display-text" value="largest" id="display-text-largest"> Largest</label>
+        </div>
+      </fieldset>
+      <fieldset>
+        <legend>Contrast</legend>
+        <div class="choice">
+          <label><input type="radio" name="display-contrast" value="" id="display-contrast-default" checked> Standard</label>
+          <label><input type="radio" name="display-contrast" value="more" id="display-contrast-more"> High contrast</label>
+        </div>
+      </fieldset>
+      <fieldset>
+        <legend>Light or dark</legend>
+        <div class="choice">
+          <label><input type="radio" name="display-theme" value="" id="display-theme-default" checked> Match my device</label>
+          <label><input type="radio" name="display-theme" value="light" id="display-theme-light"> Light</label>
+          <label><input type="radio" name="display-theme" value="dark" id="display-theme-dark"> Dark</label>
+        </div>
+      </fieldset>
+      <fieldset>
+        <legend>Spacing</legend>
+        <div class="choice">
+          <label><input type="radio" name="display-spacing" value="" id="display-spacing-default" checked> Standard</label>
+          <label><input type="radio" name="display-spacing" value="roomy" id="display-spacing-roomy"> Extra space between letters and lines</label>
+        </div>
+      </fieldset>
+      <fieldset>
+        <legend>Motion</legend>
+        <div class="choice">
+          <label><input type="radio" name="display-motion" value="" id="display-motion-default" checked> Match my device</label>
+          <label><input type="radio" name="display-motion" value="reduce" id="display-motion-reduce"> No animation</label>
+        </div>
+      </fieldset>
+    </div>
+    <p class="zoom-tip">You can also zoom any page: hold Control (Command on a Mac) and press the plus key.</p>
+    <div class="settings-foot">
+      <button class="btn" type="button" id="resetSettings">Reset to standard</button>
+      <button class="btn" type="button" id="closeSettings">Close settings</button>
+      <span class="saved" id="savedNote" role="status" aria-live="polite"></span>
+    </div>
+  </div>
+</section>
+
 <header class="top wrap">
-  <a class="logo" href="index.html" aria-label="Fertile Ground Conservancy, home"><svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 482.6 264" fill="currentColor">
+  <div class="inner">
+    <a class="logo" href="/index.html" aria-label="Fertile Ground Conservancy, home"><svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 482.6 264" fill="currentColor">
 <style type="text/css">
 	.st0{fill:none;}
 	.st1{fill:none;stroke:currentColor;stroke-width:7;stroke-miterlimit:10;}
@@ -92,86 +154,108 @@
 <g>
 </g>
 </svg></a>
-  <nav class="main" aria-label="Main">
-    <ul>
-      <li><a href="sponsor.html">Sponsorship</a></li>
-      <li><a href="campaigns.html">Campaigns</a></li>
-      <li><a href="projects.html">Projects</a></li>
-      <li><a href="land.html">Land</a></li>
-      <li><a href="contact.html" aria-current="page">Contact</a></li>
-      <li><a class="give" href="donate.html">Give</a></li>
-    </ul>
-  </nav>
+    <nav class="main" aria-label="Main">
+      <ul>
+        <li><a href="/index.html">Home</a></li>
+        <li><a href="/sponsor.html">Sponsorship</a></li>
+        <li><a href="/campaigns.html">Campaign help</a></li>
+        <li><a href="/projects.html">Projects</a></li>
+        <li><a href="/land.html">Land</a></li>
+        <li><a href="/our-story.html">About</a></li>
+        <li><a href="/contact.html" aria-current="page">Contact</a></li>
+        <li><a class="donate" href="/donate.html">Donate</a></li>
+      </ul>
+    </nav>
+  </div>
 </header>
 
 <main id="main" tabindex="-1">
+  <nav class="crumbs wrap" aria-label="Breadcrumb">
+    <ol class="inner"><li><a href="/index.html">Home</a></li><li><span aria-current="page">Contact us</span></li></ol>
+  </nav>
 <section class="hero wrap" aria-labelledby="h-hero">
-    <h1 id="h-hero">Get in touch.</h1>
-    <div class="mail">
-      <a id="email" href="mailto:info@fertilegroundconservancy.org">info@fertilegroundconservancy.org</a>
-      <button class="copy" id="copyBtn" type="button">Copy address</button>
-      <span class="vh" id="copyStatus" role="status" aria-live="polite"></span>
+    <div class="inner">
+      <h1 id="h-hero">Contact us</h1>
+      <p class="sub">Every option reaches the same small team</p>
     </div>
   </section>
 
-  <dl class="facts wrap" aria-label="Contact details">
-    <div><dt>Mail</dt><dd>PO Box 11262, Eugene, OR 97440</dd></div>
-  </dl>
-
-  <section class="block wrap" aria-labelledby="h-form">
-    <div class="split">
-      <div>
-        <h2 class="mid" id="h-form">Send a message</h2>
-        <p style="max-width:40ch;margin:20px 0 0">Applying for fiscal sponsorship? Use the <a href="sponsor.html#apply">sponsorship application</a> instead, so we have what we need to review it.</p>
-        <p style="max-width:40ch">Thinking about protecting land? The <a href="land.html#inquiry">land inquiry form</a> asks the right questions.</p>
+  <section class="block wrap on-amber" aria-labelledby="h-ways" style="padding-top:0">
+    <div class="inner" style="padding-top:clamp(28px,4vw,48px)">
+      <h2 id="h-ways">Ways to reach us</h2>
+      <ul class="ways">
+        <li>
+          <h3>Email</h3>
+          <span class="addr" id="email">info@fertilegroundconservancy.org</span><br>
+          <button class="copy" id="copyBtn" type="button" hidden data-needs-js>Copy email address</button>
+          <span class="vh" id="copyStatus" role="status" aria-live="polite"></span>
+        </li>
+        <li>
+          <h3>Mail</h3>
+          <span class="addr">Fertile Ground Conservancy<br>PO Box 11262<br>Eugene, OR 97440</span>
+        </li>
+        <li>
+          <h3>Web form</h3>
+          <p style="margin:0 0 4px">Write to us without leaving the site.</p>
+          <a class="addr" href="#message">Go to the form below</a>
+        </li>
+      </ul>
+      <div class="formats">
+        <h3>Need information in a different way?</h3>
+        <p>We can send it as large print, plain text, or a printed letter, or talk it through on a call. If you need another language, ask and we'll see what we can do. Read our <a href="/accessibility.html">accessibility statement</a> for more.</p>
       </div>
+    </div>
+  </section>
+
+  <section class="block wrap" id="message" aria-labelledby="h-form" tabindex="-1">
+    <div class="inner">
+      <div class="split">
+        <div>
+          <h2 id="h-form">Send a message</h2>
+          <p>We usually reply within two weeks.</p>
+          <div class="box">
+            <h3>Is there a better form?</h3>
+            <p>Applying for fiscal sponsorship? Use the <a href="/sponsor.html#apply">sponsorship application</a>.</p>
+            <p>Thinking about protecting land? Use the <a href="/land.html#inquiry">land form</a>.</p>
+          </div>
+        </div>
     <form class="form" name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/thanks.html" aria-label="Contact form">
+      <div class="error-summary" role="alert" hidden></div>
       <input type="hidden" name="form-name" value="contact" />
-      <p class="hp"><label>Don't fill this out if you're human: <input name="bot-field" tabindex="-1" autocomplete="off" /></label></p>
+      <p class="hp"><label>Leave this empty: <input name="bot-field" tabindex="-1" autocomplete="off" /></label></p>
       <div class="pair">
       <div class="field">
-        <label for="f-name">Name <span class="req">Required</span></label>
-        <input id="f-name" name="name" type="text" autocomplete="name" required />
+        <label for="f-name">Your name <span class="req">(required)</span></label>
+        <input id="f-name" name="name" type="text" autocomplete="name" required data-missing="Enter your name" />
       </div>
       <div class="field">
-        <label for="f-email">Email <span class="req">Required</span></label>
-        <input id="f-email" name="email" type="email" autocomplete="email" required />
+        <label for="f-email">Email address <span class="req">(required)</span></label>
+        <input id="f-email" name="email" type="email" autocomplete="email" required data-missing="Enter your email address so we can reply" />
       </div>
       </div>
       <div class="field">
-        <label for="f-subject">Subject</label>
-        <select id="f-subject" name="subject"><option value="">Choose one</option><option>Fiscal sponsorship</option><option>Campaign support</option><option>Land</option><option>Donation</option><option>Media</option><option>Other</option></select>
+        <label for="f-subject">What is this about? <span class="req">(optional)</span></label>
+        <select id="f-subject" name="subject"><option value="">Choose one</option><option>Fiscal sponsorship</option><option>Campaign help</option><option>Land</option><option>Donation</option><option>Accessibility</option><option>Media</option><option>Something else</option></select>
       </div>
       <div class="field">
-        <label for="f-message">Message <span class="req">Required</span></label>
-        <textarea id="f-message" name="message" rows="7" required></textarea>
+        <label for="f-message">Your message <span class="req">(required)</span></label>
+        <textarea id="f-message" name="message" rows="7" required data-missing="Write your message"></textarea>
       </div>
       <div><button class="btn primary" type="submit">Send message <span aria-hidden="true">→</span></button></div>
     </form>
+      </div>
     </div>
   </section>
 </main>
 
 <footer class="foot wrap">
-  <nav class="foot-nav" aria-label="Site">
-    <ul>
-      <li><a href="sponsor.html">Sponsorship</a></li>
-      <li><a href="campaigns.html">Campaigns</a></li>
-      <li><a href="projects.html">Projects</a></li>
-      <li><a href="land.html">Land</a></li>
-      <li><a href="our-story.html">About</a></li>
-      <li><a href="biocentric.html">Biocentrism</a></li>
-      <li><a href="contact.html" aria-current="page">Contact</a></li>
-      <li><a href="donate.html">Give</a></li>
-    </ul>
-  </nav>
-  <div class="foot-cols">
-    <p>Fertile Ground Conservancy<br>PO Box 11262<br>Eugene, OR 97440</p>
-    <p>501(c)(3) nonprofit<br>EIN 27-1194001<br>Since 2009</p>
+  <div class="inner">
+    <p>Fertile Ground Conservancy<br>PO Box 11262<br>Eugene, OR 97440<br>info@fertilegroundconservancy.org</p>
+    <p>501(c)(3) nonprofit<br>EIN 27-1194001<br><a href="/accessibility.html">Accessibility statement</a><br><a href="/biocentric.html">What is biocentrism?</a><br><a href="#main">Back to top</a></p>
     <p>We work on the unceded lands of many Indigenous peoples, including the Kalapuya, on whose homelands Eugene sits, and the Tolowa Dee-ni', Yurok, and Karuk of the Pacific Coast.</p>
   </div>
 </footer>
 
-<script src="js/main.js"></script>
+<script src="/js/main.js"></script>
 </body>
 </html>

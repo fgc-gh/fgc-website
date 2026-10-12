@@ -3,20 +3,82 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Campaign support · Fertile Ground Conservancy</title>
-  <meta name="description" content="Volunteer help for groups defending a specific place: reading agency documents, drafting public comments and testimony, reviewing grant applications, and strategy." />
-  <meta name="theme-color" content="#F4F1EA" />
-  <link rel="icon" href="images/fgclogo.svg" type="image/svg+xml" />
+  <title>Campaign help · Fertile Ground Conservancy</title>
+  <meta name="description" content="Volunteer help for groups defending a specific place: reading agency documents, writing public comments, reviewing grants, and strategy." />
+  <meta name="theme-color" content="#FAF7EF" />
+  <link rel="icon" href="/images/fgclogo.svg" type="image/svg+xml" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&display=swap" />
-  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Next:ital,wght@0,400;0,700;1,400&display=swap" />
+  <link rel="stylesheet" href="/css/style.css" />
 </head>
 <body>
 <a class="skip" href="#main">Skip to main content</a>
 
+<div class="utility wrap">
+  <div class="inner">
+    <a href="/accessibility.html">Accessibility</a>
+    <button class="settings-toggle" id="settingsToggle" type="button" aria-expanded="false" aria-controls="settings" hidden>
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 7h10M18 7h2M4 17h4M12 17h8"/><circle cx="16" cy="7" r="2.2"/><circle cx="10" cy="17" r="2.2"/></svg>
+      Display settings</button>
+  </div>
+</div>
+
+<section class="settings wrap" id="settings" aria-labelledby="h-settings" hidden>
+  <div class="inner">
+    <h2 id="h-settings">Display settings</h2>
+    <p class="help">Change how this site looks for you. Changes apply right away and are remembered on this device.</p>
+    <div class="groups">
+      <fieldset>
+        <legend>Text size</legend>
+        <div class="choice">
+          <label><input type="radio" name="display-text" value="" id="display-text-default" checked> Standard</label>
+          <label><input type="radio" name="display-text" value="large" id="display-text-large"> Large</label>
+          <label><input type="radio" name="display-text" value="largest" id="display-text-largest"> Largest</label>
+        </div>
+      </fieldset>
+      <fieldset>
+        <legend>Contrast</legend>
+        <div class="choice">
+          <label><input type="radio" name="display-contrast" value="" id="display-contrast-default" checked> Standard</label>
+          <label><input type="radio" name="display-contrast" value="more" id="display-contrast-more"> High contrast</label>
+        </div>
+      </fieldset>
+      <fieldset>
+        <legend>Light or dark</legend>
+        <div class="choice">
+          <label><input type="radio" name="display-theme" value="" id="display-theme-default" checked> Match my device</label>
+          <label><input type="radio" name="display-theme" value="light" id="display-theme-light"> Light</label>
+          <label><input type="radio" name="display-theme" value="dark" id="display-theme-dark"> Dark</label>
+        </div>
+      </fieldset>
+      <fieldset>
+        <legend>Spacing</legend>
+        <div class="choice">
+          <label><input type="radio" name="display-spacing" value="" id="display-spacing-default" checked> Standard</label>
+          <label><input type="radio" name="display-spacing" value="roomy" id="display-spacing-roomy"> Extra space between letters and lines</label>
+        </div>
+      </fieldset>
+      <fieldset>
+        <legend>Motion</legend>
+        <div class="choice">
+          <label><input type="radio" name="display-motion" value="" id="display-motion-default" checked> Match my device</label>
+          <label><input type="radio" name="display-motion" value="reduce" id="display-motion-reduce"> No animation</label>
+        </div>
+      </fieldset>
+    </div>
+    <p class="zoom-tip">You can also zoom any page: hold Control (Command on a Mac) and press the plus key.</p>
+    <div class="settings-foot">
+      <button class="btn" type="button" id="resetSettings">Reset to standard</button>
+      <button class="btn" type="button" id="closeSettings">Close settings</button>
+      <span class="saved" id="savedNote" role="status" aria-live="polite"></span>
+    </div>
+  </div>
+</section>
+
 <header class="top wrap">
-  <a class="logo" href="index.html" aria-label="Fertile Ground Conservancy, home"><svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 482.6 264" fill="currentColor">
+  <div class="inner">
+    <a class="logo" href="/index.html" aria-label="Fertile Ground Conservancy, home"><svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 482.6 264" fill="currentColor">
 <style type="text/css">
 	.st0{fill:none;}
 	.st1{fill:none;stroke:currentColor;stroke-width:7;stroke-miterlimit:10;}
@@ -92,52 +154,90 @@
 <g>
 </g>
 </svg></a>
-  <nav class="main" aria-label="Main">
-    <ul>
-      <li><a href="sponsor.html">Sponsorship</a></li>
-      <li><a href="campaigns.html" aria-current="page">Campaigns</a></li>
-      <li><a href="projects.html">Projects</a></li>
-      <li><a href="land.html">Land</a></li>
-      <li><a href="contact.html">Contact</a></li>
-      <li><a class="give" href="donate.html">Give</a></li>
-    </ul>
-  </nav>
+    <nav class="main" aria-label="Main">
+      <ul>
+        <li><a href="/index.html">Home</a></li>
+        <li><a href="/sponsor.html">Sponsorship</a></li>
+        <li><a href="/campaigns.html" aria-current="page">Campaign help</a></li>
+        <li><a href="/projects.html">Projects</a></li>
+        <li><a href="/land.html">Land</a></li>
+        <li><a href="/our-story.html">About</a></li>
+        <li><a href="/contact.html">Contact</a></li>
+        <li><a class="donate" href="/donate.html">Donate</a></li>
+      </ul>
+    </nav>
+  </div>
 </header>
 
 <main id="main" tabindex="-1">
+  <nav class="crumbs wrap" aria-label="Breadcrumb">
+    <ol class="inner"><li><a href="/index.html">Home</a></li><li><span aria-current="page">Campaign help</span></li></ol>
+  </nav>
 <section class="hero wrap" aria-labelledby="h-hero">
-    <h1 id="h-hero">Campaign support</h1>
-    <p class="lede-lg">Practical help for groups defending a specific place. Most places aren't lost in the field. They're lost on paper, in permits and plans that pass because no one had the time to answer them.</p>
-    <div class="cta-row">
-      <a class="btn primary" href="contact.html?topic=Campaign%20support">Ask about a campaign <span aria-hidden="true">→</span></a>
+    <div class="inner">
+      <h1 id="h-hero">Campaign help</h1>
+      <p class="sub">Practical help for groups defending a specific place</p>
+    </div>
+  </section>
+  <div class="wrap page-short">
+    <section class="short" aria-labelledby="h-short">
+      <h2 id="h-short">In short</h2>
+      <ul>
+        <li>We help groups protecting a specific place, like a forest, river, or meadow facing a permit, plan, or project.</li>
+        <li>We can help you read agency documents, write public comments, and plan your next steps.</li>
+        <li>Volunteers do this work, so we take on a few requests at a time.</li>
+        <li>Email us about the place and your deadlines. We'll tell you honestly how much we can help.</li>
+      </ul>
+      <div class="actions"><a class="btn primary" href="/contact.html?topic=Campaign%20help#message">Ask about a campaign <span aria-hidden="true">→</span></a></div>
+    </section>
+  </div>
+
+  <section class="block wrap" aria-labelledby="h-help">
+    <div class="inner">
+      <h2 id="h-help">What we can help with</h2>
+      <ul class="rows">
+        <li><h3>Reading the documents</h3><p>Environmental reviews, permit applications, and management plans can run hundreds of pages. We help you find what matters and when the deadlines are.</p></li>
+        <li><h3>Public comments and testimony</h3><p>We help you draft or review comments so they make the points an agency is required to respond to.</p></li>
+        <li><h3>Grant applications</h3><p>A second set of eyes on a proposal before you send it.</p></li>
+        <li><h3>Strategy</h3><p>Thinking through timelines, pressure points, and who else should be involved.</p></li>
+      </ul>
     </div>
   </section>
 
-  <section class="block wrap on-cobalt" aria-labelledby="h-help">
-    <h2 class="big" id="h-help">What we can help with</h2>
-    <ul class="rows">
-      <li class="row two sm"><h3>Reading the documents</h3><p>Environmental assessments, impact statements, permit applications, and management plans. We help you find what matters in them and where the deadlines are.</p></li>
-      <li class="row two sm"><h3>Comments and testimony</h3><p>Drafting or reviewing public comments and testimony so they make the points an agency has to respond to.</p></li>
-      <li class="row two sm"><h3>Grant applications</h3><p>A second set of eyes on a proposal before you send it.</p></li>
-      <li class="row two sm"><h3>Strategy</h3><p>Thinking through timelines, pressure points, and who else should be involved.</p></li>
-    </ul>
-  </section>
-
-  <section class="block wrap" aria-labelledby="h-terms">
-    <div class="split">
-      <h2 class="mid" id="h-terms">How it works</h2>
-      <div class="prose">
-        <p>Write to us with the place, what threatens it, and any deadlines you're facing. We'll tell you honestly whether we can help, and how much.</p>
-        <p>This is volunteer work, so we take on a few requests at a time and keep each one focused. We can't promise ongoing staff time or legal representation, but a few hours at the right moment often goes a long way.</p>
-        <p>If your group needs a fiscal home to raise money for the campaign, <a href="sponsor.html">fiscal sponsorship</a> covers that.</p>
+  <section class="block wrap on-green" aria-labelledby="h-ask">
+    <div class="inner">
+      <h2 id="h-ask">How to ask for help</h2>
+      <ol class="steps">
+        <li><span class="n">Step 1 of 3</span><h3>Write to us</h3><p>Tell us:</p><ul class="list"><li>The place and where it is</li><li>What threatens it</li><li>Any deadlines</li><li>Who is involved so far</li></ul></li>
+        <li><span class="n">Step 2 of 3</span><h3>Hear back</h3><p>We'll tell you honestly whether we can help, and how much. If we can't, we'll try to point you to someone who can.</p></li>
+        <li><span class="n">Step 3 of 3</span><h3>Work together</h3><p>We agree on a focused task, like reviewing one document or drafting one comment letter.</p></li>
+      </ol>
+      <div class="cta-row">
+        <a class="btn primary" href="/contact.html?topic=Campaign%20help#message">Use the contact form <span aria-hidden="true">→</span></a>
+        <span>Or email <strong>info@fertilegroundconservancy.org</strong></span>
       </div>
     </div>
-    <div class="split">
-      <h2 class="mid">Lend a hand</h2>
-      <div class="prose">
-        <p>If you have experience with environmental or administrative law, NEPA or CEQA review, or writing clearly about ecology and land use, we'd be glad to hear from you.</p>
-        <div class="cta-row" style="margin-top:24px">
-          <a class="btn" href="contact.html?topic=Campaign%20support">Get in touch <span aria-hidden="true">→</span></a>
+  </section>
+
+  <section class="block wrap" aria-labelledby="h-limits">
+    <div class="inner">
+      <div class="split">
+        <h2 id="h-limits">What we can't do</h2>
+        <ul class="ruled">
+          <li>We can't act as your lawyer or represent you in court.</li>
+          <li>We can't promise ongoing staff time. A few focused hours at the right moment often go a long way.</li>
+          <li>We may not be able to take your request if we're already helping other groups.</li>
+        </ul>
+      </div>
+      <div class="split">
+        <h2 id="h-money">Need to raise money?</h2>
+        <p>If your group needs a nonprofit home to accept donations for the campaign, <a href="/sponsor.html">fiscal sponsorship</a> covers that.</p>
+      </div>
+      <div class="split">
+        <h2 id="h-volunteer">Lend a hand</h2>
+        <div>
+          <p>If you have experience with environmental or administrative law, environmental review (NEPA or CEQA), or writing clearly about ecology and land use, we'd be glad to hear from you.</p>
+          <a class="btn" href="/contact.html?topic=Campaign%20help#message">Offer to help <span aria-hidden="true">→</span></a>
         </div>
       </div>
     </div>
@@ -145,25 +245,13 @@
 </main>
 
 <footer class="foot wrap">
-  <nav class="foot-nav" aria-label="Site">
-    <ul>
-      <li><a href="sponsor.html">Sponsorship</a></li>
-      <li><a href="campaigns.html" aria-current="page">Campaigns</a></li>
-      <li><a href="projects.html">Projects</a></li>
-      <li><a href="land.html">Land</a></li>
-      <li><a href="our-story.html">About</a></li>
-      <li><a href="biocentric.html">Biocentrism</a></li>
-      <li><a href="contact.html">Contact</a></li>
-      <li><a href="donate.html">Give</a></li>
-    </ul>
-  </nav>
-  <div class="foot-cols">
-    <p>Fertile Ground Conservancy<br>PO Box 11262<br>Eugene, OR 97440</p>
-    <p>501(c)(3) nonprofit<br>EIN 27-1194001<br>Since 2009</p>
+  <div class="inner">
+    <p>Fertile Ground Conservancy<br>PO Box 11262<br>Eugene, OR 97440<br>info@fertilegroundconservancy.org</p>
+    <p>501(c)(3) nonprofit<br>EIN 27-1194001<br><a href="/accessibility.html">Accessibility statement</a><br><a href="/biocentric.html">What is biocentrism?</a><br><a href="#main">Back to top</a></p>
     <p>We work on the unceded lands of many Indigenous peoples, including the Kalapuya, on whose homelands Eugene sits, and the Tolowa Dee-ni', Yurok, and Karuk of the Pacific Coast.</p>
   </div>
 </footer>
 
-<script src="js/main.js"></script>
+<script src="/js/main.js"></script>
 </body>
 </html>

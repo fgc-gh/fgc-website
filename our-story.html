@@ -3,20 +3,82 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>About · Fertile Ground Conservancy</title>
-  <meta name="description" content="Fertile Ground Conservancy is a biocentric 501(c)(3) founded in 2009 in the Pacific Northwest. Meet the board and learn how we work." />
-  <meta name="theme-color" content="#F4F1EA" />
-  <link rel="icon" href="images/fgclogo.svg" type="image/svg+xml" />
+  <title>About us · Fertile Ground Conservancy</title>
+  <meta name="description" content="Fertile Ground Conservancy is a volunteer-run, biocentric 501(c)(3) founded in 2009. Meet the board." />
+  <meta name="theme-color" content="#FAF7EF" />
+  <link rel="icon" href="/images/fgclogo.svg" type="image/svg+xml" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&display=swap" />
-  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Next:ital,wght@0,400;0,700;1,400&display=swap" />
+  <link rel="stylesheet" href="/css/style.css" />
 </head>
 <body>
 <a class="skip" href="#main">Skip to main content</a>
 
+<div class="utility wrap">
+  <div class="inner">
+    <a href="/accessibility.html">Accessibility</a>
+    <button class="settings-toggle" id="settingsToggle" type="button" aria-expanded="false" aria-controls="settings" hidden>
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 7h10M18 7h2M4 17h4M12 17h8"/><circle cx="16" cy="7" r="2.2"/><circle cx="10" cy="17" r="2.2"/></svg>
+      Display settings</button>
+  </div>
+</div>
+
+<section class="settings wrap" id="settings" aria-labelledby="h-settings" hidden>
+  <div class="inner">
+    <h2 id="h-settings">Display settings</h2>
+    <p class="help">Change how this site looks for you. Changes apply right away and are remembered on this device.</p>
+    <div class="groups">
+      <fieldset>
+        <legend>Text size</legend>
+        <div class="choice">
+          <label><input type="radio" name="display-text" value="" id="display-text-default" checked> Standard</label>
+          <label><input type="radio" name="display-text" value="large" id="display-text-large"> Large</label>
+          <label><input type="radio" name="display-text" value="largest" id="display-text-largest"> Largest</label>
+        </div>
+      </fieldset>
+      <fieldset>
+        <legend>Contrast</legend>
+        <div class="choice">
+          <label><input type="radio" name="display-contrast" value="" id="display-contrast-default" checked> Standard</label>
+          <label><input type="radio" name="display-contrast" value="more" id="display-contrast-more"> High contrast</label>
+        </div>
+      </fieldset>
+      <fieldset>
+        <legend>Light or dark</legend>
+        <div class="choice">
+          <label><input type="radio" name="display-theme" value="" id="display-theme-default" checked> Match my device</label>
+          <label><input type="radio" name="display-theme" value="light" id="display-theme-light"> Light</label>
+          <label><input type="radio" name="display-theme" value="dark" id="display-theme-dark"> Dark</label>
+        </div>
+      </fieldset>
+      <fieldset>
+        <legend>Spacing</legend>
+        <div class="choice">
+          <label><input type="radio" name="display-spacing" value="" id="display-spacing-default" checked> Standard</label>
+          <label><input type="radio" name="display-spacing" value="roomy" id="display-spacing-roomy"> Extra space between letters and lines</label>
+        </div>
+      </fieldset>
+      <fieldset>
+        <legend>Motion</legend>
+        <div class="choice">
+          <label><input type="radio" name="display-motion" value="" id="display-motion-default" checked> Match my device</label>
+          <label><input type="radio" name="display-motion" value="reduce" id="display-motion-reduce"> No animation</label>
+        </div>
+      </fieldset>
+    </div>
+    <p class="zoom-tip">You can also zoom any page: hold Control (Command on a Mac) and press the plus key.</p>
+    <div class="settings-foot">
+      <button class="btn" type="button" id="resetSettings">Reset to standard</button>
+      <button class="btn" type="button" id="closeSettings">Close settings</button>
+      <span class="saved" id="savedNote" role="status" aria-live="polite"></span>
+    </div>
+  </div>
+</section>
+
 <header class="top wrap">
-  <a class="logo" href="index.html" aria-label="Fertile Ground Conservancy, home"><svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 482.6 264" fill="currentColor">
+  <div class="inner">
+    <a class="logo" href="/index.html" aria-label="Fertile Ground Conservancy, home"><svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 482.6 264" fill="currentColor">
 <style type="text/css">
 	.st0{fill:none;}
 	.st1{fill:none;stroke:currentColor;stroke-width:7;stroke-miterlimit:10;}
@@ -92,98 +154,91 @@
 <g>
 </g>
 </svg></a>
-  <nav class="main" aria-label="Main">
-    <ul>
-      <li><a href="sponsor.html">Sponsorship</a></li>
-      <li><a href="campaigns.html">Campaigns</a></li>
-      <li><a href="projects.html">Projects</a></li>
-      <li><a href="land.html">Land</a></li>
-      <li><a href="contact.html">Contact</a></li>
-      <li><a class="give" href="donate.html">Give</a></li>
-    </ul>
-  </nav>
+    <nav class="main" aria-label="Main">
+      <ul>
+        <li><a href="/index.html">Home</a></li>
+        <li><a href="/sponsor.html">Sponsorship</a></li>
+        <li><a href="/campaigns.html">Campaign help</a></li>
+        <li><a href="/projects.html">Projects</a></li>
+        <li><a href="/land.html">Land</a></li>
+        <li><a href="/our-story.html" aria-current="page">About</a></li>
+        <li><a href="/contact.html">Contact</a></li>
+        <li><a class="donate" href="/donate.html">Donate</a></li>
+      </ul>
+    </nav>
+  </div>
 </header>
 
 <main id="main" tabindex="-1">
+  <nav class="crumbs wrap" aria-label="Breadcrumb">
+    <ol class="inner"><li><a href="/index.html">Home</a></li><li><span aria-current="page">About us</span></li></ol>
+  </nav>
 <section class="hero wrap" aria-labelledby="h-hero">
-    <h1 id="h-hero">About us</h1>
-    <p class="lede-lg">We're a small, volunteer-run <a href="biocentric.html">biocentric</a> nonprofit founded in 2009 in the Pacific Northwest. We give grassroots ecological projects a legal and financial home, help groups defending specific places, and hold land in permanent protection.</p>
+    <div class="inner">
+      <h1 id="h-hero">About us</h1>
+      
+    </div>
   </section>
-
-  <dl class="facts wrap" aria-label="Organization facts">
-    <div><dt>Status</dt><dd>501(c)(3) nonprofit</dd></div>
-    <div><dt>EIN</dt><dd>27-1194001</dd></div>
-    <div><dt>Based in</dt><dd>Eugene, Oregon</dd></div>
-    <div><dt>Since</dt><dd>2009</dd></div>
-  </dl>
+  <div class="wrap page-short">
+    <section class="short" aria-labelledby="h-short">
+      <h2 id="h-short">In short</h2>
+      <ul>
+        <li>We are a small nonprofit founded in 2009 in the Pacific Northwest.</li>
+        <li>Volunteers run everything. We have no paid staff.</li>
+        <li>We give grassroots ecological projects a nonprofit home, help groups protect specific places, and hold land permanently.</li>
+        <li>We are <a href="/biocentric.html">biocentric</a>: we believe the living world matters for its own sake.</li>
+      </ul>
+    </section>
+  </div>
+  <div class="wrap">
+    <dl class="facts inner" aria-label="Organization facts"><div><dt>Type</dt><dd>501(c)(3) nonprofit</dd></div><div><dt>Tax ID (EIN)</dt><dd>27-1194001</dd></div><div><dt>Location</dt><dd>Eugene, Oregon</dd></div><div><dt>Founded</dt><dd>2009</dd></div></dl>
+  </div>
 
   <section class="block wrap" id="people" aria-labelledby="h-people">
-    <h2 class="big" id="h-people">Board and staff</h2>
-    <ul class="people">
-      <li class="person">
-        <img src="images/dillon.jpg" alt="Portrait of Dillon Thomson" loading="lazy" />
-        <div>
-          <h3>Dillon Thomson</h3>
-          <span class="role label">Executive Director</span>
-          <p>Dillon is a co-founding member of Fertile Ground Conservancy and its first executive director. He grew up in the damp green of occupied Chehalis land, in what is now western Washington, a place scarred by clearcuts and dripping with wild beauty. Watching that wildness eaten away by industry and development convinced him the dominant economic system is at odds with the natural world. He found a home for his love and grief in the deep ecology and conservation movements.</p>
-        </div>
-      </li>
-      <li class="person">
-        <img src="images/max.jpg" alt="Portrait of Max Wilbert" loading="lazy" />
-        <div>
-          <h3>Max Wilbert</h3>
-          <span class="role label">Board President</span>
-          <p>Max is a writer and biocentric community organizer who has been part of grassroots political work for 20 years. He founded Protect Thacker Pass and is the author of two books, most recently <cite>Bright Green Lies: How the Environmental Movement Lost Its Way and What We Can Do About It</cite> (Monkfish, 2021). His work has been featured in the New York Times, CNN, NPR, Le Monde, the BBC, and elsewhere.</p>
-        </div>
-      </li>
-      <li class="person">
-        <img src="images/saba.jpg" alt="Portrait of Saba Malik" loading="lazy" />
-        <div>
-          <h3>Saba Malik</h3>
-          <span class="role label">Secretary</span>
-          <p>Saba has dedicated her adult life to environmental activism and community organizing. She has spoken at conferences including PIELC and Earth at Risk on ecological justice and the need for systemic change. She now supports at-risk youth in the Bay Area through material assistance and mentorship. An early member of Fertile Ground, she brings decades of experience and vision to the board.</p>
-        </div>
-      </li>
-      <li class="person">
-        <img src="images/rahman.jpg" alt="Portrait of Rahman Malik" loading="lazy" />
-        <div>
-          <h3>Rahman Malik</h3>
-          <span class="role label">Treasurer</span>
-          <p>Rahman is an entrepreneur who chose to build his own businesses rather than follow the traditional path through college. Fertile Ground Conservancy represents his passion for protecting wild nature, where he finds solace and feels most at home.</p>
-        </div>
-      </li>
-    </ul>
+    <div class="inner">
+      <h2 id="h-people">Board and staff</h2>
+      <ul class="people">
+        <li class="person">
+          <img src="/images/dillon.jpg" alt="Portrait of Dillon Thomson" loading="lazy">
+          <div><h3>Dillon Thomson</h3><span class="role">Executive Director</span><p>Dillon co-founded Fertile Ground Conservancy and is its first executive director. He grew up on occupied Chehalis land in what is now western Washington, a place scarred by clearcuts and full of wild beauty. Watching that wildness lost to industry and development convinced him that our economic system is at odds with the natural world. He found a home for his love and grief in the deep ecology and conservation movements.</p></div>
+        </li>
+        <li class="person">
+          <img src="/images/max.jpg" alt="Portrait of Max Wilbert" loading="lazy">
+          <div><h3>Max Wilbert</h3><span class="role">Board President</span><p>Max is a writer and organizer who has been part of grassroots political work for 20 years. He founded Protect Thacker Pass and wrote two books, most recently <cite>Bright Green Lies</cite> (Monkfish, 2021). His work has been covered by the New York Times, CNN, NPR, Le Monde, the BBC, and others.</p></div>
+        </li>
+        <li class="person">
+          <img src="/images/saba.jpg" alt="Portrait of Saba Malik" loading="lazy">
+          <div><h3>Saba Malik</h3><span class="role">Secretary</span><p>Saba has spent her adult life in environmental activism and community organizing. She has spoken at conferences including PIELC and Earth at Risk on ecological justice. She now supports at-risk youth in the Bay Area through material help and mentorship. She was one of Fertile Ground's earliest members.</p></div>
+        </li>
+        <li class="person">
+          <img src="/images/rahman.jpg" alt="Portrait of Rahman Malik" loading="lazy">
+          <div><h3>Rahman Malik</h3><span class="role">Treasurer</span><p>Rahman is an entrepreneur who built his own businesses instead of going to college. Fertile Ground Conservancy reflects his love of wild places, where he feels most at home.</p></div>
+        </li>
+      </ul>
+    </div>
   </section>
 
-  <section class="block wrap on-cobalt" aria-labelledby="h-more">
-    <h2 class="big" id="h-more">More about us</h2>
-    <ul class="rows">
-      <li class="row two sm r-lichen"><h3><a href="biocentric.html">What is biocentrism?</a></h3><p>The view we start from, and what it means for the work we take on and the work we turn down.</p></li>
-      <li class="row two sm r-blaze"><h3><a href="projects.html">Projects</a></h3><p>Everything we've sponsored and run since 2009, including the Earth at Risk conferences.</p></li>
-    </ul>
+  <section class="block wrap on-green" aria-labelledby="h-records">
+    <div class="inner">
+      <div class="split">
+        <h2 id="h-records">Our records</h2>
+        <div>
+          <p>Our IRS filings and financial statements are available on request. Email <strong>info@fertilegroundconservancy.org</strong>.</p>
+          <p>Want to know more about our history? See the <a href="/projects.html">projects we've sponsored and run since 2009</a>.</p>
+        </div>
+      </div>
+    </div>
   </section>
 </main>
 
 <footer class="foot wrap">
-  <nav class="foot-nav" aria-label="Site">
-    <ul>
-      <li><a href="sponsor.html">Sponsorship</a></li>
-      <li><a href="campaigns.html">Campaigns</a></li>
-      <li><a href="projects.html">Projects</a></li>
-      <li><a href="land.html">Land</a></li>
-      <li><a href="our-story.html" aria-current="page">About</a></li>
-      <li><a href="biocentric.html">Biocentrism</a></li>
-      <li><a href="contact.html">Contact</a></li>
-      <li><a href="donate.html">Give</a></li>
-    </ul>
-  </nav>
-  <div class="foot-cols">
-    <p>Fertile Ground Conservancy<br>PO Box 11262<br>Eugene, OR 97440</p>
-    <p>501(c)(3) nonprofit<br>EIN 27-1194001<br>Since 2009</p>
+  <div class="inner">
+    <p>Fertile Ground Conservancy<br>PO Box 11262<br>Eugene, OR 97440<br>info@fertilegroundconservancy.org</p>
+    <p>501(c)(3) nonprofit<br>EIN 27-1194001<br><a href="/accessibility.html">Accessibility statement</a><br><a href="/biocentric.html">What is biocentrism?</a><br><a href="#main">Back to top</a></p>
     <p>We work on the unceded lands of many Indigenous peoples, including the Kalapuya, on whose homelands Eugene sits, and the Tolowa Dee-ni', Yurok, and Karuk of the Pacific Coast.</p>
   </div>
 </footer>
 
-<script src="js/main.js"></script>
+<script src="/js/main.js"></script>
 </body>
 </html>

@@ -4,19 +4,81 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Fertile Ground Conservancy</title>
-  <meta name="description" content="Fertile Ground Conservancy gives small ecological projects a legal and financial home through fiscal sponsorship, and helps groups defending the places they love. Since 2009." />
-  <meta name="theme-color" content="#F4F1EA" />
-  <link rel="icon" href="images/fgclogo.svg" type="image/svg+xml" />
+  <meta name="description" content="Fertile Ground Conservancy gives grassroots ecological projects a nonprofit home through fiscal sponsorship, and helps groups protect the places they love. Since 2009." />
+  <meta name="theme-color" content="#FAF7EF" />
+  <link rel="icon" href="/images/fgclogo.svg" type="image/svg+xml" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&display=swap" />
-  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Next:ital,wght@0,400;0,700;1,400&display=swap" />
+  <link rel="stylesheet" href="/css/style.css" />
 </head>
 <body>
 <a class="skip" href="#main">Skip to main content</a>
 
+<div class="utility wrap">
+  <div class="inner">
+    <a href="/accessibility.html">Accessibility</a>
+    <button class="settings-toggle" id="settingsToggle" type="button" aria-expanded="false" aria-controls="settings" hidden>
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 7h10M18 7h2M4 17h4M12 17h8"/><circle cx="16" cy="7" r="2.2"/><circle cx="10" cy="17" r="2.2"/></svg>
+      Display settings</button>
+  </div>
+</div>
+
+<section class="settings wrap" id="settings" aria-labelledby="h-settings" hidden>
+  <div class="inner">
+    <h2 id="h-settings">Display settings</h2>
+    <p class="help">Change how this site looks for you. Changes apply right away and are remembered on this device.</p>
+    <div class="groups">
+      <fieldset>
+        <legend>Text size</legend>
+        <div class="choice">
+          <label><input type="radio" name="display-text" value="" id="display-text-default" checked> Standard</label>
+          <label><input type="radio" name="display-text" value="large" id="display-text-large"> Large</label>
+          <label><input type="radio" name="display-text" value="largest" id="display-text-largest"> Largest</label>
+        </div>
+      </fieldset>
+      <fieldset>
+        <legend>Contrast</legend>
+        <div class="choice">
+          <label><input type="radio" name="display-contrast" value="" id="display-contrast-default" checked> Standard</label>
+          <label><input type="radio" name="display-contrast" value="more" id="display-contrast-more"> High contrast</label>
+        </div>
+      </fieldset>
+      <fieldset>
+        <legend>Light or dark</legend>
+        <div class="choice">
+          <label><input type="radio" name="display-theme" value="" id="display-theme-default" checked> Match my device</label>
+          <label><input type="radio" name="display-theme" value="light" id="display-theme-light"> Light</label>
+          <label><input type="radio" name="display-theme" value="dark" id="display-theme-dark"> Dark</label>
+        </div>
+      </fieldset>
+      <fieldset>
+        <legend>Spacing</legend>
+        <div class="choice">
+          <label><input type="radio" name="display-spacing" value="" id="display-spacing-default" checked> Standard</label>
+          <label><input type="radio" name="display-spacing" value="roomy" id="display-spacing-roomy"> Extra space between letters and lines</label>
+        </div>
+      </fieldset>
+      <fieldset>
+        <legend>Motion</legend>
+        <div class="choice">
+          <label><input type="radio" name="display-motion" value="" id="display-motion-default" checked> Match my device</label>
+          <label><input type="radio" name="display-motion" value="reduce" id="display-motion-reduce"> No animation</label>
+        </div>
+      </fieldset>
+    </div>
+    <p class="zoom-tip">You can also zoom any page: hold Control (Command on a Mac) and press the plus key.</p>
+    <div class="settings-foot">
+      <button class="btn" type="button" id="resetSettings">Reset to standard</button>
+      <button class="btn" type="button" id="closeSettings">Close settings</button>
+      <span class="saved" id="savedNote" role="status" aria-live="polite"></span>
+    </div>
+  </div>
+</section>
+
 <header class="top wrap">
-  <a class="logo" href="index.html" aria-label="Fertile Ground Conservancy, home"><svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 482.6 264" fill="currentColor">
+  <div class="inner">
+    <a class="logo" href="/index.html" aria-label="Fertile Ground Conservancy, home"><svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 482.6 264" fill="currentColor">
 <style type="text/css">
 	.st0{fill:none;}
 	.st1{fill:none;stroke:currentColor;stroke-width:7;stroke-miterlimit:10;}
@@ -92,158 +154,179 @@
 <g>
 </g>
 </svg></a>
-  <nav class="main" aria-label="Main">
-    <ul>
-      <li><a href="sponsor.html">Sponsorship</a></li>
-      <li><a href="campaigns.html">Campaigns</a></li>
-      <li><a href="projects.html">Projects</a></li>
-      <li><a href="land.html">Land</a></li>
-      <li><a href="contact.html">Contact</a></li>
-      <li><a class="give" href="donate.html">Give</a></li>
-    </ul>
-  </nav>
+    <nav class="main" aria-label="Main">
+      <ul>
+        <li><a href="/index.html" aria-current="page">Home</a></li>
+        <li><a href="/sponsor.html">Sponsorship</a></li>
+        <li><a href="/campaigns.html">Campaign help</a></li>
+        <li><a href="/projects.html">Projects</a></li>
+        <li><a href="/land.html">Land</a></li>
+        <li><a href="/our-story.html">About</a></li>
+        <li><a href="/contact.html">Contact</a></li>
+        <li><a class="donate" href="/donate.html">Donate</a></li>
+      </ul>
+    </nav>
+  </div>
 </header>
 
 <main id="main" tabindex="-1">
 <section class="hero wrap" aria-labelledby="h-hero">
-    <h1 id="h-hero">A home for grassroots ecological work.</h1>
+    <div class="inner">
+      <h1 id="h-hero">A home for grassroots ecological work</h1>
+      
+    </div>
   </section>
 
-  <div class="band">
-    <figure>
-      <img src="images/stream.jpg" width="600" height="400" alt="Moss-covered sandstone shelves and still pools along Drift Creek in the Oregon Coast Range, with forest behind." />
-      <figcaption>Drift Creek, Oregon · Photo: Max Wilbert</figcaption>
-    </figure>
-    <div class="panel">
-      <p class="lede">Fertile Ground Conservancy gives small ecological projects a legal and financial home, and lends a hand to groups defending the places they love. We've done this since 2009.</p>
+  <div class="intro">
+    <section class="short" aria-labelledby="h-short">
+      <h2 id="h-short">In short</h2>
+      <ul>
+        <li>We are a small nonprofit based in Eugene, Oregon. We started in 2009.</li>
+        <li>We help groups that protect nature and the places they love.</li>
+        <li>Our main service is <strong>fiscal sponsorship</strong>. Your project can use our nonprofit status to receive tax-deductible donations and grants.</li>
+        <li>Volunteers run everything, so we keep things simple and take on a few groups at a time.</li>
+      </ul>
       <div class="actions">
-        <a class="btn primary" href="sponsor.html">Apply for fiscal sponsorship <span aria-hidden="true">→</span></a>
-        <a class="btn" href="campaigns.html">Ask about campaign support <span aria-hidden="true">→</span></a>
+        <a class="btn primary" href="#needs">Find what you need <span aria-hidden="true">↓</span></a>
       </div>
-    </div>
+    </section>
+    <figure>
+      <img src="/images/stream.jpg" width="600" height="400" alt="A clear creek running over flat, moss-covered rock shelves, with forest on both banks.">
+      <figcaption>Drift Creek in the Oregon Coast Range. Photo by Max Wilbert.</figcaption>
+    </figure>
   </div>
 
-  <dl class="facts wrap" aria-label="Organization facts">
-    <div><dt>Status</dt><dd>501(c)(3) nonprofit</dd></div>
-    <div><dt>EIN</dt><dd>27-1194001</dd></div>
-    <div><dt>Based in</dt><dd>Eugene, Oregon</dd></div>
-    <div><dt>Since</dt><dd>2009</dd></div>
-  </dl>
+  <div class="wrap">
+    <dl class="facts inner" aria-label="Organization facts"><div><dt>Type</dt><dd>501(c)(3) nonprofit</dd></div><div><dt>Tax ID (EIN)</dt><dd>27-1194001</dd></div><div><dt>Location</dt><dd>Eugene, Oregon</dd></div><div><dt>Founded</dt><dd>2009</dd></div></dl>
+  </div>
 
-  <section class="block wrap" id="work" aria-labelledby="h-work">
-    <h2 class="big" id="h-work">Three ways we support ecological work</h2>
-    <ul class="rows">
-      <li class="row r-blaze">
-        <h3><a href="sponsor.html">Fiscal sponsorship</a></h3>
-        <p>Your project runs under our 501(c)(3), so it can take tax-deductible donations and apply for grants without forming a nonprofit of its own. We handle the money and the paperwork. You keep doing the work.</p>
-        <div class="side" aria-hidden="true"><span class="label">Main program</span><span class="go">How it works →</span></div>
-      </li>
-      <li class="row r-cobalt">
-        <h3><a href="campaigns.html">Campaign support</a></h3>
-        <p>Practical help for groups defending a specific place: reading agency documents, drafting public comments and testimony, reviewing grant applications, and thinking through strategy. This is volunteer work, so we take on a few at a time.</p>
-        <div class="side" aria-hidden="true"><span class="label">By conversation</span><span class="go">Ask about a campaign →</span></div>
-      </li>
-      <li class="row r-lichen">
-        <h3><a href="land.html">Land</a></h3>
-        <p>We hold about 15 acres in the Elk Creek watershed of Del Norte County, California. Land protection is a smaller part of our work right now, but if you're thinking about the future of land you care about, we're glad to talk.</p>
-        <div class="side">
-          <img src="images/elk-creek-aerial-800.jpg" width="800" height="535" loading="lazy" alt="Aerial view of forest and creek along lower Elk Creek, Del Norte County." />
-          <span class="label">Photo: Justin Garwood</span>
-        </div>
-      </li>
-    </ul>
-  </section>
-
-  <section class="block wrap on-cobalt" id="sponsorship" aria-labelledby="h-spon">
-    <h2 class="big" id="h-spon">How sponsorship works</h2>
-    <ol class="steps">
-      <li>
-        <span class="n">Step 1 · Apply</span>
-        <h3>Tell us about the project</h3>
-        <p>A short application: what you do, who's involved, and how you plan to fund it.</p>
-      </li>
-      <li>
-        <span class="n">Step 2 · Talk</span>
-        <h3>Check that it's a fit</h3>
-        <p>We review applications on a rolling basis and usually reply within three weeks.</p>
-      </li>
-      <li>
-        <span class="n">Step 3 · Start</span>
-        <h3>Sign and receive funds</h3>
-        <p>We sign a sponsorship agreement, and donations and grants start flowing through FGC.</p>
-      </li>
-    </ol>
-    <div class="includes">
-      <h3>What's included</h3>
-      <ul>
-        <li>Tax-deductible donations</li>
-        <li>Eligibility for grants</li>
-        <li>Bookkeeping and payments</li>
-        <li>Donor acknowledgment letters</li>
-        <li>Grant compliance and reporting</li>
-        <li>A board that's been doing this since 2009</li>
+  <section class="block wrap" id="needs" aria-labelledby="h-needs" tabindex="-1">
+    <div class="inner">
+      <h2 id="h-needs">What brings you here?</h2>
+      <p class="lead">Choose the one that fits best. Each one tells you what happens next.</p>
+      <ul class="tasks">
+        <li class="task">
+          <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round" aria-hidden="true"><path d="M6 22 24 7l18 15"/><path d="M11 18v23h26V18"/><path d="M24 41V29"/><path d="M24 33c-5 0-7-4-7-8 4 0 7 2 7 6M24 31c0-5 3-8 8-8 0 5-3 8-8 8"/></svg>
+          <div>
+            <h3><a href="/sponsor.html">I have a project that needs a nonprofit home</a></h3>
+            <p>Fiscal sponsorship lets your project take donations and apply for grants without starting its own nonprofit.</p>
+          </div>
+          <p class="next"><b>What happens next</b>You answer 10 questions online. We reply within three weeks.</p>
+        </li>
+        <li class="task">
+          <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round" aria-hidden="true"><path d="M6 38 18 16l7 11 5-7 12 18Z"/><path d="M33 9v13M33 9h9l-3 3 3 3h-9"/></svg>
+          <div>
+            <h3><a href="/campaigns.html">I'm working to protect a specific place</a></h3>
+            <p>We can help you read agency documents, write public comments, and plan your next steps.</p>
+          </div>
+          <p class="next"><b>What happens next</b>Email us about the place and your deadlines. We'll tell you honestly how much we can help.</p>
+        </li>
+        <li class="task">
+          <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round" aria-hidden="true"><path d="M24 6 12 24h7l-9 12h28l-9-12h7Z"/><path d="M24 36v7"/><path d="M6 43h36"/></svg>
+          <div>
+            <h3><a href="/land.html">I own land I want to protect</a></h3>
+            <p>We can talk through conservation easements, donating land, or leaving land in your will.</p>
+          </div>
+          <p class="next"><b>What happens next</b>Tell us about the land. There's no obligation, and replies may take a little while.</p>
+        </li>
+        <li class="task">
+          <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round" aria-hidden="true"><path d="M24 40S7 30 7 18a8.5 8.5 0 0 1 17-2 8.5 8.5 0 0 1 17 2c0 12-17 22-17 22Z"/></svg>
+          <div>
+            <h3><a href="/donate.html">I want to support this work</a></h3>
+            <p>Gifts pay for the basic costs of sponsorship, campaign help, and caring for land.</p>
+          </div>
+          <p class="next"><b>What happens next</b>Give online through PayPal, or mail a check. Gifts are tax-deductible.</p>
+        </li>
+        <li class="task">
+          <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round" aria-hidden="true"><path d="M8 10h32v22H22l-9 7v-7H8Z"/><path d="M20 18a4 4 0 1 1 5 4c-1 .4-1 1-1 2"/><path d="M24 28v.5"/></svg>
+          <div>
+            <h3><a href="/contact.html">I'm not sure, or I have a question</a></h3>
+            <p>That's fine. Tell us what you're working on and we'll point you the right way.</p>
+          </div>
+          <p class="next"><b>What happens next</b>Reach us by email, mail, or our web form, whichever is easiest for you.</p>
+        </li>
       </ul>
     </div>
-    <div class="cta-row">
-      <a class="btn primary" href="sponsor.html#apply">Start an application <span aria-hidden="true">→</span></a>
-      <a class="btn" href="sponsor.html">More about sponsorship <span aria-hidden="true">→</span></a>
+  </section>
+
+  <section class="block wrap on-green" id="sponsorship" aria-labelledby="h-spon">
+    <div class="inner">
+      <h2 id="h-spon">How fiscal sponsorship works</h2>
+      <p class="def">Your project runs under our nonprofit. Donors give to us for your project, we keep the records, and the money goes to your work.</p>
+      <ol class="steps">
+        <li><span class="n">Step 1 of 3</span><h3>Apply</h3><p>Tell us what your project does, who is involved, and how you plan to raise money.</p></li>
+        <li><span class="n">Step 2 of 3</span><h3>Talk with us</h3><p>We read every application and usually reply within three weeks. Then we set up a call, or email if you prefer.</p></li>
+        <li><span class="n">Step 3 of 3</span><h3>Start receiving funds</h3><p>We sign a simple agreement. After that, donations and grants for your project come through us.</p></li>
+      </ol>
+      <div class="cta-row">
+        <a class="btn primary" href="/sponsor.html">Learn about sponsorship <span aria-hidden="true">→</span></a>
+        <a href="/sponsor.html#apply">Go straight to the application</a>
+      </div>
     </div>
   </section>
 
-  <section class="block wrap on-lichen" id="projects" aria-labelledby="h-proj">
-    <h2 class="big" id="h-proj">Projects we've sponsored and run</h2>
-    <ul class="projects">
-      <li class="proj"><div><span class="name">Mountains and Waters Alliance</span><span class="where">Zen practice and ecological engagement</span></div><span class="meta now">Current</span></li>
-      <li class="proj"><div><span class="name">Rural Watch Africa Initiative</span><span class="where">Agroforestry and restoration · Nigeria</span></div><span class="meta now">Current</span></li>
-      <li class="proj"><div><span class="name">Protect Thacker Pass</span><span class="where">Mining resistance · Nevada</span></div><span class="meta">Sponsored</span></li>
-      <li class="proj"><div><span class="name">Pinyon-Juniper Alliance</span><span class="where">Forest defense · Intermountain West</span></div><span class="meta">Sponsored</span></li>
-      <li class="proj"><div><span class="name">Sovereign Housing Project</span><span class="where">Ahousaht First Nation · British Columbia</span></div><span class="meta">Sponsored</span></li>
-      <li class="proj"><div><span class="name">Viveros Farm</span><span class="where">Urban permaculture and education</span></div><span class="meta">Sponsored</span></li>
-      <li class="proj"><div><span class="name">Good Grief Group</span><span class="where">Climate grief and community</span></div><span class="meta">Sponsored</span></li>
-      <li class="proj"><div><a class="name" href="earth-at-risk.html">Earth at Risk</a><span class="where">Conference series · San Francisco Bay Area</span></div><span class="meta">Ran 2010–2014</span></li>
-      <li class="proj"><div><a class="name" href="indigenous-women-of-color-rise.html">Indigenous and Women of Color Rise</a><span class="where">Gathering · Seattle</span></div><span class="meta">Ran 2019</span></li>
-    </ul>
-  </section>
-
-  <section class="block wrap" id="about" aria-labelledby="h-about">
-    <h2 class="vh" id="h-about">Why we do it</h2>
-    <p class="belief">We're a <a href="biocentric.html">biocentric</a> organization. We start from the view that the living world matters on its own terms, not only for what it provides to people.</p>
-    <div class="cta-row">
-      <a class="btn" href="our-story.html">Who we are <span aria-hidden="true">→</span></a>
+  <section class="block wrap" id="projects" aria-labelledby="h-proj">
+    <div class="inner">
+      <h2 id="h-proj">Projects we've sponsored and run</h2>
+      <ul class="projects">
+        <li class="proj"><div><span class="name">Mountains and Waters Alliance</span><span class="what">Zen practice and ecological engagement</span></div><span class="status now"><svg viewBox="0 0 16 16" aria-hidden="true"><circle cx="8" cy="8" r="6" fill="currentColor"/></svg>Current</span></li>
+        <li class="proj"><div><span class="name">Rural Watch Africa Initiative</span><span class="what">Agroforestry and restoration in Nigeria</span></div><span class="status now"><svg viewBox="0 0 16 16" aria-hidden="true"><circle cx="8" cy="8" r="6" fill="currentColor"/></svg>Current</span></li>
+        <li class="proj"><div><span class="name">Protect Thacker Pass</span><span class="what">Mining resistance in Nevada</span></div><span class="status"><svg viewBox="0 0 16 16" aria-hidden="true"><circle cx="8" cy="8" r="5.5" fill="none" stroke="currentColor" stroke-width="2"/></svg>Past</span></li>
+        <li class="proj"><div><span class="name">Pinyon-Juniper Alliance</span><span class="what">Forest defense in the Intermountain West</span></div><span class="status"><svg viewBox="0 0 16 16" aria-hidden="true"><circle cx="8" cy="8" r="5.5" fill="none" stroke="currentColor" stroke-width="2"/></svg>Past</span></li>
+        <li class="proj"><div><span class="name">Sovereign Housing Project</span><span class="what">With the Ahousaht First Nation, British Columbia</span></div><span class="status"><svg viewBox="0 0 16 16" aria-hidden="true"><circle cx="8" cy="8" r="5.5" fill="none" stroke="currentColor" stroke-width="2"/></svg>Past</span></li>
+        <li class="proj"><div><span class="name">Viveros Farm</span><span class="what">Urban permaculture and education</span></div><span class="status"><svg viewBox="0 0 16 16" aria-hidden="true"><circle cx="8" cy="8" r="5.5" fill="none" stroke="currentColor" stroke-width="2"/></svg>Past</span></li>
+        <li class="proj"><div><span class="name">Good Grief Group</span><span class="what">Climate grief and community</span></div><span class="status"><svg viewBox="0 0 16 16" aria-hidden="true"><circle cx="8" cy="8" r="5.5" fill="none" stroke="currentColor" stroke-width="2"/></svg>Past</span></li>
+        <li class="proj"><div><a class="name" href="/earth-at-risk.html">Earth at Risk</a><span class="what">Conference series in the San Francisco Bay Area, with videos</span></div><span class="status"><svg viewBox="0 0 16 16" aria-hidden="true"><circle cx="8" cy="8" r="5.5" fill="none" stroke="currentColor" stroke-width="2"/></svg>2010 to 2014</span></li>
+        <li class="proj"><div><a class="name" href="/indigenous-women-of-color-rise.html">Indigenous and Women of Color Rise</a><span class="what">Gathering in Seattle, with video</span></div><span class="status"><svg viewBox="0 0 16 16" aria-hidden="true"><circle cx="8" cy="8" r="5.5" fill="none" stroke="currentColor" stroke-width="2"/></svg>2019</span></li>
+      </ul>
     </div>
   </section>
 
-  <section class="block wrap on-blaze contact" id="contact" aria-labelledby="h-contact">
-    <h2 id="h-contact">Get in touch.</h2>
-    <div class="mail">
-      <a id="email" href="mailto:info@fertilegroundconservancy.org">info@fertilegroundconservancy.org</a>
-      <button class="copy" id="copyBtn" type="button">Copy address</button>
-      <span class="vh" id="copyStatus" role="status" aria-live="polite"></span>
+  <section class="block wrap" aria-labelledby="h-why">
+    <div class="inner" style="padding-top:0">
+      <h2 id="h-why">Why we do this</h2>
+      <p class="belief">We believe the living world matters for its own sake, not only for what it gives people. We call this being <a href="/biocentric.html">biocentric</a>.</p>
+      <div class="cta-row"><a class="btn" href="/our-story.html">Meet the people behind FGC <span aria-hidden="true">→</span></a></div>
     </div>
-    <p>To support the work, <a href="donate.html">give through our donation page</a>. Contributions are tax-deductible to the extent the law allows.</p>
+  </section>
+
+  <section class="block wrap on-amber" id="contact" aria-labelledby="h-contact">
+    <div class="inner">
+      <h2 id="h-contact">Get in touch your way</h2>
+      <p class="lead">Every option reaches the same small team.</p>
+      <ul class="ways">
+        <li>
+          <h3>Email</h3>
+          <span class="addr" id="email">info@fertilegroundconservancy.org</span><br>
+          <button class="copy" id="copyBtn" type="button" hidden data-needs-js>Copy email address</button>
+          <span class="vh" id="copyStatus" role="status" aria-live="polite"></span>
+        </li>
+        <li>
+          <h3>Mail</h3>
+          <span class="addr">Fertile Ground Conservancy<br>PO Box 11262<br>Eugene, OR 97440</span>
+        </li>
+        <li>
+          <h3>Web form</h3>
+          <p style="margin:0 0 4px">Write to us without leaving the site.</p>
+          <a class="addr" href="/contact.html#message">Open the contact form</a>
+        </li>
+      </ul>
+      <div class="formats">
+        <h3>Need information in a different way?</h3>
+        <p>We can send it as large print, plain text, or a printed letter, or talk it through on a call. If you need another language, ask and we'll see what we can do. Read our <a href="/accessibility.html">accessibility statement</a> for more.</p>
+      </div>
+    </div>
   </section>
 </main>
 
 <footer class="foot wrap">
-  <nav class="foot-nav" aria-label="Site">
-    <ul>
-      <li><a href="sponsor.html">Sponsorship</a></li>
-      <li><a href="campaigns.html">Campaigns</a></li>
-      <li><a href="projects.html">Projects</a></li>
-      <li><a href="land.html">Land</a></li>
-      <li><a href="our-story.html">About</a></li>
-      <li><a href="biocentric.html">Biocentrism</a></li>
-      <li><a href="contact.html">Contact</a></li>
-      <li><a href="donate.html">Give</a></li>
-    </ul>
-  </nav>
-  <div class="foot-cols">
-    <p>Fertile Ground Conservancy<br>PO Box 11262<br>Eugene, OR 97440</p>
-    <p>501(c)(3) nonprofit<br>EIN 27-1194001<br>Since 2009</p>
+  <div class="inner">
+    <p>Fertile Ground Conservancy<br>PO Box 11262<br>Eugene, OR 97440<br>info@fertilegroundconservancy.org</p>
+    <p>501(c)(3) nonprofit<br>EIN 27-1194001<br><a href="/accessibility.html">Accessibility statement</a><br><a href="/biocentric.html">What is biocentrism?</a><br><a href="#main">Back to top</a></p>
     <p>We work on the unceded lands of many Indigenous peoples, including the Kalapuya, on whose homelands Eugene sits, and the Tolowa Dee-ni', Yurok, and Karuk of the Pacific Coast.</p>
   </div>
 </footer>
 
-<script src="js/main.js"></script>
+<script src="/js/main.js"></script>
 </body>
 </html>

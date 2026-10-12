@@ -5,18 +5,80 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Projects · Fertile Ground Conservancy</title>
   <meta name="description" content="Projects Fertile Ground Conservancy has sponsored and run since 2009, from mining resistance and forest defense to agroforestry, housing, and gatherings." />
-  <meta name="theme-color" content="#F4F1EA" />
-  <link rel="icon" href="images/fgclogo.svg" type="image/svg+xml" />
+  <meta name="theme-color" content="#FAF7EF" />
+  <link rel="icon" href="/images/fgclogo.svg" type="image/svg+xml" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&display=swap" />
-  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Next:ital,wght@0,400;0,700;1,400&display=swap" />
+  <link rel="stylesheet" href="/css/style.css" />
 </head>
 <body>
 <a class="skip" href="#main">Skip to main content</a>
 
+<div class="utility wrap">
+  <div class="inner">
+    <a href="/accessibility.html">Accessibility</a>
+    <button class="settings-toggle" id="settingsToggle" type="button" aria-expanded="false" aria-controls="settings" hidden>
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 7h10M18 7h2M4 17h4M12 17h8"/><circle cx="16" cy="7" r="2.2"/><circle cx="10" cy="17" r="2.2"/></svg>
+      Display settings</button>
+  </div>
+</div>
+
+<section class="settings wrap" id="settings" aria-labelledby="h-settings" hidden>
+  <div class="inner">
+    <h2 id="h-settings">Display settings</h2>
+    <p class="help">Change how this site looks for you. Changes apply right away and are remembered on this device.</p>
+    <div class="groups">
+      <fieldset>
+        <legend>Text size</legend>
+        <div class="choice">
+          <label><input type="radio" name="display-text" value="" id="display-text-default" checked> Standard</label>
+          <label><input type="radio" name="display-text" value="large" id="display-text-large"> Large</label>
+          <label><input type="radio" name="display-text" value="largest" id="display-text-largest"> Largest</label>
+        </div>
+      </fieldset>
+      <fieldset>
+        <legend>Contrast</legend>
+        <div class="choice">
+          <label><input type="radio" name="display-contrast" value="" id="display-contrast-default" checked> Standard</label>
+          <label><input type="radio" name="display-contrast" value="more" id="display-contrast-more"> High contrast</label>
+        </div>
+      </fieldset>
+      <fieldset>
+        <legend>Light or dark</legend>
+        <div class="choice">
+          <label><input type="radio" name="display-theme" value="" id="display-theme-default" checked> Match my device</label>
+          <label><input type="radio" name="display-theme" value="light" id="display-theme-light"> Light</label>
+          <label><input type="radio" name="display-theme" value="dark" id="display-theme-dark"> Dark</label>
+        </div>
+      </fieldset>
+      <fieldset>
+        <legend>Spacing</legend>
+        <div class="choice">
+          <label><input type="radio" name="display-spacing" value="" id="display-spacing-default" checked> Standard</label>
+          <label><input type="radio" name="display-spacing" value="roomy" id="display-spacing-roomy"> Extra space between letters and lines</label>
+        </div>
+      </fieldset>
+      <fieldset>
+        <legend>Motion</legend>
+        <div class="choice">
+          <label><input type="radio" name="display-motion" value="" id="display-motion-default" checked> Match my device</label>
+          <label><input type="radio" name="display-motion" value="reduce" id="display-motion-reduce"> No animation</label>
+        </div>
+      </fieldset>
+    </div>
+    <p class="zoom-tip">You can also zoom any page: hold Control (Command on a Mac) and press the plus key.</p>
+    <div class="settings-foot">
+      <button class="btn" type="button" id="resetSettings">Reset to standard</button>
+      <button class="btn" type="button" id="closeSettings">Close settings</button>
+      <span class="saved" id="savedNote" role="status" aria-live="polite"></span>
+    </div>
+  </div>
+</section>
+
 <header class="top wrap">
-  <a class="logo" href="index.html" aria-label="Fertile Ground Conservancy, home"><svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 482.6 264" fill="currentColor">
+  <div class="inner">
+    <a class="logo" href="/index.html" aria-label="Fertile Ground Conservancy, home"><svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 482.6 264" fill="currentColor">
 <style type="text/css">
 	.st0{fill:none;}
 	.st1{fill:none;stroke:currentColor;stroke-width:7;stroke-miterlimit:10;}
@@ -92,72 +154,73 @@
 <g>
 </g>
 </svg></a>
-  <nav class="main" aria-label="Main">
-    <ul>
-      <li><a href="sponsor.html">Sponsorship</a></li>
-      <li><a href="campaigns.html">Campaigns</a></li>
-      <li><a href="projects.html" aria-current="page">Projects</a></li>
-      <li><a href="land.html">Land</a></li>
-      <li><a href="contact.html">Contact</a></li>
-      <li><a class="give" href="donate.html">Give</a></li>
-    </ul>
-  </nav>
+    <nav class="main" aria-label="Main">
+      <ul>
+        <li><a href="/index.html">Home</a></li>
+        <li><a href="/sponsor.html">Sponsorship</a></li>
+        <li><a href="/campaigns.html">Campaign help</a></li>
+        <li><a href="/projects.html" aria-current="page">Projects</a></li>
+        <li><a href="/land.html">Land</a></li>
+        <li><a href="/our-story.html">About</a></li>
+        <li><a href="/contact.html">Contact</a></li>
+        <li><a class="donate" href="/donate.html">Donate</a></li>
+      </ul>
+    </nav>
+  </div>
 </header>
 
 <main id="main" tabindex="-1">
+  <nav class="crumbs wrap" aria-label="Breadcrumb">
+    <ol class="inner"><li><a href="/index.html">Home</a></li><li><span aria-current="page">Projects</span></li></ol>
+  </nav>
 <section class="hero wrap" aria-labelledby="h-hero">
-    <h1 id="h-hero">Projects</h1>
-    <p class="lede-lg">Since 2009 we've given a home to grassroots projects across the western United States and beyond, and run a few of our own.</p>
+    <div class="inner">
+      <h1 id="h-hero">Projects</h1>
+      <p class="sub">What we have sponsored and run since 2009</p>
+    </div>
   </section>
 
-  <section class="block wrap on-lichen" aria-labelledby="h-proj">
-    <h2 class="vh" id="h-proj">All projects</h2>
-    <h3 class="sub-head">Currently sponsored</h3>
-    <ul class="projects">
-      <li class="proj"><div><span class="name">Mountains and Waters Alliance</span><span class="where">Zen practice and ecological engagement</span></div><span class="meta now">Current</span></li>
-      <li class="proj"><div><span class="name">Rural Watch Africa Initiative</span><span class="where">Agroforestry and restoration · Nigeria</span></div><span class="meta now">Current</span></li>
-    </ul>
-    <h3 class="sub-head">Past projects</h3>
-    <ul class="projects">
-      <li class="proj"><div><span class="name">Protect Thacker Pass</span><span class="where">Mining resistance · Nevada</span></div><span class="meta">Sponsored</span></li>
-      <li class="proj"><div><span class="name">Pinyon-Juniper Alliance</span><span class="where">Forest defense · Intermountain West</span></div><span class="meta">Sponsored</span></li>
-      <li class="proj"><div><span class="name">Sovereign Housing Project</span><span class="where">Ahousaht First Nation · British Columbia</span></div><span class="meta">Sponsored</span></li>
-      <li class="proj"><div><span class="name">Viveros Farm</span><span class="where">Urban permaculture and education</span></div><span class="meta">Sponsored</span></li>
-      <li class="proj"><div><span class="name">Good Grief Group</span><span class="where">Climate grief and community</span></div><span class="meta">Sponsored</span></li>
-      <li class="proj"><div><a class="name" href="earth-at-risk.html">Earth at Risk</a><span class="where">Conference series · San Francisco Bay Area</span></div><span class="meta">Ran 2010–2014</span></li>
-      <li class="proj"><div><a class="name" href="indigenous-women-of-color-rise.html">Indigenous and Women of Color Rise</a><span class="where">Gathering · Seattle</span></div><span class="meta">Ran 2019</span></li>
-    </ul>
+  <section class="block wrap" aria-labelledby="h-cur" style="padding-top:0">
+    <div class="inner" style="padding-top:clamp(20px,3vw,40px)">
+      <h2 id="h-cur">Current projects</h2>
+      <ul class="projects">
+        <li class="proj"><div><span class="name">Mountains and Waters Alliance</span><span class="what">Zen practice and ecological engagement</span></div><span class="status now"><svg viewBox="0 0 16 16" aria-hidden="true"><circle cx="8" cy="8" r="6" fill="currentColor"/></svg>Current</span></li>
+        <li class="proj"><div><span class="name">Rural Watch Africa Initiative</span><span class="what">Agroforestry and restoration in Nigeria</span></div><span class="status now"><svg viewBox="0 0 16 16" aria-hidden="true"><circle cx="8" cy="8" r="6" fill="currentColor"/></svg>Current</span></li>
+      </ul>
+      <h2 id="h-past" style="margin-top:clamp(48px,6vw,80px)">Past projects</h2>
+      <ul class="projects">
+        <li class="proj"><div><span class="name">Protect Thacker Pass</span><span class="what">Mining resistance in Nevada</span></div><span class="status"><svg viewBox="0 0 16 16" aria-hidden="true"><circle cx="8" cy="8" r="5.5" fill="none" stroke="currentColor" stroke-width="2"/></svg>Past</span></li>
+        <li class="proj"><div><span class="name">Pinyon-Juniper Alliance</span><span class="what">Forest defense in the Intermountain West</span></div><span class="status"><svg viewBox="0 0 16 16" aria-hidden="true"><circle cx="8" cy="8" r="5.5" fill="none" stroke="currentColor" stroke-width="2"/></svg>Past</span></li>
+        <li class="proj"><div><span class="name">Sovereign Housing Project</span><span class="what">With the Ahousaht First Nation, British Columbia</span></div><span class="status"><svg viewBox="0 0 16 16" aria-hidden="true"><circle cx="8" cy="8" r="5.5" fill="none" stroke="currentColor" stroke-width="2"/></svg>Past</span></li>
+        <li class="proj"><div><span class="name">Viveros Farm</span><span class="what">Urban permaculture and education</span></div><span class="status"><svg viewBox="0 0 16 16" aria-hidden="true"><circle cx="8" cy="8" r="5.5" fill="none" stroke="currentColor" stroke-width="2"/></svg>Past</span></li>
+        <li class="proj"><div><span class="name">Good Grief Group</span><span class="what">Climate grief and community</span></div><span class="status"><svg viewBox="0 0 16 16" aria-hidden="true"><circle cx="8" cy="8" r="5.5" fill="none" stroke="currentColor" stroke-width="2"/></svg>Past</span></li>
+        <li class="proj"><div><a class="name" href="/earth-at-risk.html">Earth at Risk</a><span class="what">Conference series in the San Francisco Bay Area, with videos</span></div><span class="status"><svg viewBox="0 0 16 16" aria-hidden="true"><circle cx="8" cy="8" r="5.5" fill="none" stroke="currentColor" stroke-width="2"/></svg>2010 to 2014</span></li>
+        <li class="proj"><div><a class="name" href="/indigenous-women-of-color-rise.html">Indigenous and Women of Color Rise</a><span class="what">Gathering in Seattle, with video</span></div><span class="status"><svg viewBox="0 0 16 16" aria-hidden="true"><circle cx="8" cy="8" r="5.5" fill="none" stroke="currentColor" stroke-width="2"/></svg>2019</span></li>
+      </ul>
+      <p style="margin-top:24px">Earth at Risk and Indigenous and Women of Color Rise were events we ran ourselves. Their pages have video recordings.</p>
+    </div>
   </section>
 
-  <section class="block wrap" aria-labelledby="h-next">
-    <h2 class="big" id="h-next">Have a project that needs a home?</h2>
-    <div class="cta-row" style="margin-top:0">
-      <a class="btn primary" href="sponsor.html#apply">Apply for fiscal sponsorship <span aria-hidden="true">→</span></a>
-      <a class="btn" href="sponsor.html">How sponsorship works <span aria-hidden="true">→</span></a>
+  <section class="block wrap on-green" aria-labelledby="h-next">
+    <div class="inner">
+      <h2 id="h-next">Have a project that needs a home?</h2>
+      <p class="def">Fiscal sponsorship lets your project receive tax-deductible donations and grants without starting its own nonprofit.</p>
+      <div class="cta-row" style="margin-top:0">
+        <a class="btn primary" href="/sponsor.html">How sponsorship works <span aria-hidden="true">→</span></a>
+        <a href="/sponsor.html#apply">Go straight to the application</a>
+      </div>
     </div>
   </section>
 </main>
 
 <footer class="foot wrap">
-  <nav class="foot-nav" aria-label="Site">
-    <ul>
-      <li><a href="sponsor.html">Sponsorship</a></li>
-      <li><a href="campaigns.html">Campaigns</a></li>
-      <li><a href="projects.html" aria-current="page">Projects</a></li>
-      <li><a href="land.html">Land</a></li>
-      <li><a href="our-story.html">About</a></li>
-      <li><a href="biocentric.html">Biocentrism</a></li>
-      <li><a href="contact.html">Contact</a></li>
-      <li><a href="donate.html">Give</a></li>
-    </ul>
-  </nav>
-  <div class="foot-cols">
-    <p>Fertile Ground Conservancy<br>PO Box 11262<br>Eugene, OR 97440</p>
-    <p>501(c)(3) nonprofit<br>EIN 27-1194001<br>Since 2009</p>
+  <div class="inner">
+    <p>Fertile Ground Conservancy<br>PO Box 11262<br>Eugene, OR 97440<br>info@fertilegroundconservancy.org</p>
+    <p>501(c)(3) nonprofit<br>EIN 27-1194001<br><a href="/accessibility.html">Accessibility statement</a><br><a href="/biocentric.html">What is biocentrism?</a><br><a href="#main">Back to top</a></p>
     <p>We work on the unceded lands of many Indigenous peoples, including the Kalapuya, on whose homelands Eugene sits, and the Tolowa Dee-ni', Yurok, and Karuk of the Pacific Coast.</p>
   </div>
 </footer>
 
-<script src="js/main.js"></script>
+<script src="/js/main.js"></script>
 </body>
 </html>
