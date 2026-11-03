@@ -1,13 +1,16 @@
 # Old URLs from earlier versions of the site
 /defend                   /campaigns.html  301
 /defend.html              /campaigns.html  301
-/steward                  /land.html       301
-/steward.html             /land.html       301
-/steward/elk-creek        /land.html       301
-/steward/elk-creek.html   /land.html       301
-/elk-creek                /land.html       301
-/elk-creek.html           /land.html       301
-/land-conservation        /land.html       301
-/land-conservation.html   /land.html       301
 /fiscal-sponsorship       /sponsor.html    301
 /fiscal-sponsorship.html  /sponsor.html    301
+# Land pages were retired in November 2026; send visitors home
+/land                     /                301
+/land.html                /                301
+/steward                  /                301
+/steward.html             /                301
+/steward/elk-creek        /                301
+/steward/elk-creek.html   /                301
+/elk-creek                /                301
+/elk-creek.html           /                301
+/land-conservation        /                301
+/land-conservation.html   /                301

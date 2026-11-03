@@ -5,8 +5,8 @@
   const root = document.documentElement;
 
   /* ---------- Display settings (remembered on this device) ---------- */
-  const KEYS = ['text', 'contrast', 'theme', 'spacing', 'motion'];
-  const ATTR = { text: 'data-text', contrast: 'data-contrast', theme: 'data-theme', spacing: 'data-spacing', motion: 'data-motion' };
+  const KEYS = ['text', 'font', 'contrast', 'theme', 'spacing', 'motion'];
+  const ATTR = { text: 'data-text', font: 'data-font', contrast: 'data-contrast', theme: 'data-theme', spacing: 'data-spacing', motion: 'data-motion' };
   const store = {
     get() { try { return JSON.parse(localStorage.getItem('fgc-display') || '{}') || {}; } catch { return {}; } },
     set(v) { try { localStorage.setItem('fgc-display', JSON.stringify(v)); return true; } catch { return false; } }
