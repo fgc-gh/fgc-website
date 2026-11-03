@@ -14,10 +14,10 @@
 </head>
 <body>
 <a class="skip" href="#main">Skip to main content</a>
-<div class="utility wrap"><div class="row">
+<nav class="utility wrap" aria-label="Accessibility and display"><div class="row">
   <a href="/accessibility.html">Accessibility</a>
   <button class="settings-toggle" id="settingsToggle" type="button" aria-expanded="false" aria-controls="settings" hidden><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" aria-hidden="true"><path d="M4 7h10M18 7h2M4 17h4M12 17h8"/><circle cx="16" cy="7" r="2.2"/><circle cx="10" cy="17" r="2.2"/></svg>Display settings</button>
-</div></div>
+</div></nav>
 <section class="settings wrap" id="settings" aria-labelledby="h-settings" hidden>
   <div class="row">
     <h2 id="h-settings">Display settings</h2>
@@ -137,7 +137,7 @@
   </section>
   <div class="intro wrap">
     <div><p class="statement">We want everyone to be able to use this website. If something doesn't work for you, <mark>tell us</mark>, and we'll get you the information another way.</p></div>
-    <aside class="inshort" aria-labelledby="h-short"><h2 id="h-short">In short</h2><ul><li>This site is built to work with screen readers, magnifiers, voice control, and keyboards.</li><li>You can change text size, typeface, contrast, spacing, and motion with <strong>Display settings</strong> at the top of every page.</li><li>If something doesn't work for you, tell us. We'll fix it if we can, and get you the information another way in the meantime.</li></ul></aside>
+    <aside class="inshort" aria-labelledby="h-short"><h2 id="h-short">In short</h2><ul><li>This site is designed to work with keyboards, screen magnifiers, and screen readers, and to follow your device's settings.</li><li>You can change text size, typeface, contrast, spacing, and motion with <strong>Display settings</strong> at the top of every page.</li><li>If something doesn't work for you, tell us. We'll fix it if we can, and get you the information another way in the meantime.</li></ul></aside>
   </div>
 
   <div class="longread wrap">
@@ -145,51 +145,56 @@
     <div class="prose">
       <h2 id="goal">Our goal</h2>
       <p>Fertile Ground Conservancy is a small, volunteer-run nonprofit. We help people protect the living world, and that work should be open to everyone. Our website is often the first way people reach us, so we design it to work for as many people as possible, without anyone needing to ask.</p>
-      <p>We aim to meet the <a href="https://www.w3.org/TR/WCAG22/">Web Content Accessibility Guidelines (WCAG) 2.2</a> at Level AA, and Level AAA where we can. An outside expert has not reviewed our site, and some parts don't meet the standard yet (see <a href="#known">Known problems</a>). So we describe the site as <strong>partially conforming</strong>.</p>
+      <p>We aim to meet the <a href="https://www.w3.org/TR/WCAG22/">Web Content Accessibility Guidelines (WCAG) 2.2</a> at Level AA, and Level AAA where we can. An outside expert has not reviewed our site, and some parts haven't been fully tested (see <a href="#known">Known problems</a> and <a href="#checking">How we check the site</a>). So we describe the site as <strong>partially conforming</strong>.</p>
       <h2 id="adjust">Adjust the site for you</h2>
       <p>Every page has a <strong>Display settings</strong> button at the top. You can choose:</p>
       <ul>
         <li><strong>Text size:</strong> standard, large, or largest</li>
-        <li><strong>Typeface:</strong> standard, or an easy-to-read typeface (Atkinson Hyperlegible, designed by the Braille Institute)</li>
-        <li><strong>Contrast:</strong> standard or high contrast</li>
+        <li><strong>Typeface:</strong> standard, or easy to read (Atkinson Hyperlegible, designed by the Braille Institute). Most of our text is set in a monospaced typeface; if that is hard for you to read, choose easy to read.</li>
+        <li><strong>Contrast:</strong> standard or high contrast. High contrast removes the decorative map and colored sections and shows black and white.</li>
         <li><strong>Light or dark:</strong> match your device, or choose one</li>
         <li><strong>Spacing:</strong> extra space between letters, words, and lines</li>
         <li><strong>Motion:</strong> turn off all animation</li>
       </ul>
-      <p>Your choices are saved on your device. Settings from your device, such as dark mode, reduced motion, high contrast, and Windows contrast themes, also work automatically.</p>
+      <p>Your choices are saved on your device. If your device is set to dark mode or reduced motion, the site follows those settings automatically. If your device asks for more contrast, we darken secondary text; for the strongest contrast, choose High contrast in Display settings.</p>
       <p hidden data-needs-js><button class="btn cm" type="button" data-open-settings>Open display settings</button></p>
-      <p>You can also zoom any page up to 400% without losing content. Hold Control (Command on a Mac) and press the plus key.</p>
+      <p>You can zoom any page to 400%. The layout rearranges to fit, so you don't have to scroll sideways. Hold Control (Command on a Mac) and press the plus key.</p>
       <h2 id="built-in">What we've built in</h2>
       <h3>Easy to read</h3>
-      <ul><li>Plain language, short sentences, and an "In short" summary near the top of key pages</li><li>Explanations for terms like "fiscal sponsor" and "501(c)(3)"</li><li>Left-aligned text, with lines kept to a comfortable length</li><li>Soft, low-glare background colors</li></ul>
+      <ul><li>Plain language and short sentences</li><li>An "In short" summary near the top of most pages</li><li>Explanations for terms like "fiscal sponsor" and "501(c)(3)" on the sponsorship page</li><li>Left-aligned text, with lines kept to a comfortable length</li></ul>
       <h3>Easy to see</h3>
-      <ul><li>Text contrast meets WCAG AA everywhere, and the stricter AAA level for most text</li><li>Color is never the only way we show something. For example, project status uses a word and a shape as well as a color.</li><li>Text descriptions for every meaningful image</li><li>Decorative map patterns are hidden in high contrast mode</li></ul>
+      <ul><li>Text meets WCAG AA contrast throughout, in light and dark mode, and the stricter AAA level for most body text</li><li>Color is never the only way we show something. For example, project status uses a word and a shape as well as a color.</li><li>Text descriptions for meaningful images. Decorative images, like the map and icons, are hidden from screen readers.</li></ul>
       <h3>Easy to use</h3>
-      <ul><li>Everything works with a keyboard, with a clear outline showing where you are</li><li>Menus open with a click, a tap, or the keyboard, not just by hovering, and close with Escape</li><li>A "Skip to main content" link at the top of each page</li><li>Buttons and links at least 44 pixels in size</li><li>The same menu, in the same place, on every page</li><li>Headings, labels, and landmarks so screen reader users can move around quickly</li></ul>
+      <ul><li>Everything works with a keyboard, with a clear outline showing where you are</li><li>Menus open with a click, a tap, or the keyboard, not just by hovering, and close with Escape</li><li>A "Skip to main content" link at the top of each page</li><li>Buttons, menu items, and form fields are at least 44 pixels tall. Links inside text are smaller, but spaced so they are easy to tell apart.</li><li>The same menu, in the same place, on every page</li><li>Headings, labels, and landmarks so screen reader users can move around quickly</li></ul>
       <h3>Forgiving forms</h3>
-      <ul><li>Every question is marked as required or optional</li><li>If something is missing, the form lists every problem at the top and next to each question, and says how to fix it</li><li>We say how long each form takes before you start</li><li>You can always email, mail, or call instead of using a form</li></ul>
+      <ul><li>Every question is marked as required or optional</li><li>If something is missing, the form lists every problem at the top and next to each question, and says how to fix it</li><li>The sponsorship application tells you how long it takes before you start</li><li>If a form can't be sent, your answers stay on the page, and you can copy them into an email</li><li>You can email or mail us instead of using a form, or ask us to call you</li></ul>
       <h3>Motion you control</h3>
-      <ul><li>Animations only respond to what you do, like hovering, clicking, or scrolling. Nothing moves on its own.</li><li>Choosing "No animation", or turning on reduced motion on your device, switches every animation off. The header then stays put instead of hiding as you scroll.</li></ul>
+      <ul><li>Animation only responds to what you do, like hovering, clicking, or scrolling. Nothing moves on its own.</li><li>Choosing "No animation", or turning on reduced motion on your device, switches animation off. The header then stays in place instead of hiding as you scroll. It also stays in place when you choose a larger text size.</li></ul>
       <h3>Works in more places</h3>
-      <ul><li>No time limits, pop-ups, or auto-playing media</li><li>Pages work without JavaScript. Only the display settings, menus, and copy buttons need it.</li><li>Pages print cleanly</li></ul>
+      <ul><li>No time limits, pop-ups, or auto-playing media</li><li>Pages work without JavaScript. Only the display settings, menu previews, copy buttons, and sending forms in the background need it; without it, menus are plain links and forms send the usual way.</li></ul>
       <h2 id="known">Known problems</h2>
-      <p>These parts of the site don't fully meet our goal yet. We're working on them.</p>
+      <p>These parts of the site don't fully meet our goal yet, or haven't been tested. We're working on them.</p>
       <div class="table-wrap"><table class="data-table"><caption class="vh">Known accessibility problems and workarounds</caption>
         <thead><tr><th scope="col">Where</th><th scope="col">The problem</th><th scope="col">What you can do now</th></tr></thead>
         <tbody>
           <tr><td>Event videos</td><td>Captions are made automatically by YouTube and may have errors. There are no transcripts yet.</td><td>Ask us for a transcript of a specific video and we'll make it a priority.</td></tr>
           <tr><td>Online donations</td><td>Online gifts go through PayPal, a separate website we don't control.</td><td>Give by check, or contact us to arrange another way.</td></tr>
           <tr><td>"What is biocentrism?" page</td><td>The full essay uses more complex language than the rest of the site. A plain summary is at the top.</td><td>Ask us to explain any part of it.</td></tr>
+          <tr><td>Text typeface</td><td>Most text is set in a monospaced typeface, which some people find slower to read.</td><td>Choose "Easy to read" under Typeface in Display settings.</td></tr>
+          <tr><td>Device contrast settings</td><td>Asking your device for more contrast darkens secondary text, but the decorative map and colored sections still show.</td><td>Choose High contrast in Display settings for black and white.</td></tr>
+          <tr><td>Windows contrast themes</td><td>We haven't yet tested the site with Windows contrast themes. Some decorative parts may not display as intended.</td><td>Tell us if anything is hard to use, and choose High contrast in Display settings.</td></tr>
           <tr><td>Photos</td><td>Some photo descriptions are brief.</td><td>Ask us to describe any image in more detail.</td></tr>
         </tbody></table></div>
       <h2 id="formats">Other formats</h2>
       <p>Ask us for any information on this site in another format. We can provide large print, plain text by email, a printed letter by mail, or a phone or video call to talk it through. If you need another language, ask and we'll see what we can do. Our fiscal sponsorship application can also be completed by email or on a call.</p>
       <h2 id="tell-us">Tell us about a problem</h2>
       <p>If you have trouble using any part of this site, please tell us. You don't need to use technical words. It helps to know which page you were on, what you were trying to do, what happened instead, and what device or assistive technology you use, if you know.</p>
-      <div class="callout"><p style="margin:0"><strong class="sans">Email:</strong> info@fertilegroundconservancy.org<br><strong class="sans">Mail:</strong> Fertile Ground Conservancy, PO Box 11262, Eugene, OR 97440<br><strong class="sans">Web form:</strong> <a href="/contact.html?topic=Accessibility#message">contact form</a></p></div>
+      <div class="callout"><p style="margin:0"><strong class="sans">Email:</strong> info@<wbr>fertilegroundconservancy.org<br><strong class="sans">Mail:</strong> Fertile Ground Conservancy, PO Box 11262, Eugene, OR 97440<br><strong class="sans">Web form:</strong> <a href="/contact.html?topic=Accessibility#message">contact form</a></p></div>
       <p>We aim to reply within one week. We're volunteers, so it may sometimes take a little longer, but accessibility problems go to the front of the line.</p>
       <h2 id="checking">How we check the site</h2>
-      <p>Before we publish changes, we use every page with a keyboard only, check pages zoomed to 200% and 400% and on a phone, test color contrast, run automated accessibility checkers, and try key pages with a screen reader. We also welcome feedback from people who use assistive technology every day.</p>
+      <p>For the current version of the site, we checked every page:</p>
+      <ul><li>With an automated accessibility checker (axe), in light and dark mode</li><li>At phone width, and at a width equal to 400% zoom</li><li>With the keyboard, for the menus, accordions, and forms</li><li>For color contrast</li></ul>
+      <p>An outside expert has not reviewed the site, and we haven't yet tested it with a screen reader or with Windows contrast themes. We plan to. We also welcome feedback from people who use assistive technology every day.</p>
       <h2 id="about">About this statement</h2>
       <p>We first wrote this statement on October 12, 2026, and updated it on November 3, 2026. We review it at least once a year and whenever we make a major change to the site.</p>
     </div>

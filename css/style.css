@@ -700,3 +700,4 @@ mark.m-moss { --mark: var(--mark-moss); }
 }
 @media print { .longread { display: block; } .toc { display: none; } }
 .fields #email { font-size: clamp(1.125rem, 4.6vw, 2rem); overflow-wrap: normal; }
+.inshort li { overflow-wrap: anywhere; }

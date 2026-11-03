@@ -117,7 +117,12 @@
         input.setAttribute('aria-describedby', [err.id, input.getAttribute('aria-describedby')].filter(Boolean).join(' '));
         problems.push({ id: input.id, msg });
       });
-      if (!problems.length) { if (summary) summary.hidden = true; return; }
+      if (!problems.length) {
+        if (summary) summary.hidden = true;
+        e.preventDefault();
+        send(form, summary);
+        return;
+      }
       e.preventDefault();
       if (!summary) { form.querySelector('[aria-invalid]').focus(); return; }
       const n = problems.length;
@@ -139,4 +144,45 @@
       if (field && field.classList.contains('has-error') && e.target.checkValidity()) clear(field);
     });
   });
+  /* ---------- Send forms in the background so a failure never loses answers ---------- */
+  function answersText(form) {
+    return [...form.querySelectorAll('.field')].map(f => {
+      const label = f.querySelector('label').firstChild.textContent.trim();
+      const input = f.querySelector('input, textarea, select');
+      return `${label}\n${input.value || '(no answer)'}`;
+    }).join('\n\n');
+  }
+  async function send(form, summary) {
+    const btn = form.querySelector('button[type="submit"]');
+    const label = btn.innerHTML;
+    btn.disabled = true; btn.textContent = 'Sending…';
+    try {
+      const body = new URLSearchParams(new FormData(form)).toString();
+      const r = await fetch('/', { method: 'POST', headers: { 'Content-Type': 'application/x-www-form-urlencoded' }, body });
+      if (!r.ok) throw new Error('status ' + r.status);
+      location.href = form.getAttribute('action') || '/thanks.html';
+    } catch (err) {
+      btn.disabled = false; btn.innerHTML = label;
+      if (!summary) { alertFallback(form); return; }
+      summary.innerHTML = '';
+      const h = document.createElement('h3'); h.tabIndex = -1;
+      h.textContent = "Sorry, your message wasn't sent";
+      const p = document.createElement('p');
+      p.innerHTML = 'Your answers are still here. Please try again in a few minutes, or email them to <strong>info@fertilegroundconservancy.org</strong>.';
+      const copy = document.createElement('button');
+      copy.type = 'button'; copy.className = 'btn line cm'; copy.textContent = 'Copy my answers';
+      const status = document.createElement('p'); status.setAttribute('role', 'status');
+      const box = document.createElement('textarea'); box.readOnly = true; box.hidden = true; box.rows = 8;
+      box.setAttribute('aria-label', 'Your answers, ready to copy'); box.style.width = '100%'; box.style.marginTop = '12px';
+      copy.addEventListener('click', async () => {
+        const text = answersText(form);
+        try { await navigator.clipboard.writeText(text); status.textContent = 'Copied. Paste your answers into an email to info@fertilegroundconservancy.org.'; }
+        catch { box.value = text; box.hidden = false; box.focus(); box.select(); status.textContent = 'Your answers are selected below. Press Control C to copy.'; }
+      });
+      summary.append(h, p, copy, status, box);
+      summary.hidden = false;
+      h.focus();
+    }
+  }
+  function alertFallback(form) { form.submit(); }
 })();
