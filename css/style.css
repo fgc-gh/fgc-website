@@ -701,3 +701,38 @@ mark.m-moss { --mark: var(--mark-moss); }
 @media print { .longread { display: block; } .toc { display: none; } }
 .fields #email { font-size: clamp(1.125rem, 4.6vw, 2rem); overflow-wrap: normal; }
 .inshort li { overflow-wrap: anywhere; }
+
+/* =====================================================================
+   Simplified structure (Nov 2026): one centered column, titles above
+   sections, no dropdown menus
+   ===================================================================== */
+.sec { display: block; }
+.sec > .inner { max-width: 960px; margin-inline: auto; }
+.sec-title { font: 500 clamp(1.75rem, 3vw, 2.5rem) / 1.1 var(--sans); letter-spacing: -.01em; margin: 0 0 clamp(20px, 2.5vw, 32px); }
+.sec-title::before { content: ""; display: inline-block; width: .38em; height: .38em; margin-right: .4em; vertical-align: .12em; background: var(--mark, var(--ochre)); transition: border-radius .6s var(--spring); }
+.sec:hover .sec-title::before { border-radius: 50%; }
+.band-rust .sec-title::before, .sec.band-rust .sec-title::before { background: #F2CF7A; }
+.band-moss .sec-title::before { background: #E9C46A; }
+.band-ochre .sec-title::before { background: var(--moss); }
+.page-title { font-size: clamp(2.25rem, 4.6vw, 3.75rem); }
+.btn-row { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 28px; }
+.statement { max-width: none; }
+.statement.lg { max-width: 24ch; }
+.hero .card p + p { margin-top: .9em; }
+.inshort h3 { font: 600 1.125rem var(--sans); margin: 0 0 12px; }
+.inshort h3::before { content: ""; display: inline-block; width: 10px; height: 10px; margin-right: 10px; background: var(--moss); vertical-align: .1em; }
+
+/* Long reading pages: contents list above the text, all centered */
+.longread { display: block; }
+.longread > .inner { max-width: 960px; margin-inline: auto; }
+.longread .toc { position: static; margin-bottom: 40px; padding: 18px 20px; border: 1px solid var(--line); background: var(--surface); }
+.longread .prose { max-width: none; }
+
+/* Contact page: the whole page sits on ochre */
+body:has(main.contact-page) { background: var(--ochre-band); }
+main.contact-page { min-height: 70vh; padding-bottom: clamp(48px, 6vw, 96px); }
+main.contact-page .sec:first-child { padding-top: clamp(40px, 6vw, 88px); }
+.contact-band.sec { margin-top: clamp(72px, 10vw, 160px); padding-block: clamp(48px, 6vw, 88px); }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .band-ochre { --mute: #E3D6BD; --line: #C9B98F; } }
+:root[data-theme="dark"] .band-ochre { --mute: #E3D6BD; --line: #C9B98F; }
+.person img { height: auto; }
