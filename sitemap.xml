@@ -40,4 +40,20 @@
     <loc>https://fertilegroundconservancy.org/indigenous-women-of-color-rise.html</loc>
     <priority>0.5</priority>
   </url>
+  <url>
+    <loc>https://fertilegroundconservancy.org/annual-reports.html</loc>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://fertilegroundconservancy.org/annual-report-2025.html</loc>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://fertilegroundconservancy.org/annual-report-2024.html</loc>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://fertilegroundconservancy.org/annual-report-2023.html</loc>
+    <priority>0.5</priority>
+  </url>
 </urlset>
