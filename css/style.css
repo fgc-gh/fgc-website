@@ -6,17 +6,17 @@
    with a deeper blue-grey for buttons and the contact band. Sans for headings
    and labels, a serif for running text. Every text pair meets WCAG AA, most AAA. */
 :root {
-  --bg: #ECF1F4;
-  --surface: #F6F8FA;
+  --bg: #F1ECE2;
+  --surface: #F8F5EF;
   --panel: #D0DBE4;
   --panel-2: #DDE3EB;
   --ink: #2D2012;
   --mute: #4F4339;      /* 8.4:1 on ground */
   --line: #2D2012;
-  --on-ink: #ECF1F4;
+  --on-ink: #F1ECE2;
   --error: #9E2A1C;
   --focus: #2D2012;
-  --halo: #ECF1F4;
+  --halo: #F1ECE2;
   --sans: "Host Grotesk", "Helvetica Neue", Arial, system-ui, sans-serif;
   --serif: "JetBrains Mono", ui-monospace, Menlo, Consolas, monospace;
   --size: 100%;
@@ -326,7 +326,7 @@ footer.foot { padding-block: 40px 28px; }
    Revisions: topo hero, mono text, footer, organic motion
    ===================================================================== */
 :root {
-  --topo-0: #ECF1F4; --topo-1: #E4EAEF; --topo-2: #DCE4EA; --topo-3: #D3DDE5; --topo-4: #CAD6E0;
+  --topo-0: #F1ECE2; --topo-1: #E9E4DA; --topo-2: #E0DCD3; --topo-3: #D7D6D2; --topo-4: #CED2D4;
   --topo-5: #C0CEDA; --topo-6: #B6C6D3; --topo-7: #ABBDCC; --topo-8: #A0B4C4; --topo-line: rgba(45, 32, 18, .28);
   --spring: cubic-bezier(.34, 1.36, .64, 1);
   --settle: cubic-bezier(.22, 1, .36, 1);
@@ -425,23 +425,23 @@ footer.foot { padding-block: clamp(48px, 6vw, 80px) 32px; border-top: 1px solid 
    Mostly tints; a few solid marks. Color never carries meaning alone.
    ===================================================================== */
 :root {
-  --moss: #4F6B35; --rust: #98472A; --ochre: #B98A2E; --sky: #4D7898;
+  --moss: #4F6B35; --rust: #98472A; --ochre: #B98A2E; --sky: #4D7898; --ochre-ink: #85600F; --moss-ink: #3E5529;
   --moss-t: #DDE6D2; --ochre-t: #F0E4C4; --rust-t: #F1D9CC; --sky-t: #D5E3EE; --wheat-t: #E9DFC6;
-  --on-accent: #F6F8FA;
+  --on-accent: #F8F5EF;
   /* hypsometric tints for the color lens: valley sage up to pale summits */
   --hyp-0: #D9E5D3; --hyp-1: #CCDCC2; --hyp-2: #BED1B0; --hyp-3: #CBD3A6; --hyp-4: #DCD3A2;
   --hyp-5: #E2C99B; --hyp-6: #DDBA93; --hyp-7: #D7AE8E; --hyp-8: #EADCCB;
 }
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) {
-    --moss: #A9C18C; --rust: #E39A78; --ochre: #D9B263; --sky: #9DBBD3; --on-accent: #1C1914;
+    --moss: #A9C18C; --rust: #E39A78; --ochre: #D9B263; --sky: #9DBBD3; --on-accent: #1C1914; --ochre-ink: #D9B263; --moss-ink: #A9C18C;
     --moss-t: #2A3323; --ochre-t: #3A3020; --rust-t: #3B2922; --sky-t: #22303A; --wheat-t: #35302A;
     --hyp-0: #1F261C; --hyp-1: #243020; --hyp-2: #2A3924; --hyp-3: #353A25; --hyp-4: #403A26;
     --hyp-5: #47392A; --hyp-6: #4A362C; --hyp-7: #4C342E; --hyp-8: #3A3530;
   }
 }
 :root[data-theme="dark"] {
-  --moss: #A9C18C; --rust: #E39A78; --ochre: #D9B263; --sky: #9DBBD3; --on-accent: #1C1914;
+  --moss: #A9C18C; --rust: #E39A78; --ochre: #D9B263; --sky: #9DBBD3; --on-accent: #1C1914; --ochre-ink: #D9B263; --moss-ink: #A9C18C;
   --moss-t: #2A3323; --ochre-t: #3A3020; --rust-t: #3B2922; --sky-t: #22303A; --wheat-t: #35302A;
   --hyp-0: #1F261C; --hyp-1: #243020; --hyp-2: #2A3924; --hyp-3: #353A25; --hyp-4: #403A26;
   --hyp-5: #47392A; --hyp-6: #4A362C; --hyp-7: #4C342E; --hyp-8: #3A3530;
@@ -537,6 +537,8 @@ footer.foot { padding-block: clamp(48px, 6vw, 80px) 32px; border-top: 1px solid 
 
 .sec.band { padding-block: clamp(64px, 9vw, 140px); margin-top: clamp(72px, 10vw, 160px); }
 .sec.band + .sec { padding-top: clamp(64px, 9vw, 140px); }
+/* Colored bands that follow another band or the banner sit flush against it */
+.sec.band + .contact-band.sec, .sec.band + .sec.band, .hero + .sec.band { margin-top: 0; }
 .band-moss { --bg: var(--moss-band); --surface: var(--moss-band-2); --panel: var(--moss-band-2); --ink: #F3F1E8; --mute: #DCE3CF; --line: rgba(243,241,232,.55); --on-ink: var(--moss-band); --spread: var(--moss-band-2); --mark: #F3F1E8; --focus: #F3F1E8; --halo: var(--moss-band); --moss-t: #F3F1E8; background: var(--bg); color: var(--ink); }
 .band-rust { --bg: var(--rust-band); --surface: #A84B2C; --ink: #F3F1E8; --mute: #F3F1E8; --line: rgba(243,241,232,.6); --on-ink: var(--rust-band); --focus: #F3F1E8; --halo: var(--rust-band); --moss-t: #F3F1E8; --ochre: #F2CF7A; background: var(--bg); color: var(--ink); }
 .band-ochre { --bg: var(--ochre-band); --panel-2: var(--ochre-band); --surface: var(--ochre-band-2); --spread: var(--ochre-band-2); --line: #2D2012; --mute: #3F3428; background: var(--bg); }
@@ -709,18 +711,22 @@ mark.m-moss { --mark: var(--mark-moss); }
 .sec { display: block; }
 .sec > .inner { max-width: 960px; margin-inline: auto; }
 .sec-title { font: 500 clamp(1.75rem, 3vw, 2.5rem) / 1.1 var(--sans); letter-spacing: -.01em; margin: 0 0 clamp(20px, 2.5vw, 32px); }
-.sec-title::before { content: ""; display: inline-block; width: .38em; height: .38em; margin-right: .4em; vertical-align: .12em; background: var(--mark, var(--ochre)); transition: border-radius .6s var(--spring); }
-.sec:hover .sec-title::before { border-radius: 50%; }
-.band-rust .sec-title::before, .sec.band-rust .sec-title::before { background: #F2CF7A; }
-.band-moss .sec-title::before { background: #E9C46A; }
-.band-ochre .sec-title::before { background: var(--moss); }
+.sec-title { color: var(--mark, var(--ochre-ink)); }
+.band-rust .sec-title, .sec.band-rust .sec-title { color: #F2CF7A; }
+.band-moss .sec-title { color: #F0D27E; }
+.band-ochre .sec-title { color: #3E5529; }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .band-ochre .sec-title { color: #C9DCA9; } }
+:root[data-theme="dark"] .band-ochre .sec-title { color: #C9DCA9; }
+:root[data-contrast="more"] .sec-title { color: var(--ink) !important; }
+@media (forced-colors: active) { .sec-title { color: CanvasText !important; } }
 .page-title { font-size: clamp(2.25rem, 4.6vw, 3.75rem); }
 .btn-row { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 28px; }
 .statement { max-width: none; }
 .statement.lg { max-width: 24ch; }
 .hero .card p + p { margin-top: .9em; }
 .inshort h3 { font: 600 1.125rem var(--sans); margin: 0 0 12px; }
-.inshort h3::before { content: ""; display: inline-block; width: 10px; height: 10px; margin-right: 10px; background: var(--moss); vertical-align: .1em; }
+.inshort h3 { color: var(--moss-ink, var(--moss)); }
+.band .inshort h3 { color: inherit; }
 
 /* Long reading pages: contents list above the text, all centered */
 .longread { display: block; }
