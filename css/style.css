@@ -788,3 +788,17 @@ main.contact-page .sec:first-child { padding-top: clamp(40px, 6vw, 88px); }
 blockquote.filed { margin: 0; padding: 20px 24px; border-left: 6px solid var(--ochre); background: var(--panel); font: 600 clamp(1.15rem, 2.4vw, 1.4rem)/1.35 var(--sans); }
 :root[data-contrast="more"] .hb-bar, :root[data-contrast="more"] .chart path { fill: var(--ink); background: var(--ink); }
 @media (forced-colors: active) { .hb-bar { background: CanvasText; } .chart .b-in path { fill: Highlight; } .chart .b-out path { fill: CanvasText; } .legend .sw.b-in { background: Highlight; } .legend .sw.b-out { background: CanvasText; } }
+
+/* ---------- Side-by-side sections ---------- */
+.split-sec > .inner.split { max-width: 1200px; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: clamp(32px, 4vw, 56px); align-items: start; }
+.split .rows > li { grid-template-columns: minmax(0, 1fr); }
+.split .give-box { height: 100%; }
+@media (max-width: 860px) { .split-sec > .inner.split { grid-template-columns: minmax(0, 1fr); gap: clamp(64px, 9vw, 96px); } }
+.sec.tight { padding-top: clamp(40px, 5vw, 64px); }
+
+/* ---------- Homepage statement over a photo ---------- */
+.sec.why-photo { position: relative; background: #2D2012 url(/images/banners/why-1728.webp) center / cover no-repeat; }
+@media (max-width: 900px) { .sec.why-photo { background-image: url(/images/banners/why-900.webp); } }
+.why-box { background: var(--bg); color: var(--ink); border: 1px solid var(--line); padding: clamp(24px, 4vw, 48px); max-width: 820px; }
+.why-box .statement { margin: 0; }
+:root[data-contrast="more"] .sec.why-photo { background-image: none; }
