@@ -1,5 +1,5 @@
 /* Fertile Ground Conservancy, after Tekt.
-   Running text is set in JetBrains Mono.
+   Everything is set in Host Grotesk. JetBrains Mono is kept for small labels.
   Layout: a narrow label column on the left and large statements on the right;
    content sits in thin-ruled boxes with survey-marker corners; photography runs
    full width. Two colors only: a pale blue-grey ground and a dark brown ink,
@@ -18,7 +18,8 @@
   --focus: #2D2012;
   --halo: #F1ECE2;
   --sans: "Host Grotesk", "Helvetica Neue", Arial, system-ui, sans-serif;
-  --serif: "JetBrains Mono", ui-monospace, Menlo, Consolas, monospace;
+  --serif: "Host Grotesk", system-ui, sans-serif;
+  --mono: "JetBrains Mono", ui-monospace, Menlo, monospace;
   --size: 100%;
   --lh: 1.5;
   --ls: normal;
@@ -47,13 +48,13 @@
 :root[data-text="large"] { --size: 125%; }
 :root[data-text="largest"] { --size: 150%; }
 :root[data-spacing="roomy"] { --lh: 1.9; --ls: .12em; --ws: .16em; --para: 2em; }
-:root[data-font="easy"] { --sans: "Atkinson Hyperlegible Next", "Atkinson Hyperlegible", Verdana, sans-serif; --serif: var(--sans); }
+:root[data-font="easy"] { --sans: "Atkinson Hyperlegible Next", "Atkinson Hyperlegible", Verdana, sans-serif; --serif: var(--sans); --mono: var(--sans); }
 
 * { box-sizing: border-box; }
 html { font-size: var(--size); scroll-behavior: smooth; }
 body {
   margin: 0; background: var(--bg); color: var(--ink);
-  font-family: var(--serif); font-size: 1.0625rem; line-height: calc(var(--lh) + .1); font-weight: 400;
+  font-family: var(--serif); font-size: 1.125rem; line-height: calc(var(--lh) + .1); font-weight: 400;
   letter-spacing: var(--ls); word-spacing: var(--ws); overflow-x: clip; overflow-wrap: break-word;
   -webkit-font-smoothing: antialiased;
 }
@@ -802,3 +803,8 @@ blockquote.filed { margin: 0; padding: 20px 24px; border-left: 6px solid var(--o
 .why-box { background: var(--bg); color: var(--ink); border: 1px solid var(--line); padding: clamp(24px, 4vw, 48px); max-width: 820px; }
 .why-box .statement { margin: 0; }
 :root[data-contrast="more"] .sec.why-photo { background-image: none; }
+
+/* JetBrains Mono survives only in small labels */
+.status, .fields .k, .tile-stat dt, .chart .tick { font-family: var(--mono); letter-spacing: 0; }
+.fields .k { font-size: .875rem; font-weight: 400; }
+.status { font-size: .8125rem; }
